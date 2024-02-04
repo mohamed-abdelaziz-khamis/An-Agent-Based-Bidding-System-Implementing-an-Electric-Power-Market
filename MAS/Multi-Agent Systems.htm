@@ -1,0 +1,573 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.aaai.org/AITopics/html/multi.html -->
+<HTML><HEAD><TITLE>Multi-Agent Systems</TITLE><!-- InstanceBegin template="/Templates/TempA.dwt" codeOutsideHTMLIsLocked="false" --><LINK 
+href="http://www.aaai.org/aitopics/assets/Site%20Art/icon.gif" type=image/gif 
+rel="shortcut icon"><!-- #BeginEditable "doctitle" --><!-- #EndEditable -->
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT language=JavaScript>
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</SCRIPT>
+
+<META 
+content="AI, artificial intelligence, AAAI, American Association for Artificial Intelligence, AI Topics, pathfinder, computer science, cognitive science, robots, agents, games, puzzles, expert systems, natural language, LISP, history, philosophy, bibliography, news, science fiction, smart rooms, vision, speech, machine learning, chess, cartoons, toons, glossary, education, intelligent tutoring, reasoning, inference, logic, representation, ontology, turing, resources, teacher, educator, classroom, links faq, space, medicine, law, applications, overview, interface, systems" 
+name=keywords>
+<META 
+content="AI Topics provides basic, understandable information and helpful resources concerning artificial intelligence, with an emphasis on material available online. " 
+name=description><!-- InstanceParam name="OptionalRegion1" type="boolean" value="true" -->
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY vLink=#006600 aLink=#ff6633 link=#3333ff>
+<TABLE height=417 cellSpacing=0 cellPadding=0 width="95%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="10%" height=80>
+      <DIV align=center><IMG height=87 alt="apple tree logo" 
+      src="Multi-Agent Systems_files/apltreeA.gif" width=66 useMap=#Map 
+      border=0> <MAP name=Map><AREA shape=CIRCLE coords=34,38,28 
+        href="http://www.aaai.org/AITopics/html/welcome.html"><AREA shape=CIRCLE 
+        coords=32,47,1 
+      href="http://www.aaai.org/AITopics/pathfinder.html"></MAP></DIV></TD>
+    <TD vAlign=center align=middle width="2%" height=80>
+      <DIV align=center><A name=up></A><IMG height=66 alt="apple tree logo" 
+      src="Multi-Agent Systems_files/topics.gif" width=9> </DIV></TD>
+    <TD width="66%" colSpan=2 height=80>
+      <DIV align=center><FONT face=Arial 
+      size=5><!-- #BeginEditable "BANNER" --><FONT 
+      face="Century Schoolbook, Verdana, Times" size=4><B>Multi-Agent Systems 
+      <BR></B><FONT size=3>(A subtopic of <A 
+      href="http://www.aaai.org/AITopics/html/agents.html">Agents</A>) 
+      </FONT></FONT><!-- #EndEditable --></FONT></DIV></TD>
+    <TD vAlign=center width="22%" height=80>
+      <DIV align=center><SELECT onchange="MM_jumpMenu('parent',this,0)" 
+      name="THE TOPICS"> <OPTION selected>THE TOPICS</OPTION> <OPTION 
+        value=current.html>AI in the news</OPTION> <OPTION 
+        value=overview.html>AI Overview</OPTION> <OPTION 
+        value=agents.html>Agents</OPTION> <OPTION 
+        value=applications.html>Applications</OPTION> <OPTION 
+        value=cogsci.html>Cognitive Science</OPTION> <OPTION 
+        value=education.html>Education</OPTION> <OPTION 
+        value=ethics.html>Ethical/Social</OPTION> <OPTION 
+        value=expert.html>Expert Systems</OPTION> <OPTION 
+        value=faqs.html>FAQs</OPTION> <OPTION value=games.html>Games &amp; 
+        Puzzles</OPTION> <OPTION value=history.html>History</OPTION> <OPTION 
+        value=interfaces.html>Interfaces</OPTION> <OPTION 
+        value=machine.html>Machine Learning</OPTION> <OPTION 
+        value=natlang.html>Natural Language</OPTION> <OPTION 
+        value=phil.html>Philosophy</OPTION> <OPTION 
+        value=reason.html>Reasoning</OPTION> <OPTION 
+        value=reference.html>Reference Shelf</OPTION> <OPTION 
+        value=repr.html>Representation</OPTION> <OPTION 
+        value=resources.html>Resources</OPTION> <OPTION 
+        value=robots.html>Robots</OPTION> <OPTION value=scifi.html>Science 
+        Fiction</OPTION> <OPTION value=speech.html>Speech</OPTION> <OPTION 
+        value=sys.html>Systems &amp; Languages</OPTION> <OPTION 
+        value=turing.html>Turing Test</OPTION> <OPTION 
+        value=vision.html>Vision</OPTION> <OPTION value=sitemap.html#sp>What's 
+        Left?</OPTION></SELECT> <BR><SELECT 
+      onchange="MM_jumpMenu('parent',this,0)" name="quick start"> <OPTION 
+        selected>QUICK START tips</OPTION> <OPTION value=overview.html>AI 
+        Overview</OPTION> <OPTION value=a2z.html>A - Z Index</OPTION> <OPTION 
+        value=current.html>AI in the news</OPTION> <OPTION 
+        value=report.html>Doing a Report for School</OPTION> <OPTION 
+        value=sitemap.html>Site Map</OPTION> <OPTION 
+        value=reference.html>Reference Shelf</OPTION> <OPTION 
+        value=springbd.html>How to use this site</OPTION> <OPTION 
+        value=http://www.aaai.org/cgi-bin/swish-pff.pl>Search 
+      Engine</OPTION></SELECT> <BR><SELECT 
+      onchange="MM_jumpMenu('parent',this,0)" name=directory> <OPTION 
+        selected>DIRECTORY</OPTION> <OPTION value=springbd.html>How to use this 
+        site</OPTION> <OPTION value=announ.html>Announcements</OPTION> <OPTION 
+        value=a2z.html>A - Z Index</OPTION> <OPTION value=sitemap.html>Site 
+        Map</OPTION> <OPTION value=reference.html>Reference Shelf</OPTION> 
+        <OPTION value=http://www.aaai.org/cgi-bin/swish-pff.pl>Search 
+        Engine</OPTION> <OPTION value=inquir.html>Contact AI Topics</OPTION> 
+        <OPTION value=notices.html>Notices</OPTION> <OPTION 
+        value=notices.html>Disclosures</OPTION> <OPTION 
+        value=notices.html>Copyright</OPTION> <OPTION value=welcome.html>AI 
+        Topics Home</OPTION> <OPTION value=http://www.aaai.org/>AAAI 
+        Home</OPTION></SELECT> </DIV></TD></TR>
+  <TR>
+    <TD vAlign=top width="10%" height=330>
+      <DIV align=left>
+      <P><FONT face="Comic Sans MS" size=2><FONT face=Arial size=2 
+      align="center"><A 
+      href="http://www.aaai.org/AITopics/html/multi.html#good">Good Places to 
+      Start</A></FONT></FONT></P>
+      <P><FONT face="Comic Sans MS" size=2><FONT face=Arial size=2><A 
+      href="http://www.aaai.org/AITopics/html/multi.html#readon">Readings 
+      Online</A></FONT></FONT></P>
+      <P><FONT face="Comic Sans MS" size=2><FONT face=Arial size=2><A 
+      href="http://www.aaai.org/AITopics/html/multi.html#web">Related Web 
+      Sites</A></FONT></FONT></P>
+      <P><FONT face=Arial size=2><A 
+      href="http://www.aaai.org/AITopics/html/multi.html#pages">Related 
+      Pages</A></FONT></P>
+      <P><FONT face=Arial size=2><A 
+      href="http://www.aaai.org/AITopics/html/multi.html#more">More Readings</A> 
+      <BR>(<I>see</I> <A 
+      href="http://www.aaai.org/AITopics/html/springbd.html#online">FAQ</A>)</FONT></P>
+      <P><FONT face=Arial size=2><A 
+      href="http://www.aaai.org/AITopics/newstopics/main.html">Recent News about 
+      THE TOPICS </A>(annotated)</FONT></P>
+      <P><FONT face="Comic Sans MS" size=2><FONT size=1><BR></FONT></FONT><FONT 
+      face="Comic Sans MS" size=2><FONT face="Comic Sans MS" size=2><FONT 
+      size=1><BR></FONT></FONT></FONT></P></DIV>
+      <DIV align=center>
+      <P>&nbsp;</P></DIV></TD>
+    <TD vAlign=bottom width="2%">&nbsp; 
+      <DIV align=left></DIV></TD>
+    <TD vAlign=top bgColor=#ffffff colSpan=3><!-- #BeginEditable "text" -->
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TD width="22%" bgColor=#ffffff height=74>
+            <DIV align=center><FONT face=Arial><IMG height=96 
+            alt="photo of Katia Sycara" 
+            src="Multi-Agent Systems_files/sycara.gif" width=72></FONT></DIV></TD>
+          <TD width="78%" height=74>
+            <DIV align=center>
+            <P><FONT face=Arial size=3><A id=ks2 name=ks2></A>The 
+            characteristics of MASs are that (1) each agent has incomplete 
+            information or capabilities for solving the problem and, thus, has a 
+            limited viewpoint; (2) there is no system global control; (3) data 
+            are decentralized; and (4) computation is asynchronous. 
+            </FONT></P><FONT face=Arial size=3>- <A 
+            href="http://www.aaai.org/AITopics/html/multi.html#ks">Katia 
+            Sycara</A></FONT></DIV></TD></TR></TBODY></TABLE>
+      <P><FONT face=Arial size=3>The study of multiagent systems <A 
+      name=mas></A>(MAS) focuses on systems in which many intelligent agents 
+      interact with each other. The agents are considered to be autonomous 
+      entities, such as software programs or robots. Their interactions can be 
+      either cooperative or selfish. That is, the agents can share a common goal 
+      (e.g. an ant colony), or they can pursue their own interests (as in the 
+      free market economy). </FONT></P>
+      <P><FONT face=Arial size=3>MAS researchers develop communications 
+      languages, interaction protocols, and agent architectures that facilitate 
+      the development of multiagent systems. For example, a MAS researcher can 
+      tell you how to program each ant in a colony in order to get them all to 
+      bring food to the nest in the most efficient manner, or how to set up 
+      rules so that a group of selfish agents will work together to accomplish a 
+      given task. MAS researchers draw on ideas from many disciplines outside of 
+      AI, including biology, sociology, economics, organization and management 
+      science, complex systems, and philosophy.</FONT></P>
+      <HR>
+
+      <P><FONT face=Arial><B><FONT size=3><A name=good></A>Good Places to 
+      Start</FONT></B></FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.herring.com/insider/2002/0109/1004.html">The Smartest 
+      Agents Will Learn to Be Team Players</A>. By Christopher Locke. Red 
+      Herring (January 9, 2002). "An example of how the system would work is a 
+      crisis situation -- say, planning the evacuation of American citizens from 
+      a foreign city during a conflict. In this scenario, each agent in a 
+      multi-agent team would be assigned a specific task, like plotting an 
+      evacuation route, forecasting the weather, or laying out a flight plan. 
+      All of the agents would cooperate and gather data to determine the optimal 
+      choices."</FONT></P>
+      <P><FONT face=Arial size=3><A name=ks></A><A 
+      href="http://www.aaai.org/Resources/Papers/AIMag19-02-007.pdf">MultiAgent 
+      Systems</A>. By Katia Sycara (1998). AI Magazine 19(2). Discusses the need 
+      for multiple agent systems communicating peer-to-peer. (See <A 
+      href="http://www.aaai.org/AITopics/html/multi.html#ks2">quote</A> 
+      above.)</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.it-director.com/article.php?articleid=11774">Multi-agent 
+      technology: removing the 'artificial' from AI</A>. By Fran Howarth. 
+      IT-Director.com (March 18, 2004). </FONT><FONT face=Arial>"<FONT 
+      size=3>Agents are small software programs that communicate with each 
+      other, acting behaviorally to interact and respond, matching available 
+      resources to demand. ... In a multi-agent system, each agent communicates 
+      with the network of agents, considering options for matching its 
+      capabilities with demand, negotiating on such constraints as quality, 
+      price and time, and then making decisions for committing resources to 
+      match demand."</FONT></FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.asap.cs.nott.ac.uk/themes/ma.shtml">Intelligent Agents 
+      and Multi-Agents</A>. From ASAP, the Automated Scheduling, Optimisation 
+      and Planning group, School of Computer Science and Information Technology, 
+      University of Nottingham. "Agent theory concerns the definition of agents 
+      and Multi-agent systems, properties, architectures, communication, 
+      cooperation and coordination capabilities. The practical side concerns the 
+      agent languages and platforms for programming and experimenting with 
+      agents. ... Several researchers have proposed formal definitions for 
+      agents and multi-agent systems, we retain the following...."</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://dsonline.computer.org/agents/agentsabout.htm">About 
+      Distributed Agents</A> from <A 
+      href="http://www.aaai.org/AITopics/html/multi.html#dsonline">IEEE 
+      Distributed Systems Online</A>: "The research areas of multi-agent systems 
+      and distributed systems coincide, and form the research area of 
+      distributed agent computing. In short, multi-agent systems are often 
+      distributed systems, and distributed systems are platforms to support 
+      multi-agent systems." Also see:</FONT></P>
+      <UL>
+        <LI><FONT face=Arial size=3><A 
+        href="http://dsonline.computer.org/agents/agentsprojects.htm">Distributed 
+        Agent Projects</A></FONT> 
+        <LI><FONT face=Arial size=3><A 
+        href="http://dsonline.computer.org/agents/agentsreferences.htm">Reference 
+        Material</A></FONT> 
+        <LI><FONT face=Arial size=3>... <A 
+        href="http://dsonline.computer.org/agents/index.htm">and more</A></FONT> 
+        </LI></UL>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.acm.org/pubs/articles/journals/surveys/1995-27-3/p340-lesser/p340-lesser.pdf">Multiagent 
+      Systems: An Emerging Subdiscipline of AI</A>. Victor R. Lesser (1995). ACM 
+      Computing Surveys, 27 (3): 340 -342. "As more AI applications are being 
+      formulated in terms of spatially, functionally, or temporally distributed 
+      processing, multiagent systems (or what was previously called distributed 
+      AI) are emerging as an important subdiscipline of AI. ... In general 
+      multiagent systems are computational systems in which several 
+      semi-autonomous agents interact or work together to perform some set of 
+      tasks or satisfy some set of goals."</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.acm.org/crossroads/xrds5-4/multiagent.html">Standardization 
+      of Multi-Agent System Frameworks</A>. By Roberto A. Flores-Mendez. <HTTP: 
+      current-logo.gif archive images crossroads www.acm.org><HTTP: images 
+      crossroads www.acm.org acmlogo.gif>ACM Crossroads, 5(4). "This article 
+      briefly describes these groups' efforts toward the standardization of 
+      multi-agent system architectures, and outlines early work at the 
+      University of Calgary to define multi-agent systems architectures. 
+      However, the main objective of this article is to give the reader a basic 
+      overview of the background and terminology in this exciting area of 
+      research."</FONT></P>
+      <P><FONT face=Arial size=3>To find out what <A 
+      href="http://www.aaai.org/AITopics/html/name.html#pandemonium">Pandemonium 
+      &amp; Demons</A> have to do with MAS, see our <A 
+      href="http://www.aaai.org/AITopics/html/name.html#pandemonium">Namesakes</A> 
+      page.</FONT></P>
+      <P><FONT face=Arial size=3><B><A name=readon></A>Readings 
+      Online</B></FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.aaai.org/Library/Magazine/Vol22/22-02/vol22-02.html">Multiagent 
+      Systems: A Modern Approach to Distributed Artificial Intelligence</A>. 
+      Reviewed by Julie A. Adams. AI Magazine 22(2): 105-108 (Summer 2001). " As 
+      the title indicates, Multiagent Systems: A Modern Approach to Distributed 
+      Artificial Intelligence covers the design and development of multiagent 
+      and distributed AI systems. The purpose of this book is to provide a 
+      comprehensive overview of the field. It is an excellent collection of 
+      closely related papers that provides a wonderful introduction to 
+      multiagent systems and distributed AI."</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.apcmag.com/apc/v3.nsf/0/C89F335A82CCA4BBCA256DEC00036F27">AI 
+      think, therefore I am</A>. Virtual agents feature - Computerised 
+      characters that look, sound, move and seemingly think like real people are 
+      emerging from the realms of science fiction into everyday life. Superguide 
+      by David Braue. apcmag.com (December 16, 2003). "'We have agents embedded 
+      in trucks, excavators and individuals [robots] in order to mine the right 
+      material at the right time,' says Hugh Durrant-Whyte, research director at 
+      CEAS [Centre of Excellence in Autonomous Systems]. 'We do not approach it 
+      at all from a human point of view -- robots are really physical 
+      embodiments of agents. They wont discuss Plato with you, but they can 
+      work 24 hours a day and have cooperation and negotiation strategies [to 
+      interact with each other].'"</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.economist.com/science/displaystory.cfm?story_id=2121720">Agents 
+      of creation</A> - Artificial agents can model complex systems. The 
+      Economist (October 9, 2003). "In this context, an agent is a program that 
+      acts in a self-interested manner in its dealings with numerous other 
+      agents inside a computer. This arrangement can mimic almost any 
+      interactive system: a stockmarket; a habitat; even a business 
+      supply-chain."</FONT></P>
+      <P><FONT face=Arial><A 
+      href="http://www.aaai.org/Resources/President/president.html"><FONT 
+      size=3>Collaborative Systems</FONT></A><FONT size=3>: 1994 AAAI 
+      Presidential Address. By Barbara Grosz. 1996. AI Magazine 17(2), 
+      67-85.</FONT></FONT></P>
+      <P><FONT face=Arial><A 
+      href="http://www.cs.iastate.edu/~honavar/agent99.pdf"><FONT 
+      size=3>Tutorial on Intelligent Agents and Multiagent 
+      Systems</FONT></A><FONT size=3>. By Vasant Honavar, Department of Computer 
+      Science, Iowa State University.</FONT></FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://csdl.computer.org/comp/mags/ex/2004/05/x5toc.htm">Dependable 
+      Agent Systems</A>. IEEE Intelligent Systems Special Issue (Volume 19, 
+      Number 5; September/October 2004). "It is well known that building 
+      dependable software systems for dynamic environments is difficult. It is 
+      also well known that building large-scale distributed software systems is 
+      difficult. The relatively few attempts to combine these two tasks confirm 
+      that successfully building large-scale distributed systems with 
+      predictable dependability properties is exceptionally difficult. The 
+      articles in this special issue of IEEE Intelligent Systems deal with this 
+      issue and discuss an emerging and exciting new approach to building these 
+      most challenging kinds of systems. " - Abstract: <A 
+      href="http://csdl.computer.org/comp/mags/ex/2004/05/x5020abs.htm">Guest 
+      Editors' Introduction</A></FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://jasss.soc.surrey.ac.uk/JASSS.html">Journal of Artificial 
+      Societies and Social Simulation</A>, "an inter-disciplinary journal for 
+      the exploration and understanding of social processes by means of computer 
+      simulation."</FONT></P>
+      <P><FONT face=Arial><A name=game></A><A 
+      href="http://cognet.mit.edu/MITECS/Entry/koller"><FONT size=3>Game 
+      Theory</FONT></A><FONT size=3>. Daphne Koller's article for the MIT 
+      Encyclopedia of Cognitive Science. "Game theory is a mathematical 
+      framework designed for analyzing the interaction between several agents 
+      whose decisions affect each other. In a game-theoretic analysis, an 
+      interactive situation is described as a <EM>game</EM>: an abstract 
+      description of the players (agents), the courses of actions available to 
+      them, and their preferences over the possible outcomes. ... Unlike 
+      decision making for a single agent, in the multiagent case this assumption 
+      is not enough to define an 'optimal decision,' because the agent cannot 
+      unilaterally control the outcome." In addition to her overview, you'll 
+      find references, readings, and links to other resources.</FONT></FONT></P>
+      <UL>
+        <LI><FONT face=Arial size=3>Also see: </FONT>
+        <UL>
+          <LI><FONT face=Arial size=3><A 
+          href="http://www.sciam.com/askexpert_question.cfm?chanID=sa005&amp;articleID=000B8A10-F94C-1ECC-8E1C809EC588EF21&amp;pageNumber=1&amp;catID=3">What 
+          is game theory and what are some of its applications?</A> Explained by 
+          Saul I. Gass. Scientific American - Ask the Experts (June 2, 
+          2003).</FONT> 
+          <LI><FONT face=Arial size=3><A 
+          href="http://www.aaai.org/AITopics/html/games.html#shor">Game Theory 
+          .net</A> where you'll find lecture notes, news, games, dictionary, 
+          interactive materials, links to journals, and much more.</FONT> 
+        </LI></UL></LI></UL>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.trnmag.com/Stories/2002/091802/Software_agents_ask_for_help_091802.html">Software 
+      agents ask for help</A>. By Kimberly Patch, Technology Research News 
+      (September 18/25, 2002). "If you're good at something, people naturally 
+      ask your advice about it. Researchers from the University of Porto in 
+      Portugal are tapping this learning strategy by programming tiny bits of 
+      software, called agents, to ask other agents for help as the group figures 
+      out how to control the timing of traffic lights." </FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.technologyreview.com/articles/wo_patch031903.asp">On the 
+      Backs of Ants</A> - New networks mimic the behavior of insects and 
+      bacteria. By Kimberly Patch. Technology Review (March 19, 2003). "Drawing 
+      heavily on the chemistry of biology, researchers from Humboldt University 
+      in Germany have devised a way for electronic agents to efficiently 
+      assemble a network without relying on a central plan." </FONT></P>
+      <P><FONT face=Arial><A 
+      href="http://www.cs.cmu.edu/afs/cs/usr/pstone/public/papers/97MAS-survey/revised-survey.html"><FONT 
+      size=3>Multiagent Systems: A Survey from a Machine Learning 
+      Perspective</FONT></A><FONT size=3>. By Peter Stone and Manuela Veloso, 
+      Computer Science Department, Carnegie Mellon University. "Distributed 
+      Artificial Intelligence (DAI) has existed as a subfield of AI for less 
+      than two decades. DAI is concerned with systems that consist of multiple 
+      independent entities that interact in a domain. Traditionally, DAI has 
+      been divided into two sub-disciplines: Distributed Problem Solving (DPS) 
+      focusses on the information management aspects of systems with several 
+      branches working together towards a common goal; Multiagent Systems (MAS) 
+      deals with behavior management in collections of several independent 
+      entities, or agents. This survey of MAS is intended to serve as an 
+      introduction to the field and as an organizational 
+      framework."</FONT></FONT></P>
+      <UL>
+        <LI><FONT face=Arial size=3><A 
+        href="http://www.cs.cmu.edu/afs/cs/usr/pstone/public/papers/97MAS-survey/node2.html">Multiagent 
+        Systems</A>: "The most important reason to use MAS when designing a 
+        system is that some domains require it. In particular, if there are 
+        different people or organizations with different (possibly conflicting) 
+        goals and proprietary information, then a multiagent system is needed to 
+        handle their interactions. Even if each organization wants to model its 
+        internal affairs with a single system, the organizations will not give 
+        authority to any single person to build a system that represents them 
+        all: the different organizations will need their own systems that 
+        reflect their capabilities and priorities." </FONT>
+        <LI><FONT face=Arial size=3><A 
+        href="http://www.cs.cmu.edu/afs/cs/usr/pstone/public/papers/97MAS-survey/node40.html">Robotic 
+        Soccer</A>: Several multiagent domains have been mentioned throughout 
+        the course of this survey, including design, planning, entertainment, 
+        games, air-traffic control, air combat, personal assistants, 
+        load-balancing, and robotic leg control. In this section a single domain 
+        which embodies most multiagent issues is presented. </FONT></LI></UL>
+      <P><FONT face=Arial size=3><B><A name=web></A>Related Web 
+      Sites</B></FONT></P>
+      <P><FONT face=Arial size=3><A name=econ></A><A 
+      href="http://www.econ.iastate.edu/tesfatsi/ace.htm">ACE</A>. "Agent-based 
+      computational economics (ACE) is the computational study of economies 
+      modelled as evolving systems of autonomous interacting agents. ACE is thus 
+      a specialization to economics of the basic complex adaptive systems 
+      paradigm." Maintained by Leigh Tesfatsion, Department of Economics, Iowa 
+      State University. The site offers links to a variety of helpful 
+      resources.</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://en.afit.af.mil/ai/default.htm">Agent Lab Homepage.</A> "The 
+      goal of the AFIT Lab is to bring together researchers with various 
+      expertise to solve interesting problems in the area of multi-agent systems 
+      development and agent security." </FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.casos.ece.cmu.edu/home_frame.html">CASOS</A>. 
+      Computational Analysis of Social and Organizational Systems. "Gourps, 
+      organizations, and societies are inherently computational and 
+      computational multi-agent systems are inherently organizational. Thus, 
+      within CASOS we attempt to understand and formally model two distinct but 
+      complimentary types of phenomena. The first is the natural or human group, 
+      organizational or society, which is universally informatted and 
+      continually acquires, manipulates, and produces information (and possibly 
+      other material goods) through the joint, and interlocked activities of 
+      people and automated information technologies. The second is the 
+      artificial computational systems which is generally comprised of multiple 
+      distributed agents who can mutually influence, constrain and suppurt each 
+      other as they try to manage and manipulate the knowledge, communication 
+      and interaction networks in which they are embedded. Computational 
+      analysis is used to develop a better understanding of the fundamental 
+      priciples of organizing, coordinating, and managing multiple information 
+      processing agents (whether they are human, WebBot, or robots) and the 
+      fundamental dynamic nature of groups, organizations and societies." - from 
+      their <A href="http://www.casos.ece.cmu.edu/mission_frame.html">Mission 
+      Statement</A></FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.coro.caltech.edu/">CORO</A>. Collective Robotics Research 
+      Group at the Center for Neuromorphic Systems Engineering at the California 
+      Institute of Technology. "The use of multiple mobile robots offers 
+      significant advantages over the use of single mobile robots: key features 
+      are the possibility of distributed sensing, distributed action, task 
+      dependent reconfigurability, and the enabling of robustness and system 
+      reliability through redundancy. There are several approaches for 
+      controlling systems of multiple mobile robots: most of them, rooted in the 
+      conventional artificial intelligence paradigm, base on complex robots that 
+      build and maintain internal models relevant to the task, and communicate 
+      only explicitly with other robots and external agents including humans. In 
+      the CORO group, we focus instead on the application of Swarm Intelligence 
+      principles, where local interactions among robots and between robots and 
+      environment play a crucial role for achieving the required 
+      task."</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://coabs.globalinfotek.com/">Control of Agent Based Systems</A>. 
+      Defense Advanced Research Projects Agency (DARPA), U.S. Department of 
+      Defense. Overviews and detailed descriptions of military research projects 
+      involving agents. </FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.soc.surrey.ac.uk/research/simsoc/dai.html">Distributed 
+      Artificial Intelligence links</A> from the Department of Sociology, 
+      University of Surrey.</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.ifi.unizh.ch/groups/ailab/projects/flocking/">The 
+      Flocking Robots Project</A> at the Artificial Intelligence Laboratory, 
+      Department of Information Technology, University of Zurich. "Flocking 
+      adresses a variety of important topics in the field of multiagent 
+      simulation and collective robotics which include agent interaction, kin 
+      recognition, and finally the emergence of collective behavior." And their 
+      flocking applet is simply beautiful! </FONT><FONT face="Comic Sans MS" 
+      size=3>
+      <UL>
+        <LI><FONT face=Arial>For related information, also see: <A 
+        href="http://www.aaai.org/AITopics/html/alife.html#boid">Boids</A></FONT> 
+        </LI></UL></FONT>
+      <P><FONT face=Arial size=3><A name=dsonline></A>"<A 
+      href="http://dsonline.computer.org/index.htm">IEEE Distributed Systems 
+      Online</A> aims to promote professional awareness of developments, trends, 
+      activities, and editorial coverage in the distributed systems field and 
+      provide online support for Internet Computing and Pervasive Computing. 
+      IEEE DS Online hopes to serve as a springboard for building a stronger 
+      distributed systems community and offer researchers, students, educators, 
+      application developers, and program managers a forum for sharing ideas and 
+      discussing projects." Topic areas include: Cluster Computing, 
+      Collaborative Computing, Dependable Systems, Distributed Agents, 
+      Distributed Databases, Distributed Multimedia, Grid Computing, Middleware, 
+      Mobile &amp; Pervasive, Operating Systems, Parallel Processing, Real Time 
+      &amp; Embedded, Security, Web Systems.</FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://dis.cs.umass.edu/research/agents-learn.html">Learning in 
+      Multi-Agent Systems: Webliography.</A> By M. V. Nagendra Prasad 
+      (University of Massachusetts, Amherst) and Thomas Haynes (University of 
+      Tulsa), Links to research sites, projects, conferences, journals and more. 
+      </FONT></P>
+      <P><FONT face=Arial size=3><A href="http://www.multiagent.com/">MultiAgent 
+      Systems</A>. "This site contains pointers to information about multiagent 
+      systems, including both research and industrial references. The front page 
+      also has breaking news of some relevance." Maintained by Jos頊 M 
+      Vidal.</FONT></P>
+      <P><FONT face=Arial><A 
+      href="http://www-2.cs.cmu.edu/~softagents/multi.html"><FONT 
+      size=3>Multi-Agent Systems</FONT></A><FONT size=3> at The Intell1igent 
+      Software Agents Group, Robotics Institute, Carnegie Mellon University. Be 
+      sure to scroll down their page to their collection of "Applications of 
+      Multi-Agent Research."</FONT></FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://mas.cs.umass.edu/index.shtml">The Multi-Agent Systems 
+      Laboratory</A> at the Department of Computer Science at the University of 
+      Massachusetts at Amherst. "[This lab] is concerned with the development 
+      and analysis of sophisticated AI problem-solving and control architectures 
+      for both single-agent and multiple-agent systems. The laboratory has 
+      pioneered work in the development of the blackboard architecture, 
+      approximate processing for use in control and real-time AI, and a wide 
+      variety of techniques for coordination of multiple agents." </FONT></P>
+      <P><FONT face=Arial size=3><A 
+      href="http://www.ai.sri.com/~oaa/main.html">Open Agent Architecture</A> - 
+      A framework for integrating a community of heterogeneous software agents 
+      in a distributed environment. From SRI's Artificial Intelligence Center. 
+      </FONT><FONT face="Comic Sans MS" size=3>
+      <UL>
+        <LI><FONT face=Arial>Videos of OAA are also available from SRI. Just 
+        scroll down to the "Planning and Simulation" section in their<A 
+        href="http://www.ai.sri.com/videos/"> Video Archive</A>.</FONT> 
+      </LI></UL></FONT>
+      <P><FONT face=Arial size=3>"The <A 
+      href="http://ist.psu.edu/TeamAgents/index.htm">Research Center for 
+      Team-Based Agents</A> [School of Information Sciences and Technology, The 
+      Pennsylvania State University] aims to develop agents with 'team 
+      intelligence', which enables them to support and enhance collaborative 
+      activities of teams, which may include both human users and software 
+      agents. The center's research will build on the findings and theories 
+      about effective human team behaviors and incorporate them into intelligent 
+      agent technologies."</FONT></P>
+      <P><FONT face=Arial size=3><A href="http://www.swarm.org/intro.html">Swarm 
+      Development Group</A> "Swarm is a software package for multi-agent 
+      simulation of complex systems, originally developed at the Santa Fe 
+      Institute. Swarm is intended to be a useful tool for researchers in a 
+      variety of disciplines. The basic architecture of Swarm is the simulation 
+      of collections of concurrently interacting agents: with this architecture, 
+      we can implement a large variety of agent based models." Be sure to check 
+      out the demos, tutorial, and the other resources they offer.</FONT> </P>
+      <P><FONT face=Arial size=3><B><A name=pages></A>Related Pages 
+      </B></FONT></P>
+      <UL>
+        <LI><FONT face=Arial size=3>General Index to AI in the news: <A 
+        href="http://www.aaai.org/AITopics/newstopics/agents.html">Agents</A></FONT> 
+
+        <LI><FONT face=Arial size=3><A 
+        href="http://www.aaai.org/AITopics/html/alife.html">Artificial 
+        Life</A></FONT> 
+        <LI><FONT face=Arial size=3><A 
+        href="http://www.aaai.org/AITopics/html/natintell.html">Nature of 
+        Intelligence</A></FONT> 
+        <LI><FONT face=Arial size=3><A 
+        href="http://www.aaai.org/AITopics/html/robots.html">Robots</A></FONT> 
+        <LI><FONT face=Arial size=3><A 
+        href="http://www.aaai.org/AITopics/html/social.html">Social 
+        Science</A></FONT> 
+        <LI><FONT face=Arial size=3><A 
+        href="http://www.aaai.org/AITopics/html/webagent.html">Web-Searching 
+        Agents</A></FONT> </LI></UL>
+      <P></P>
+      <P><FONT face=Arial size=3><B><A name=more></A>More 
+Readings</B></FONT></P>
+      <P><FONT face=Arial size=3>Durfee, Edmund H. 1992. What Your Computer 
+      Really Needs to Know You Learned in Kindergarten. In Proceedings of the 
+      10th National Conference on Artificial Intelligence, 858-864. San Jose, 
+      CA: AAAI Press. </FONT></P>
+      <P><FONT face=Arial size=3>Ferber, Jacques. 1998. Multi-Agent Systems: 
+      Towards a Collective Intelligence. Reading, MA: Addison-Wesley. 
+</FONT></P>
+      <P><FONT face=Arial size=3>Lesser, Victor., editor. 1995. Proceedings of 
+      the First International Conference on Multiagent Systems. Menlo Park, CA: 
+      AAAI Press. </FONT></P>
+      <P><FONT face=Arial size=3>Tokoro, Mario, editor. 1996. Proceedings of the 
+      Second International Conference on Multiagent Systems. Menlo Park, CA: 
+      AAAI Press. Topics cover coordination, distributed planning, implementing 
+      multi-agent systems, market-oriented approaches, multiagent applications, 
+      multiagent learning, multiagent search, mutual knowledge, negotiation, 
+      organizational aspects, real-world agents, situated agents, sociability, 
+      and teams of agents. </FONT></P><!-- #EndEditable --><!-- InstanceBeginEditable name="EditRegion1" -->
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TD width="50%">
+            <DIV align=center><FONT face="Comic Sans MS" size=3><A 
+            href="http://www.aaai.org/AITopics/html/notices.html#fairuse"><FONT 
+            face=Arial size=2>Fair Use Notice</FONT></A></FONT></DIV></TD>
+          <TD width="50%">
+            <DIV align=center><FONT face="Comic Sans MS" size=3><FONT face=Arial 
+            size=2><A 
+            href="http://www.aaai.org/AITopics/html/notices.html#copy">©</A></FONT></FONT><FONT 
+            face=Arial size=2><A 
+            href="http://www.aaai.org/AITopics/html/notices.html#copy">2000 - 
+            2004 by AAAI</A></FONT></DIV></TD></TR></TBODY></TABLE><!-- InstanceEndEditable --></TD></TR></TBODY></TABLE><!-- InstanceEnd --></BODY></HTML>

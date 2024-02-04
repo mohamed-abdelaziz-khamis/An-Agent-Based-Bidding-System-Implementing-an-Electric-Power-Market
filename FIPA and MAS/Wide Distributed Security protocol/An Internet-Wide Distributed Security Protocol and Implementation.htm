@@ -1,0 +1,216 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0048)http://jmvidal.cse.sc.edu/papers/blurbs/dsp.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>An Internet-Wide Distributed Security Protocol and Implementation</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><LINK 
+href="/favicon.ico" rel="shortcut icon"><LINK 
+href="An Internet-Wide Distributed Security Protocol and Implementation_files/style.css" 
+rel=stylesheet>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H1>An Internet-Wide Distributed Security Protocol and Implementation</H1>
+<H2>José M. Vidal</H2>
+<H3>University of South Carolina</H3></CENTER>
+<H2>Introduction</H2>
+<P>As the Internet becomes the backbone of a growing part of the world's 
+business and social activities, our need to guarantee its safety becomes a 
+pressing concern. One of the biggest risks to the Internet's survivability is 
+the growing number of distributed and automated attacks by malicious intruders. 
+The security industry has concentrated on the development of automated security 
+programs that detect problems at a specific computer. These programs never use 
+the Internet as a communications medium, except when downloading updates from a 
+central server---usually owned by the same company that produced the program. 
+Security consortiums, on the other hand, concentrate on the publication of 
+security alerts aimed at system administrators. None of these approaches manages 
+to leverage the distributed automated nature of the Internet to serve as a 
+vehicle for its own survival. Meanwhile, more and more security incidents 
+consist of a large series of widely distributed exploits, involving numerous 
+systems, networks, operating systems and applications. Intruders often 
+compromise multiple systems when they attack a target site. We know that at each 
+compromised system there may be signs of intrusive activities which, if gathered 
+automatically and analyzed in a timely manner, could lead to the discovery of 
+the attack. However, the domain languages and interaction protocols that are 
+needed do not exist. The industrial security vendors are not interested in the 
+development of an open automated system that could eliminate the need for their 
+products. </P>
+<P>The goal of the proposed research is the development of an open Internet-wide 
+distributed security protocol that will allow systems to dynamically detect and 
+respond to security threats that would be otherwise invisible to the individual 
+system (e.g., a computer, a LAN, or a firewall-guarded corporation). We propose 
+to develop: languages for describing suspicious events, interaction protocols 
+for the exchange of these events, and decision processes that agents can use for 
+choosing which action to take. The proposed prototype system will distinguish 
+and deal with distributed attacks on the infrastructure as they happen. It will 
+also form a platform for future research into the dynamic identification and 
+eradication of new attacks. We believe that our interaction and content 
+protocols will serve as enablers to distributed intrusion detection in the same 
+way that HTTP and HTML served to enable the web. </P>
+<P>The proposed project will extend our ongoing efforts in this direction. Over 
+the last year and a half we have built a prototype system that implements some 
+of the basic ideas presented in this proposal. </P>
+<H2>Current System</H2>
+<DIV class=floatright>
+<P><A href="http://jmvidal.cse.sc.edu/papers/blurbs/oldarchitecture.png"><IMG 
+class=float 
+src="An Internet-Wide Distributed Security Protocol and Implementation_files/oldarchitecture-400.png"></A></P>
+<P class=caption><B>Figure 1:</B> Architecture of our current prototype system. 
+Each agent is responsible for a set of computers. The log files produced by the 
+computers are first analyzed by a log file analyzer. Any detected problems 
+become goals for the agent to act on. </P></DIV>
+<P>We have designed and implemented a security framework that provides a service 
+for retrieving the information from a distrusted network. This information is 
+then used to detect intrusions on hosts. The architecture of the project is 
+shown in Figure&nbsp;1. We assume that each domain is represented by an agent. 
+All computers in a domain submit their log files to a central database for that 
+domain. These log files are analyzed by a log analyzer which reports any 
+suspicious events to the agent. The log analyzer merely performs some simple 
+string-matching functions in order to pick out those log entries that are out of 
+the ordinary, or those that report on the current system's status. We expect 
+that the agents will reside in the same machine that runs the firewall for a 
+group of trusted hosts, such as the machines within a company or university. 
+</P>
+<P>While our current implementation ties the agents to specific intrusion 
+detection and log analysis software, the basic architecture allows us to wrap 
+our agents around any of the existing distributed security frameworks. This 
+means that users would not need to abandon their current software systems if 
+they wanted to migrate to our system. They would only need to implement an agent 
+that translates their security events to work with our system. </P>
+<P>In the context of our application an agent is defined as an encapsulated 
+software entity with its own state, behavior, thread of control, and ability to 
+interact and communicate with other entities---including people, other agents, 
+and systems. An agent is autonomous in its action and communicates with other 
+agents using the FIPA-ACL. The agents are implemented using FIPA-OS. Both of 
+these are described in the next section. </P>
+<H2>Proposed System</H2>
+<P>While our prototype system has been shown to work in a laboratory setting, 
+several barriers must be cleared for the system to be eligible for Internet-wide 
+deployment and use. </P>
+<P>
+<OL>
+  <LI>The agents must use a published, semantically-precise language for 
+  describing the events. The list of possible vulnerabilities must be constantly 
+  updated by some industry-wide consortium. 
+  <LI>The agents must use a published and standardized protocol for 
+  communication. 
+  <LI>The knowledge that the agents employ to handle messages must be 
+  represented in such a way that it can itself be sent as a message. </LI></OL>
+<P></P>
+<P>Experience has shown us that a technology must be easy to describe and 
+implement in order for it to succeed in the Internet. That is, new technologies 
+take the form of standards' documents that describe a protocol or data format. 
+If these are simple and useful then many implementations will appear and, 
+eventually, the laws of increasing returns will take over. As such, the proposed 
+system will maintain the interaction protocols as simple as possible while, at 
+the same time, adhering to most widely used Internet standards. </P>
+<H3>Technologies Used</H3>
+<P>Our wish to adhere to the most widely-used Internet standards had to be 
+tempered by the reality that many of the technologies we require have not yet 
+reached maturity. Still, we plan to use the best of what is available at this 
+time. The technologies we plan to use include the <A 
+href="http://cve.mitre.org/">Common Vulnerabilities and Exposures</A>, <A 
+href="http://www.w3c.org/RDF/">RDF</A>, <A href="http://www.daml.org/">DAML</A>, 
+and <A href="http://www.fipa.org/">FIPA</A>. We provide a quick overview of 
+these technologies in the next sections. </P>
+<H3>Architecture</H3>
+<DIV class=floatright>
+<P><A href="http://jmvidal.cse.sc.edu/papers/blurbs/newarchitecture.png"><IMG 
+class=float 
+src="An Internet-Wide Distributed Security Protocol and Implementation_files/newarchitecture-400.png"></A></P>
+<P class=caption><B>Figure 2:</B> Diagram of the proposed architecture. The 
+interaction between the agents will be governed by our interaction protocols. 
+</P></DIV>
+<P>The proposed system has an architecture that, at a high level, is similar to 
+our current system. However, the details are very different. Our proposed 
+research focuses on three areas: the development of a language for describing 
+suspicious events, the development of a suitable interaction protocols, and the 
+development of a method for handling the exchange of knowledge about how to 
+recognize and handle security threats via communications with other agents. 
+These three areas are detailed in the next sections. </P>
+<P>The architecture for our proposed system is shown in Figure&nbsp;2. As with 
+our current system, we envision having one agent handle all the log files for 
+each domain. A domain can be, for example, a company, a university, or some 
+other LAN. As before, the log files are analyzed using one of the available log 
+analyzer which simply strips out all the uninteresting and duplicated 
+information. The results are then all placed in an event log database. The agent 
+monitors the event log database for suspicious events. Notice that our 
+architecture supports the reuse of existing distributed intrusion detection 
+systems by simply wrapping their results with one of our agents or by modifying 
+the systems to use our event language and interaction protocols. </P>
+<P>We envision a system where millions of agents share information, either 
+directly or indirectly, with each other. As such, scalability is a central 
+concern for us. Our protocols are based on a peer-to-peer model where no one 
+agent acts as a central control. Furthermore, we envision the connectivity of 
+the resulting graph to be rather low. That is, each agent should not have to 
+correspond with more than a few hundred other agents. There are, of course, some 
+bootstrapping concerns with these types of systems. The biggest problem is 
+determining how agents find each other. This problem is usually solved with the 
+use of a hierarchical name-resolution system, as used, for example, in DNS. We 
+will investigate the viability of this type of hierarchical system as well as 
+the peer-based discovery mechanisms used by <A 
+href="http://www.gnutella.com/">Gnutella</A> and <A 
+href="http://www.jxta.org/">JXTA</A>. We believe that a peer-based discovery 
+mechanism will work better alongside the reputation management protocols we will 
+develop. </P>
+<P>The authentication and verification problem will be handled in our prototype 
+system with the use of a public-key signature mechanism to verify the identify 
+of the originator of a message. That is, all messages can be signed, if desired, 
+and the receiving agents will be able to verify the signatures by accessing a 
+well-known and trusted key server. As such, we propose to leverage the existing 
+public key infrastructure rather than develop new methods ourselves. </P>
+<P>The agents will use FIPA ACL as the wrapper language and our own RDF-based 
+Event language as the content language. We have again chosen to use FIPA ACL 
+since we feel it is the only well-known language with carefully defined 
+semantics. Unfortunately, this combination is not enough to properly define a 
+system so we will also be defining added interaction protocols. We should also 
+note that our choice of FIPA ACL does not preclude the use of common distributed 
+programming tools such as SOAP, Java RMI, or CORBA. FIPA ACL is defined at a 
+higher semantic level than these tools. In fact, bindings exist for using RMI 
+and IIOP---CORBA's transport protocol---as transport layers for FIPA ACL. We 
+expect that SOAP bindings will soon appear and, in fact, we expect to use 
+HTTP/SOAP as the underlying transport mechanism for our messages since it is the 
+least likely to be blocked by a firewall. </P>
+<P>Our agent implementations will use a rule-based system such as <A 
+href="http://herzberg.ca.sandia.gov/jess/">Jess</A> since it will give us the 
+flexibility we need to implement the domain knowledge. The agents will use the 
+knowledge base to determine what to do with a message they have received and 
+what messages to send. The knowledge base allows agents to perform 
+signature-based and anomaly-based intrusion detection as well as to maintain 
+cooperative relationships with other agents. </P>
+<H2>Impact of Research</H2>
+<P>The implementation of the proposed system will result in both short and long 
+term benefits. The short term benefits include the development of a distributed, 
+robust, open, intrusion-detection and management system. If successful the 
+system will offer unprecedented automatic management of security problems on the 
+Internet. It will be able to discover anomalies and possible attacks which would 
+be impossible to detect from any single location in the Internet. Currently, the 
+most troublesome security problem have an automated aspect to them, that is, 
+they rely on autonomous programs to do some of the work. As the popularity of 
+these automated attacks grows in number we must start to use similar and even 
+more sophisticated techniques in order to contain them. </P>
+<P>The long term benefits of the proposed project include the generation of a 
+wealth of data which will a ready candidate for the application of data mining 
+techniques. Specifically, we envision the possibility of using data mining 
+techniques, along with some machine learning algorithms, in order to develop 
+algorithms which can discern new distributed attacks and generate rules for 
+their detection and defeat. The proposed project will also foster the future 
+development of scalable reputation mechanisms. In this project we propose to 
+build some rudimentary reputation management mechanisms which will allow agents 
+to form opinions of other agents and pass these around. However, a more flexible 
+system would extend this basic research and allow the agents to dynamically 
+generate trust measures, form alliances, sign contracts, form trust 
+relationships, etc. These type of sophisticated social contracts, when better 
+understood, will greatly aid in reducing the amount of communication needed. As 
+such, they will aid in allowing the system to scale up to millions of agents 
+without any bottlenecks. </P>
+<P>Finally, we stress once again that we view the main contribution of the 
+proposed work as the development of easy-to-use but powerful event languages and 
+interaction protocols for distributed security management. Our prototype 
+implementation is only meant to be a testbed for our ideas. We want to merge 
+current research from multiagent systems, ontologies, and security in order to 
+come up with the equivalent of HTTP/HTML for distributed security systems. </P>
+<HR>
+
+<ADDRESS><A href="mailto:vidal@sc.edu">Jose M Vidal</A>- 
+http://jmvidal.cse.sc.edu</ADDRESS>This paper is available at 
+http://jmvidal.cse.sc.edu/papers/blurbs/dsp.html <BR><!-- Created: Fri Jun  7 20:22:16 EDT 2002 --><!-- hhmts start -->Last 
+modified: Sat Jun 8 15:00:35 EDT 2002 <!-- hhmts end --></BODY></HTML>

@@ -1,0 +1,11 @@
+to run the AUML program(idk)
+1- go to Control Panel
+2- System
+3- Advanced
+4- Environment Variables
+5- go to PATH
+6- Press Edit
+7- write ; and write the path of J2SDK bin folder
+8- use command prompt If you are in the foo dir, it can be run directly with
+9- write 
+   foo> java –jar lib/ingeniaseditor.jar

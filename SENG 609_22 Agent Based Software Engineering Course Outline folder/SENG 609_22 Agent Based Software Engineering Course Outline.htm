@@ -1,0 +1,1228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0059)http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/ -->
+<HTML><HEAD><TITLE>SENG 609.22: Agent Based Software Engineering: Course Outline</TITLE>
+<META http-equiv=Content-Type content=text/html;CHARSET=iso-8859-1>
+<SCRIPT language=JavaScript>
+<!--
+// name - name of the cookie
+// value - value of the cookie
+// [expires] - expiration date of the cookie (defaults to end of current session)
+// [path] - path for which the cookie is valid (defaults to path of calling document)
+// [domain] - domain for which the cookie is valid (defaults to domain of calling document)
+// [secure] - Boolean value indicating if the cookie transmission requires a secure transmission
+// * an argument defaults when it is assigned null as a placeholder
+// * a null placeholder is not required for trailing omitted arguments
+function setCookie(name, value, expires, path, domain, secure) {
+  var curCookie = name + "=" + escape(value) +
+      ((expires) ? "; expires=" + expires.toGMTString() : "") +
+      ((path) ? "; path=" + path : "") +
+      ((domain) ? "; domain=" + domain : "") +
+      ((secure) ? "; secure" : "");
+  document.cookie = curCookie;
+}
+
+// name - name of the desired cookie
+// * return string containing value of specified cookie or null if cookie does not exist
+function getCookie(name) {
+  var dc = document.cookie;
+  var prefix = name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+    begin = dc.indexOf(prefix);
+    if (begin != 0) return null;
+  } else
+    begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end == -1)
+    end = dc.length;
+  return unescape(dc.substring(begin + prefix.length, end));
+}
+
+// name - name of the cookie
+// [path] - path of the cookie (must be same as path used to create cookie)
+// [domain] - domain of the cookie (must be same as domain used to create cookie)
+// * path and domain default if assigned null or omitted if no explicit argument proceeds
+function deleteCookie(name, path, domain) {
+  if (getCookie(name)) {
+    document.cookie = name + "=" + 
+    ((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+    "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+  }
+}
+
+// date - any instance of the Date object
+// * hand all instances of the Date object to this function for "repairs"
+function fixDate(date) {
+  var base = new Date(0);
+  var skew = base.getTime();
+  if (skew > 0)
+    date.setTime(date.getTime() - skew);
+}
+// -->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY vLink=#666666 aLink=#aa0000 link=#aa0000 bgProperties=fixed 
+bgColor=#ffffff 
+background="SENG 609_22 Agent Based Software Engineering Course Outline_files/binder.gif">
+<P>
+<CENTER>
+<TABLE borderColor=red width="80%" bgColor=white border=2>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=middle>
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=right><!-- internal title table starts here. -->
+            <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=middle><IMG 
+                  alt="University of Calgary Logo" 
+                  src="SENG 609_22 Agent Based Software Engineering Course Outline_files/UofC.gif" 
+                  align=middle border=0> </TD></TR>
+              <TR>
+                <TD vAlign=top align=middle><FONT 
+                  face="Verdana, Arial, Helvetica" color=#000000><B>Department 
+                  of Electrical and Computer Engineering</B> </FONT></TD></TR>
+              <TR>
+                <TD vAlign=top align=middle>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top align=middle>
+                  <H1>Agent Based Software Engineering <BR>(SENG 
+                  609.22)<BR>Course Outline</H1></TD></TR>
+              <TR>
+                <TD vAlign=top align=middle><FONT color=#ff0000 size=2>(
+                  <SCRIPT language=JavaScript>
+	document.write("Document Last Updated: " + document.lastModified);
+	</SCRIPT>
+                  ) </FONT></TD></TR></TBODY></TABLE><!-- internal title table ends here. --></TD>
+          <TD vAlign=top align=left><!-- internal title table starts here. -->
+            <TABLE cellSpacing=0 cellPadding=0 width=300 bgColor=cornsilk 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=left><A 
+                  href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/industrial_courses/AGENT.pdf"><IMG 
+                  alt="Course Brochure" 
+                  src="SENG 609_22 Agent Based Software Engineering Course Outline_files/AGENT.jpg" 
+                  border=2 bordercolor="red"></A><BR><FONT color=blue><B>This 
+                  course is also available as an industrial course of the 
+                  <EM>Lecture Series on Software Systems for The Future</EM>. 
+                  Please click on the above image for the 2 pages course 
+                  brochure (PDF format) and contact the <A 
+                  href="mailto:far@ucalgary.ca">series editor</A> for 
+                  reservation. </B></FONT></TD></TR></TBODY></TABLE><!-- internal title table ends here. --></TD></TR></TBODY></TABLE></CENTER>
+      <P></P>
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left><B>Instructor:</B> </TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.enel.ucalgary.ca/People/far">B. H. Far</A> 
+            (Associate Professor, Faculty of Engineering) </TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>Course/Year:</B> </TD>
+          <TD vAlign=top align=left>Software Engineering Course/ Graduate 
+            level </TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>Department:</B> </TD>
+          <TD vAlign=top align=left>Electrical and Computer Engineering </TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>School Year:</B> </TD>
+          <TD vAlign=top align=left>2004 (Fall, 1st quarter) </TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>Timetable:</B> </TD>
+          <TD vAlign=top align=left>Tue. (17:30-20:30) starting 14/9/2004 
+        </TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>Room:</B> </TD>
+          <TD vAlign=top align=left>ICT 518 (located on the 5th Floor, ICT 
+            Building) </TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>Background Courses:</B> </TD>
+          <TD vAlign=top align=left>This is the list of recommended background 
+            courses / knowledge that is necessary to fully understand the 
+            contents: <BR>
+            <UL>
+              <LI>Principles of Software Engineering <BR>
+              <LI>Object-Oriented analysis and design with UML <BR>
+              <LI>Introduction to knowledge-based systems <BR></LI></UL></TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>Lecture Format:</B></TD>
+          <TD vAlign=top align=left>Lecture (1x3 hours sessions per week) 
+          <BR></TD>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>Contact:</B></TD>
+          <TD vAlign=top align=left>Office: ICT 543<BR>Tel. (403) 
+        210-5411</TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>E-Mail:</B></TD>
+          <TD vAlign=top align=left><A 
+            href="mailto:far@ucalgary.ca">far@ucalgary.ca</A></TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp; </TD>
+          <TD vAlign=top align=left>&nbsp; </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><B>Course Outline:</B> </TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22.pdf">Course 
+            Outline (PDF format)</A> </TD></TR></TBODY></TABLE></CENTER>
+      <P></P><PRE>
+</PRE>
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=5 cellPadding=5 width=550 bgColor=cornsilk border=1>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left><FONT face="Verdana, Arial, Helvetica" 
+            color=red><B>Announcements</B> </FONT>
+            <P>
+            <OL>
+              <LI>The first lecture will be delivered on 14/September/2004. 
+            </LI></OL><!--
+  <LI> <FONT COLOR="red"> 27/8/2002:</FONT>Course description and web pages updated.
+  <LI> <FONT COLOR="red"> 27/9/2002:</FONT> 
+	The first sessions will be on 21/10/2002 in the Room ICT 524. 
+  <LI> <FONT COLOR="red"> 24/10/2002:</FONT> 
+	<b>The dates for the sessions are updated. We will have 6x3 hours Monday sessions ending 16/12/2002.</b>
+  <LI> <FONT COLOR="red"> 25/11/2002:</FONT> 
+	<b>Evaluation exam (about 30-40 minutes, mainly multiple choice questions) will be held on Monday 16/12/2002.</b>
+  <LI> <FONT COLOR="red"> 25/11/2002:</FONT> 
+	<b>The deadline for the tutorial report is Friday 20/12/2002.</b>
+  <LI> <FONT COLOR="red"> 25/11/2002:</FONT> 
+	<b>The deadline for the team project is Friday 20/12/2002.</b>
+  <LI> <FONT COLOR="red"> 2/1/2003:</FONT> 
+	<b>Final grades for Fall 2002-03 was posted on 2/1/2003.</b>
+  <LI> Please check the U of C InfoNet for final marks of SENG 609.22 Fall 2003.
+--></TD></TR></TBODY></TABLE></CENTER>
+      <P></P><PRE>
+</PRE>
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left colSpan=2>
+            <H2>Course Description and Outline</H2>
+            <P>The course begins with an overview of the agent systems and 
+            software agents. Then we focus on agent system architecture and 
+            infrastructure from a software engineering viewpoint, including: 
+<BR>
+            <UL>
+              <LI>Requirements for agent-based systems 
+              <LI>Modeling and design of agent-based systems 
+              <LI>Development process for agent-based systems </LI></UL>Topics 
+            such as agent architecture, communication, knowledge sharing, 
+            computing and uncertainty management are discussed. Studying society 
+            of agents and models of agency follows. Finally, a perspective on a 
+            methodology for agent-oriented software engineering and standards 
+            are presented. <BR><IMG alt="Course Outline" 
+            src="SENG 609_22 Agent Based Software Engineering Course Outline_files/outline.jpg"> 
+
+            <P></P>
+            <H2>Course Objectives</H2>Agent-based systems are software products 
+            that not only do things as specified but also have knowledge to do 
+            their job and can do it in a cooperative, coordinative and 
+            competitive way. 
+            <UL>
+              <LI>What are myths and realities of the agent-based systems? 
+              <LI>How to develop an agent-based system for a particular task? 
+              <LI>How to evolve from object-oriented development to agent-based 
+              systems? 
+              <LI>How to incorporate and share knowledge among software agents? 
+              </LI></UL>These are only a few questions that can be answered by 
+            agent-based systems. After taking this course, the participants 
+            <UL>
+              <LI>will have an understanding of the agent system terminology and 
+              development process of agent-based systems. 
+              <LI>will have learned techniques to design agent-based system. 
+              <LI>will know how to modify architecture of the current software 
+              systems and re-structure them to be agent-based. </LI></UL>
+            <H2>Course Web Site</H2>
+            <P>The SENG 609.22 course home page contains links to up-to-date 
+            course information, problem assignments announcements, as well as 
+            laboratory and examination scheduling. The SENG 609.22 course home 
+            page is available through the B.H. Far's home page at the URL: 
+            <BR>(<A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/"> 
+            http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/</A>) 
+</P>
+            <H2>Projects and Laboratories</H2>
+            <P>During the course the students are asked to design a moderately 
+            realistic software agent. A list of projects that the students can 
+            select among them will be posted on the course WWW page. The reports 
+            (design documents) of various phases of the assigned project should 
+            be handed in for check and marking. The reports are reviewed and a 
+            group discussion will be held towards the end of the course. Also 
+            the students are supposed to prepare a tutorial report on various 
+            topics related to software agents and present it to the class. A 
+            typical list of topics for tutorial report about will be posted on 
+            the course WWW site. </P>
+            <H2>Allocation of Marks</H2>
+            <P>Evaluation is based on evaluation test, tutorial and project 
+            reports.
+            <P>
+            <CENTER>
+            <TABLE width=550 border=1>
+              <TBODY>
+              <TR>
+                <TH><I>Criteria</I></TH>
+                <TH><I>Total mark</I></TH>
+                <TH><I>Comments</I></TH></TR><!--
+<tr>
+  <th>Evaluation test</th>
+  <th>20% </th>
+  <td>About 30-40 minutes, mainly multiple choice questions, will be held on Monday 1/12/2003.<BR>
+	<b>Sample Evaluation examination:</b> 
+	<UL>
+	  <LI> Fall 2002: <A HREF="./PDF/final_2002.pdf">(questions)</A> and 
+		<A HREF="./PDF/final_2002_answer.pdf">(answers)</A>.
+	  <LI> Fall 2003: <A HREF="./PDF/final_2003.pdf">(questions)</A> and 
+		<A HREF="./PDF/final_2003_answer.pdf">(answers)</A>.
+	</UL>
+   </td>
+</tr>
+-->
+              <TR>
+                <TH>Tutorial Report</TH>
+                <TH>40%</TH>
+                <TD>The assignment is composed of two parts: 
+                  <UL>
+                    <LI>a tutorial report on agent-based development 
+                    methodology; and 
+                    <LI>an evaluation report of the methodology. </LI></UL><A 
+                  href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/assignments.pdf"><IMG 
+                  src="SENG 609_22 Agent Based Software Engineering Course Outline_files/print1.gif" 
+                  align=middle border=0> Assignment (PDF format)</A> <BR><FONT 
+                  color=red><B>Deadline: 02/Nov/2004 (Tue)</B></FONT></TD></TR>
+              <TR>
+                <TH>Laboratories (project)</TH>
+                <TH>50%</TH>
+                <TD>A number of sample projects have been posted at the bottom 
+                  of this page. A document explaining a sample project is given 
+                  here: <A 
+                  href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/sample_project.pdf">PDF 
+                  format</A> and <A 
+                  href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/sample_project.ppt">PowerPoint 
+                  format</A>. <BR><A 
+                  href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22_Project_2004.pdf"><IMG 
+                  src="SENG 609_22 Agent Based Software Engineering Course Outline_files/print1.gif" 
+                  align=middle border=0>List of suggested projects</A> <BR><FONT 
+                  color=red><B>Deadline: 02/Nov/2004 (Tue)</B></FONT><BR></TD></TR>
+              <TR>
+                <TH>Group Discussion</TH>
+                <TH>10%</TH>
+                <TD>The students are asked to have the project and the 
+                  tutorials be reviewed by the instructor.</TD></TR><!--
+<tr>
+  <th colspan="3">
+ <font color="red"><B>
+ <A HREF="./PDF/Final_Grades_Fall2004.pdf">Final Grades (Fall 2004)</A> (unofficial)
+ </B></font>
+  </th>
+</tr>
+--></TBODY></TABLE></CENTER>
+            <P></P></TD></TR></TBODY></TABLE></CENTER>
+      <P></P>
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 bgColor=white border=1>
+        <TBODY>
+        <TR bgColor=black>
+          <TH colSpan=2><FONT color=white>Regular Sessions</FONT> </TH></TR>
+        <TR bgColor=#cccc99>
+          <TD vAlign=top align=right><B>1st week</B></TD>
+          <TD vAlign=top align=left><FONT 
+            color=blue><B>14/09/2004:</B></FONT><BR><B>Overview of agent-based 
+            software engineering.</B>
+            <P>In this <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/01/index.html">Overview</A> 
+            basic concepts and a method for agent-based software engineering is 
+            presented. 
+            <P>Slides are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/01/index.html">slide 
+            show version</A>.<BR>Prints are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-01.pdf">PDF 
+            (2 pages per sheet)</A> and <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-01_handout.pdf">PDF 
+            (6 pages per sheet)</A>. </P></TD></TR>
+        <TR bgColor=#cccc99>
+          <TD vAlign=top align=right><B>2nd week</B></TD>
+          <TD vAlign=top align=left><FONT 
+            color=blue><B>21/09/2004:</B></FONT><BR><B>Methodologies for 
+            agent-based modeling, analysis and design.</B>
+            <P>
+            <UL>
+              <LI><A href="http://www.auml.org/">Agent-based Unified Modeling 
+              Language (AUML)</A>: Multiagent systems (MAS) are often 
+              characterized as extensions of object-oriented systems. AUML will 
+              focus on problems and notations needed to support an agent-based 
+              UML. <BR>The following papers will be reviewed: 
+              <OL>
+                <LI>James Odell, et al.&nbsp; : &nbsp;&nbsp;&nbsp; <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/Odell-W001.pdf">Extending 
+                UML for Agents</A>. 
+                <LI>F. Bergenti, et al.&nbsp; : &nbsp;&nbsp;&nbsp; <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/Bergenti-W001.pdf">Exploiting 
+                UML in the Design of Multiagent Systems</A> </LI></OL>
+              <LI>Agent-based analysis and design 
+              <OL>
+                <LI>M. Wooldridge, N. R. Jennings, and D. Kinny. &nbsp; : 
+                &nbsp;&nbsp;&nbsp; <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/aa99.pdf">A 
+                Methodology for Agent-Oriented Analysis and Design</A>. In O. 
+                Etzioni, J. P. Muller, and J. Bradshaw, editors: Agents '99: 
+                Proceedings of the Third International Conference on Autonomous 
+                Agents Seattle, WA, May 1998. 
+                <LI><A href="http://www.agentlab.de/">J. Lind. </A>&nbsp; : 
+                &nbsp;&nbsp;&nbsp; <A 
+                href="http://www.agentlab.de/documents/Lind2000b.ps.gz">The 
+                MASSIVE Development Method for Multiagent Systems</A>. In 
+                Proceedings of the Fifth International Conference on the 
+                Practical Application of Intelligent Agents and Multi-Agents 
+                (PAAM2000), Manchester, 2000. You can also <A 
+                href="http://link.springer.de/link/service/series/0558/tocs/t1994.htm">browse 
+                the book</A> on this method. 
+                <P></P></LI></OL>
+              <LI>Other agent-based analysis and design methods 
+              <OL>
+                <LI>M. Wooldridge, N.R. Jennings, D. Kinny: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P01.pdf">The 
+                Gaia Methodology for Agent-Oriented Analysis and Design</A>, 
+                Autonomous Agents and Multi-Agent Systems, 3, 285-312, 2000. 
+                <LI>S.A. DeLoach, E.T. Matson, Y. Li: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P02.pdf">Applying 
+                Agent Oriented Software Engineering to Cooperative Robotics</A>, 
+                Proceedings of The 15th International FLAIRS Conference (FLAIRS 
+                2002). Pensacola, Florida. May 16-18, 2002. 
+                <LI>L. Padgham and M. Winikoff: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P03.pdf">Prometheus: 
+                A Methodology for Developing Intelligent Agents</A>, Proceedings 
+                of the First International Joint Conference on Autonomous Agents 
+                and Multi-Agent Systems (AAMAS 2002), 2002. 
+                <LI>F. Giunchiglia, J. Mylopoulos, and A. Perini: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P04.pdf">The 
+                tropos software development methodology: processes, models and 
+                diagrams</A>, Proceedings of the first international joint 
+                conference on Autonomous agents and multiagent systems: part 1. 
+                Bologna, Italy, 2002. 
+                <LI>C.A. Iglesias, et al.: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P05.pdf">Analysis 
+                and Design of Multiagent Systems using MAS-CommonKADS</A>, 
+                Proceedings of the AAAI'97 Workshop on Agent Theories, 
+                Architectures and Languages, Providence, USA, July, 1997. 
+                <LI>R. Evans, et al.: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P06.pdf">MESSAGE: 
+                Methodology for Engineering Systems of Software Agents</A>, 
+                EURESCOM Participants in Project P907, EDIN 0223-0907, 2001. 
+                <LI>S. Poslad, et al.: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P07.pdf">The 
+                FIPA-OS agent platform: Open Source for Open Standards</A>, 
+                Proceedings of PAAM 2000, Manchester, UK, pp355-368, 2000. 
+                <LI>A.K. Galan: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P08.pdf">JiVE: 
+                JAFMAS integrated Visual Environment</A>, MSc Thesis, Division 
+                of Research and Advanced Studies of the University of 
+                Cincinnati, 2000. 
+                <LI>M. Garijo, A. Cancer, J.J. Sanchez: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P09.pdf">A 
+                Multiagent System for Cooperative Network-Fault Management</A>, 
+                In Proceedings of the First International Conference on the 
+                Practical Application of Intelligent Agents and Multi-agent 
+                Technology (PAAM-96), pp. 279-294, London, UK, 1996. 
+                <LI>M. Cossentino, C. Potts: <A 
+                href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/references/P10.pdf">A 
+                CASE tool supported methodology for the design of multi-agent 
+                systems</A>, The 2002 International Conference on Software 
+                Engineering Research and Practice (SERP'02) - June 24 - 27, 2002 
+                - Las Vegas (NV), USA, 2002. </LI></OL></LI></UL>Slides are 
+            available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/02/index.html">slide 
+            show version</A>.<BR>Prints are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-02.pdf">PDF 
+            (2 pages per sheet)</A> and <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-02_handout.pdf">PDF 
+            (6 pages per sheet)</A>. </TD></TR>
+        <TR bgColor=#cccc99>
+          <TD vAlign=top align=right><B>3rd week</B></TD>
+          <TD vAlign=top align=left><FONT 
+            color=blue><B>28/09/2004:</B></FONT><BR><B>Agent communication and 
+            knowledge sharing.</B>
+            <P>The following topics will be reviewed: 
+            <OL>
+              <LI>A review on knowledge level communication among software 
+              agents will be presented. First, KQML (Knowledge Query and 
+              Manipulation Language) is presented. KQML is a language and 
+              protocol for exchanging information and knowledge. It is part of a 
+              larger effort, the ARPA Knowledge Sharing Effort which is aimed at 
+              developing techniques and methodology for building large-scale 
+              knowledge bases which are sharable and reusable. The following 
+              Paper will be reviewed:<BR>
+              <UL>
+                <LI><A 
+                href="http://www.cs.umbc.edu/kqml/papers/kqmlacl.pdf">KQML as an 
+                agent communication language</A> &nbsp;&nbsp; Tim Finin, Yannis 
+                Labrou, and James Mayfield, in Jeff Bradshaw (Ed.), <EM>Software 
+                Agents</EM>, MIT Press (1997). </LI></UL>
+              <LI>Knowledge Interchange Format (KIF), a computer-oriented 
+              language for the interchange of knowledge among disparate programs 
+              is presented. KIF has declarative semantics (i.e. the meaning of 
+              expressions in the representation can be understood without appeal 
+              to an interpreter for manipulating those expressions); it is 
+              logically comprehensive (i.e. it provides for the expression of 
+              arbitrary sentences in the first-order predicate calculus); it 
+              provides for the representation of knowledge about the 
+              representation of knowledge; it provides for the representation of 
+              nonmonotonic reasoning rules; and it provides for the definition 
+              of objects, functions, and relations. 
+              <LI>In <A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/04/index.html">Ontology 
+              Engineering</A> review, the concept of ontology and the ways of 
+              constructing ontologies is presented. Also look at the <A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/ontology-tutorial.pdf">ontology 
+              tutorial</A> paper by N.F. Noy and D.L. McGuinness (Stanford 
+              University) about building ontologies. 
+              <P></P></LI></OL><BR>Slides are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/03/index.html">slide 
+            show version</A>.<BR>Prints are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-03.pdf">PDF 
+            (2 pages per sheet)</A> and <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-03_handout.pdf">PDF 
+            (6 pages per sheet)</A>. </TD></TR>
+        <TR bgColor=#cccc99>
+          <TD vAlign=top align=right><B>4th week</B></TD>
+          <TD vAlign=top align=left><FONT 
+            color=blue><B>05/10/2004:</B></FONT><BR><B>Agent-based System 
+            Architecture and Organization.</B>
+            <P>In this session we will review a number of theories related to 
+            agent organization and architecture including the followings:<BR>
+            <UL>
+              <LI>D.L. Martin, A.J. Cheyer, D.B. Moran, <A 
+              href="http://www.ai.sri.com/~cheyer/papers/oaa.pdf"><EM>The Open 
+              Agent Architecture: A Framework for building Distributed Software 
+              Systems</EM></A>, Applied Artificial Intelligence: An 
+              International Journal. Volume 13, Number 1-2, January-March 1999. 
+              pp 91-128. 
+              <LI><A 
+              href="http://sourceforge.net/project/showfiles.php?group_id=3819">FIPA-OS 
+              Agent platform</A> an implementation of the FIPA agent platform. 
+              We will explain how FIPA-OS can be used to develop agent-based 
+              systems. 
+              <LI>Behrouz H. Far, et al., <EM><A 
+              href="http://www.enel.ucalgary.ca/People/far/pub/papers/2000/kbse-06.pdf">Formalization 
+              of Organizational Intelligence for Multiagent System Design</A> 
+              </EM>Transactions of IEICE, vol. E83-D, no. 4, pp. 599-607, 2000. 
+              <LI>K.M. Carley and L. Gasser, <EM>Computational Organization 
+              Theory</EM>, in Multiagent Systems: A Modern Approach to 
+              Distributed Artificial Intelligence, G. Weiss, edt., pp.299-330, 
+              MIT Press, 1999. 
+              <LI>R. Unland, <EM>Organizational Intelligence and Negotiation 
+              Based DAI Systems </EM>Working Papers of the Institute of Business 
+              Informatics, University of Munster, Germany, 1994. 
+            </LI></UL><BR>Slides are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/04/index.html">slide 
+            show version</A>.<BR>Prints are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-04.pdf">PDF 
+            (2 pages per sheet)</A> and <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-04_handout.pdf">PDF 
+            (6 pages per sheet)</A>. </TD></TR>
+        <TR bgColor=#cccc99>
+          <TD vAlign=top align=right><B>5th week</B></TD>
+          <TD vAlign=top align=left><FONT 
+            color=blue><B>12/10/2004:</B></FONT><BR><B>FIPA: Foundation for 
+            Intelligent Physical Agents.</B>
+            <P>In this session we will review the <A 
+            href="http://www.fipa.org/">FIPA specification</A> and study the 
+            application, abstract architecture, agent communication, agent 
+            management and agent message transport standards and guidelines. We 
+            will review the <A href="http://www.fipa.org/specs/fipa00001/">FIPA 
+            Abstract Architecture Specification</A> and <A 
+            href="http://www.fipa.org/specs/fipa00089/">Domains and Policies 
+            Specification</A> in detail. 
+            <P>Slides are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/05/index.html">slide 
+            show version</A>.<BR>Prints are available: <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-05.pdf">PDF 
+            (2 pages per sheet)</A> and <A 
+            href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/SENG609-22-05_handout.pdf">PDF 
+            (6 pages per sheet)</A>. </P></TD></TR>
+        <TR bgColor=#cccc99>
+          <TD vAlign=top align=right><B>6th week</B></TD>
+          <TD vAlign=top align=left><FONT 
+            color=blue><B>19/10/2004:</B></FONT><BR>Students presentation: 
+            presenting the progress report of the assigned project. <!--
+    <B>Uncertainty Management, agents interactions and metrics.</B><P>
+    In this session we will review some interesting topics related to agent-based systems 
+    including agent interaction, competition, uncertain decision making process; 
+    agent quality system and metrics for agent-based system development.<BR>
+   In this session we will review the paper: 
+   <A HREF="http://www.enel.ucalgary.ca/People/far/pub/papers/2002/FAR_SEMAS2002.pdf">Uncertainty and Complexity Issues for Software Agents</a>
+    Proceedings of The 6th World Conference on Systemics, Cybernetics and Informatics (SCI 2002), 
+    Vol. XII, pp. 322-327, Orlando, FA, July 2002. <font color="red">(Best Paper Award: SCI 2002/ISAS 2002 Best Papers)</font>.
+<p>
+Slides are available: <A HREF="06/index.html">slide show version</a>.<br>
+Prints are available: 
+<A HREF="PDF/SENG609-22-06.pdf">PDF (2 pages per sheet)</a> and 
+<A HREF="PDF/SENG609-22-06_handout.pdf">PDF (6 pages per sheet)</a>.
+<BR>
+--></TD></TR><!--
+<TR BGCOLOR="#cccc99">
+    <TD ALIGN="RIGHT" VALIGN="TOP"><B>6th week</B></TD> 
+    <TD ALIGN="LEFT" VALIGN="TOP">
+    <B>Evaluation examination</B>
+	<font color="blue"><b>(1/12/2003)</b></font><BR>
+    <UL>
+       <LI> Evaluation examination (Fall 2002) <br>
+	<A HREF="./PDF/final_2002.pdf">(questions)</A> and 
+	<A HREF="./PDF/final_2002_answer.pdf">(answers)</A>.
+    </UL>
+    </TD>
+  </TR>
+-->
+        <TR bgColor=#bbbb99>
+          <TD vAlign=top align=right><B>Group Projects</B></TD>
+          <TD vAlign=top align=left><FONT color=blue><B>Students' Group 
+            Projects.</B></FONT><BR>The students are asked to divide into 2-3 
+            members teams and design a moderately realistic multiagent system. 
+            <P>In Fall 2003 the following projects were completed: </P>
+            <OL>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2003/P01_Agent-based_Student_Timetabling_System.pdf">P01: 
+              Agent-based Student Timetabling System</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2003/P02_MAS_for_Digital_Data_Warehouse.pdf">P02: 
+              MAS for Digital Data Warehouse</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2003/P03_Multiagent_Inter_Network_Handover.pdf">P03: 
+              Multiagent Inter Network Handover</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2003/P04_Agent-based_Job_Finding_System.pdf">P04: 
+              An Agent-based System for Job Finding</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2003/P05_Ranching_Agent_Assistant_System.pdf">P05: 
+              Ranching Agent Assistant System</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2003/P06_Agent-Based_Electronic_Realtor_System.pdf">P06: 
+              Agent-Based Electronic Realtor System</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2003/P07_Agent-based_Personal_Electronic_Commerce_System.pdf">P07: 
+              Agent-based Personal Electronic Commerce System</A> </LI></OL>
+            <P>
+            <P>In Fall 2002 the following projects were completed: </P>
+            <OL>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P01_Agent-based_E-Marketplace.pdf">P01: 
+              Agent-based E-Marketplace</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P02_Job_Finding_Agency_System.pdf">P02: 
+              Job Finding Agency System</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P03_Multi-agent_System_for_Electronic_Marketplace.pdf">P03: 
+              Multi-agent System for Electronic Marketplace</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P04_Multiagent_System_for_Tutoring_and_Learning.pdf">P04: 
+              Multiagent System for Tutoring and Learning</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P05_Multiagent_System_for_Electronic_Realtor.pdf">P05: 
+              Multiagent System for Electronic Realtor</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P06_Online_Examination_Assistant_System.pdf">P06: 
+              Online Examination Assistant System</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P07_A_Mmultiagent_System_for_ARES_Simulation.pdf">P07: 
+              A Mmultiagent System for ARES Simulation</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P08_Auction_Agency_System.pdf">P08: 
+              Auction Agency System</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P09_Remote_Monitoring_System.pdf">P09: 
+              Remote Monitoring System</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P10_Agent-Based_System_for_Electronic_Realtor.pdf">P10: 
+              Agent-Based System for Electronic Realtor</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/projects/2002/P11_Internet_Broker_Agent_Based_System.pdf">P11: 
+              Internet Broker Agent Based System</A> </LI></OL>
+            <P></P></TD></TR>
+        <TR bgColor=#bbbb99>
+          <TD vAlign=top align=right><B>Presentation week</B></TD>
+          <TD vAlign=top align=left><FONT color=blue><B>(Web based 
+            presentation)</B></FONT><BR><B>Students' Presentations. </B>
+            <P>Students are asked to prepare a tutorial on a topic related to 
+            agent-based systems and prepare for a 7-10 minutes talk to the 
+            audience about their selected topic. 
+            <P>In Fall 2003 the following topics were presented: </P>
+            <OL>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Based_Software_Analysis_and_Design.pdf">Agent 
+              Based Software Analysis and Design</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Based_Software_Engineering1.pdf">Agent 
+              Based Software Engineering (1)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Based_Software_Engineering2.pdf">Agent 
+              Based Software Engineering (2)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Based_System_Architecture_and_Organization.pdf">Agent 
+              Based System Architecture and Organization</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Communication_and_Knowledge_Sharing1.pdf">Agent 
+              Communication and Knowledge Sharing (1)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Communication_and_Knowledge_Sharing2.pdf">Agent 
+              Communication and Knowledge Sharing (2)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Communication_and_Knowledge_Sharing3.pdf">Agent 
+              Communication and Knowledge Sharing (3)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Mediated_Electronic_Commerce.pdf">Agent-mediated 
+              Electronic Commerce</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agent_Messaging.pdf">Agent 
+              Messaging</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agents_and_Web_Services1.pdf">Agents 
+              and Web Services (1)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agents_and_Web_Services2.pdf">Agents 
+              and Web Services (2)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agents_and_Web_Services3.pdf">Agents 
+              and Web Services (3)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agents_and_Web_Services4.pdf">Agents 
+              and Web Services (4)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Agents_and_Web_Services5.pdf">Agents 
+              and Web Services (5)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Computational_Complexity_and_Agent_Based_Software_Engineering.pdf">Computational 
+              Complexity and Agent-based Software Engineering</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Conversational_Agents.pdf">Conversational 
+              Agents</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Examining_Performance_Issues_of_Multiagent_Systems.pdf">Examining 
+              Performance Issues of Multiagent Systems</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Examining_the_Multiagent_Systems_Engineering_Methodology.pdf">Examining 
+              the Multiagent Systems Engineering Methodology</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Infrastructure_APIs_and_Software_Tools_for_Agent_Based_Systems.pdf">Infrastructure, 
+              APIs, and Software Tools for Agent-Based Systems</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Methodologies_for_Agent_Based_Analysis_and_Design1.pdf">Methodologies 
+              for Agent-Based Analysis and Design (1)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Methodologies_for_Agent_Based_Analysis_and_Design2.pdf">Methodologies 
+              for Agent-Based Analysis and Design (2)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Middle_Agents.pdf">Middle 
+              Agents</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Mobile_Agents1.pdf">Mobile 
+              Agents (1)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Mobile_Agents2.pdf">Mobile 
+              Agents (2)</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Multiagent_Architecture_Standards.pdf">Multiagent 
+              Architecture Standards</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Multi-Agent_Simulation_Using_SWARM.pdf">Multi-Agent 
+              Simulation Using SWARM</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Simulation_for_Agent_Based_Software_Engineering.pdf">Simulation 
+              for Agent-Based Software Engineering</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Standards_for_Agent_Based_Systems.pdf">Standards 
+              for Agents and Agent-Based Systems</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Conversational_Agents.pdf">Conversational 
+              Agents</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2003/Web_Hunting_Agents.pdf">Web 
+              Hunting Agents</A><BR></LI></OL>
+            <P>In Fall 2002 the following topics were presented: </P>
+            <OL>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Application_of_Agent-Based_Technology_in_Pervasive_Computing.pdf">Application 
+              of Agent-Based Technology in Pervasive Computing</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/A_Tutorial_on_Agent_Based_Software_Engineering.pdf">A 
+              Tutorial on Agent Based Software Engineering</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Agent-Based_System_Architecture_and_Organization.pdf">Agent-Based 
+              System Architecture and Organization</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Agent-Mediated_e-Commerce1.pdf">Agent-Mediated 
+              e-Commerce1</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Agent-Mediated_e-Commerce2.pdf">Agent-Mediated 
+              e-Commerce2</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Agent-based_Simulation_for_Social_Issues.pdf">Agent-based 
+              Simulation for Social Issues</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Agent-based_System_Architecture.pdf">Agent-based 
+              System Architecture</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Agent_Communication_Languages_and_Protocols.pdf">Agent 
+              Communication Languages and Protocols</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Agent_Communication_and_Knowledge_Sharing.pdf">Agent 
+              Communication and Knowledge Sharing</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Agent_Oriented_Engineering.pdf">Agent 
+              Oriented Engineering</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Comparison_of_Objects_and_Agents.pdf">Comparison 
+              of Objects and Agents</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Conversational_Agents1.pdf">Conversational 
+              Agents1</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Conversational_Agents2.pdf">Conversational 
+              Agents2</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Coordination_in_Multi-Agent_Systems.pdf">Coordination 
+              in Multi-Agent Systems</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Data_Integration_Using_Agent-based_Mediator-Wrapper_Architecture.pdf">Data 
+              Integration Using Agent-based Mediator-Wrapper 
+Architecture</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/ebXML_and_Agent-Mediated_e-commerce.pdf">ebXML 
+              and Agent-Mediated e-commerce</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Evaluation_of_Modeling_Techniques_for_Agent-Based_Systems.pdf">Evaluation 
+              of Modeling Techniques for Agent-Based Systems</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Methodologies_for_Agent-Based_System_Analysis_and_Design.pdf">Methodologies 
+              for Agent-Based System Analysis and Design</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Middle_Agents1.pdf">Middle 
+              Agents1</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Middle_Agents2.pdf">Middle 
+              Agents2</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Mobile_Agents1.pdf">Mobile 
+              Agents1</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Mobile_Agents2.pdf">Mobile 
+              Agents2</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Mobile_Agents3.pdf">Mobile 
+              Agents3</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Multiple_Agent_Simulation_System_in_a_Virtual_Environment.pdf">Multiple 
+              Agent Simulation System in a Virtual Environment</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Performance_Metrics_For_Intelligent_Systems.pdf">Performance 
+              Metrics For Intelligent Systems</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Role_Model_Analysis_Method_in_Agent-Based_System.pdf">Role 
+              Model Analysis Method in Agent-Based System</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Security_Concerns_for_Mobile_Agents.pdf">Security 
+              Concerns for Mobile Agents</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Unleashing_The_Jini.pdf">Unleashing 
+              The Jini</A> 
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/Using_Intelligent_Agents_to_Manage_Fuzzy_Business_Processes.pdf">Using 
+              Intelligent Agents to Manage Fuzzy Business Processes</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2002/XML_and_Agent_Communication.pdf">XML 
+              and Agent Communication</A><BR></LI></OL>
+            <P>In Fall 2001 the following topics were presented: </P>
+            <OL>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/A_Tutorial_on_The_Jini_Technology.pdf">A 
+              Tutorial on The Jini Technology</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Agent_Based_Simulation.pdf">Agent 
+              Based Simulation</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Agent_Security_for_Web_Applications.pdf">Agent 
+              Security for Web Applications</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/An_Introduction_to_Jini.pdf">An 
+              Introduction to Jini</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Interface_Agent.pdf">Interface 
+              Agent</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Mobile_Agents1.pdf">Mobile 
+              Agents1</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Mobile_Agents2.pdf">Mobile 
+              Agents2</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Mobile_Agents3.pdf">Mobile 
+              Agents3</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Ontology_Development.pdf">Ontology 
+              Development</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Semantic_Web.pdf">Semantic 
+              Web</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Using_Jini_for_Agent_Development.pdf">Using 
+              Jini for Agent Development</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/Virus_Agent.pdf">Virus 
+              Agent</A><BR>
+              <LI><A 
+              href="http://www.enel.ucalgary.ca/People/far/Lectures/SENG609-22/PDF/tutorials/2001/XML_Toturial.pdf">XML 
+              Toturial</A><BR></LI></OL>
+            <P><B>Other Suggested topics for students' tutorials:</B> </P>
+            <UL>
+              <LI>Agent communication and knowledge sharing 
+              <LI>Agent-based ecosystems 
+              <LI>Agent-based simulation for socio-biological, social, economic, 
+              and environmental issues 
+              <LI>Agent-based System architecture and organization 
+              <LI>Agent-based software engineering 
+              <LI>Agent-mediated ecommerce 
+              <LI>Agencies; holonic, complex, collective agents 
+              <LI>Agent architectures as cognitive models and models of mind 
+              <LI>Agent-based workflow management and process control 
+              <LI>Agent communication languages and protocols 
+              <LI>Agent programming languages and environments 
+              <LI>Computational complexity and agent systems 
+              <LI>Conflicts, conflict resolution, and negotiation 
+              <LI>Conversational agents 
+              <LI>Coordination, cooperation and competition problems 
+              <LI>Methodologies and tools for specification, design, 
+              implementation, testing, validation, and benchmarking 
+              <LI>Infrastructure, APIs, and software tools for agent-based 
+              systems 
+              <LI>Interface agents and conversational agents 
+              <LI>Methodologies for agent-based analysis and design 
+              <LI>Middle-agents (e.g., matchmakers, brokers, routers) 
+              <LI>Mobile agents 
+              <LI>Motivation, goal selection and theories of rational agency 
+              <LI>Negotiation in agent-based systems 
+              <LI>Ontologies for agents and social modeling; ontologies in 
+              agent-based information systems and knowledge management 
+              <LI>Performance metrics for intelligent systems 
+              <LI>Philosophical foundations of agents 
+              <LI>Privacy, security and agents; conceptual, technical, and legal 
+              issues 
+              <LI>Robustness, fault tolerance, performance, dependability, etc. 
+              <LI>Scalability and complexity issues 
+              <LI>Self-organizing systems and emergent organization 
+              <LI>Scalability issues in agent-based systems 
+              <LI>Standards for agents and agent-based systems (FIPA: Foundation 
+              for Intelligent Physical Agents) 
+              <LI>etc. </LI></UL></TD></TR></TBODY></TABLE></CENTER>
+      <P></P>
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 bgColor=white border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=150><B>Textbooks:</B></TD>
+          <TD vAlign=top align=left colSpan=2>Course materials are selected 
+            from a number of books, research documents and journal papers and 
+            will be delivered on each session. </TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left colSpan=2>&nbsp;</TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150><B>Recommended Textbooks:</B></TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/tg/detail/-/0262232030/qid=1030476964/sr=1-3/ref=sr_1_3/103-8011091-8309417?v=glance&amp;s=books"><EM>Multiagent 
+            Systems : A Modern Approach to Distributed Artificial 
+            Intelligence</EM></A>, Gerhard Weiss, Edt., 1st edition, (648 pages) 
+            MIT Press, (July, 2000). <BR>ISBN: 0262731312. </TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/tg/detail/-/0262232030/qid=1030476964/sr=1-3/ref=sr_1_3/103-8011091-8309417?v=glance&amp;s=books"><IMG 
+            src="SENG 609_22 Agent Based Software Engineering Course Outline_files/0262232030.jpg" 
+            border=0></A> </TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left colSpan=2>&nbsp;</TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/tg/detail/-/1558604952/qid=1030476295/sr=1-1/ref=sr_1_1/103-8011091-8309417?v=glance&amp;s=books"><EM>Readings 
+            in Agents</EM></A>, M.N. Huhns and M.P. Singh, Edts., (523 p.) 
+            Morgan Kaufmann Publishers, (January 1998). <BR>ISBN: 1-558-60495-2. 
+          </TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/tg/detail/-/1558604952/qid=1030476295/sr=1-1/ref=sr_1_1/103-8011091-8309417?v=glance&amp;s=books"><IMG 
+            src="SENG 609_22 Agent Based Software Engineering Course Outline_files/1558604952.jpg" 
+            border=0></A> </TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left colSpan=2>&nbsp;</TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/ASIN/0262194368/qid=1030819249/sr=11-1/ref=sr_11_1/104-7311169-6247169"><EM>Heterogeneous 
+            Agent Systems</EM></A>, V. S. Subrahmanian, Piero Bonatti, Jurgen 
+            Dix, Thomas Eiter and Fatma Ozcan, (640 p.) 1st edition, MIT Press, 
+            (June, 2000). <BR>ISBN: 0-262-19436-8. </TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/ASIN/0262194368/qid=1030819249/sr=11-1/ref=sr_11_1/104-7311169-6247169"><IMG 
+            src="SENG 609_22 Agent Based Software Engineering Course Outline_files/HAS.jpg" 
+            border=0></A> </TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left colSpan=2>&nbsp;</TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/ASIN/047139601X/qid=1030477416/sr=11-1/ref=sr_11_1/103-8011091-8309417#product-details"><EM>Constructing 
+            Intelligent Agents Using Java: Professional Developer's 
+            Guide</EM></A>, (432 pages) Joseph P. Bigus, Jennifer Bigus, (2nd 
+            Edition) John Wiley and Sons, (March, 2001). <BR>ISBN: 
+            0-471-39601-X. </TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/ASIN/047139601X/qid=1030477416/sr=11-1/ref=sr_11_1/103-8011091-8309417#product-details"><IMG 
+            src="SENG 609_22 Agent Based Software Engineering Course Outline_files/025555555.jpg" 
+            border=0></A> </TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left colSpan=2>&nbsp;</TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/ASIN/020169946X/qid=1016561224/ref=sr_11_0_1/002-0119510-7827275"><EM>Fundamental 
+            of Object-Oriented Design in UML</EM></A>, (458 pages) Meiler 
+            Page-Jones, Addison Wesley, (April, 2000). <BR>ISBN: 0-201-69946-X. 
+          </TD>
+          <TD vAlign=top align=left><A 
+            href="http://www.amazon.com/exec/obidos/ASIN/020169946X/qid=1016561224/ref=sr_11_0_1/002-0119510-7827275"><IMG 
+            src="SENG 609_22 Agent Based Software Engineering Course Outline_files/020169946X.jpg" 
+            border=0></A> </TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=150>&nbsp;</TD>
+          <TD vAlign=top align=left 
+      colSpan=2>&nbsp;</TD></TR></TBODY></TABLE></CENTER>
+      <P></P><PRE>
+</PRE>
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 bgColor=white border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left><B>Related Links:</B> 
+            <UL>
+              <LI><A href="http://www.cs.umbc.edu/agents/">UMBC Intelligent 
+              Software Agents Resources</A> 
+              <LI><A href="http://www.csee.umbc.edu/kse/kif/">UMBC Kif Web</A> 
+              <LI><A href="http://www.cs.umbc.edu/kqml/">UMBC KQML Web</A> 
+              <LI><A href="http://www.omg.org/">Object Management Group Home 
+              Page</A> 
+              <LI><A href="http://www.wkap.nl/journalhome.htm/1387-2532">Journal 
+              of Autonomous Agents and Multi-Agent Systems</A> 
+              <LI><A href="http://www.soc.surrey.ac.uk/JASSS/JASSS.html">Journal 
+              of Artifical Societies and Social Simulation</A> 
+              <LI><A href="http://www.macs.mines.edu/~kais/">Knowledge and 
+              Information Systems: An International Journal</A> 
+              <LI><A href="http://wwwsoc.nacsis.ac.jp/jssst/" 
+              LAST_MODIFIED="928134350" LAST_VISIT="977278519" 
+              ADD_DATE="928134524">Japan Society for Software Science and 
+              Technology</A> 
+              <LI><A href="http://www.omg.org/">Object Management Group 
+              (OMG)</A> 
+              <LI><A href="http://www.uml.org/">Umified Modeling Language 
+              (UML)</A> 
+              <LI><A href="http://www.auml.org/">Agent-Based Umified Modeling 
+              Language (AUML)</A> 
+              <LI><A href="http://www.research.ibm.com/journal/">IBM Technical 
+              Journals</A> </LI></UL></TD></TR></TBODY></TABLE></CENTER>
+      <P></P><PRE>
+</PRE><!--
+<P>
+<CENTER>
+<FORM METHOD="POST" ACTION="http://far1.iss.enel.ucalgary.ca/cgi-bin/Lecture/SENG609-22_comment.cgi">
+
+<TABLE WIDTH="550" CELLPADDING="5" CELLSPACING="0" BORDER="0">
+
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="550" COLSPAN="2">
+<P><B> Comments and Messages:</B></P>
+
+Students and visitors of this page are welcome to leave their constructive comments.
+This will help me improve the contents and the quality of presentation.
+Please note that all the messages will be open to public. 
+For private communication with the author please 
+<A HREF="mailto:far@ucalgary.ca">email me</A>.
+<BR>
+<FONT COLOR="#FF0000">
+No business or commercial messages. All the messages will be edited without prior notice. 
+Only messages appropriate for educational institutions will be displayed.
+</FONT>
+</TD>
+</TR>
+
+<TR bgcolor="#bbbb99">
+   <TH WIDTH="200" ALIGN="RIGHT" VALIGN="top">Your Name:</TH>
+   <TD WIDTH="350"><INPUT TYPE="text" MAXLENGTH="60"  VALUE="" SIZE="40" NAME="j1"></TD>
+</TR>
+<TR bgcolor="#bbbb99"> 
+   <TH WIDTH="200" ALIGN="RIGHT" VALIGN="top">Your Email: </TH>
+   <TD WIDTH="350"><INPUT TYPE="text" MAXLENGTH="100" VALUE="" SIZE="40" NAME="j2"><BR>
+	<FONT SIZE="2">(e.g., yourname@host.domain)</FONT></TD>
+</TR>
+<TR bgcolor="#bbbb99">
+   <TH WIDTH="200" ALIGN="RIGHT" VALIGN="top">Your Home Page:</TH>
+   <TD WIDTH="350"><INPUT TYPE="text" MAXLENGTH="100" VALUE="http://" SIZE="40" NAME="j3"><BR>
+	<FONT SIZE="2">optional (e.g., http://host.domain/~user/page.html)</FONT>
+   </TD>
+</TR>
+
+<TR bgcolor="#bbbb99">
+   <TH WIDTH="200" ALIGN="RIGHT" VALIGN="top">Your Message:</TH>
+   <TD WIDTH="350"><TEXTAREA ROWS="5" COLS="40" NAME="j4"></TEXTAREA></TD>
+</TR>
+
+
+<TR bgcolor="#bbbb99">
+   <TH WIDTH="200">&nbsp;</TH>
+   <TD WIDTH="350"><INPUT TYPE="submit" VALUE="Send my message ">
+       <INPUT TYPE="reset"  VALUE="Reset and restart"></TD>
+</TR>
+
+<TR bgcolor="#bbbb99">
+<TD ALIGN="left"  COLSPAN="2">
+  <UL>
+     <LI> <A href="http://far1.iss.enel.ucalgary.ca/tmp/SENG609-22_record_log.html">
+          <FONT SIZE="4">Messages (From 28 August. 2002)</FONT></A>
+  </UL
+</TD>
+</TR>
+
+
+<TR>
+<TD ALIGN="RIGHT" COLSPAN="2">
+<FONT SIZE="2">
+  This guestbook was created using  
+       <A HREF="http://www.enel.ucalgary.ca/People/far/guest_home.html">
+       Guests Home Page Tool</A><BR>
+       (Copyright 1995 -
+       <A HREF="http://www.enel.ucalgary.ca/People/far/index.html">
+       Dr. B.H. Far</A> - All Rights Reserved)<BR>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+</FORM>
+</CENTER>
+</P>
+-->
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=5 cellPadding=5 width=550 bgColor=#88bbaa border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top><FONT face="Verdana, Arial, Helvetica" 
+            color=#000000>Copies of the slides in Portable Document Format 
+            (PDF), and PowerPoint Slide format are available for on-line 
+            download. </FONT><FONT face="Verdana, Arial, Helvetica" 
+            color=red><B>Note that the files are password protected and are 
+            provided solely for the internal use for the registered students of 
+            this course. </B></FONT><BR><FONT face="Verdana, Arial, Helvetica" 
+            color=#000000>All Unix, PC and MAC users can download, view and 
+            print the PDF version of the documents using </FONT><FONT 
+            face="Verdana, Arial, Helvetica"><A 
+            href="http://www.adobe.com/prodindex/acrobat/">Adobe's Acrobat 
+            Reader</A></FONT><FONT face="Verdana, Arial, Helvetica" 
+            color=#000000> version 5.x or later. 
+      </FONT></TD></TR></TBODY></TABLE></CENTER>
+      <P></P><PRE>
+</PRE>
+      <P>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=3 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left>
+            <ADDRESS><FONT color=#000000>This page was created by <B><A 
+            href="http://www.enel.ucalgary.ca/People/far/index.html">B.H. 
+            Far</A></B>.If you may find omissions, glitches, have suggestions 
+            for improvement of the material presented here, please <A 
+            href="mailto:far@ucalgary.ca">contact me</A>. </FONT></ADDRESS></TD>
+          <TD align=left width=30>&nbsp;</TD>
+          <TD vAlign=top align=left>Copyright Terms. <STRONG><FONT 
+            color=#cc0000 size=-1>THIS DOCUMENT AND ITS ENTIRE CONTENTS ARE 
+            COPYRIGHT 2001 BY B.H. FAR. COPYING, REPUBLISHING AND DISTRIBUTING 
+            THIS DOCUMENT IN WHOLE OR IN PART IS PROHIBITED BY LAW. IF YOU 
+            DESIRE TO REPUBLISH PARTS OF THIS DOCUMENT IN ELECTRONIC FORM, 
+            PLEASE CONTACT THE <A href="mailto:far@ucalgary.ca">AUTHOR</A>. 
+            </FONT></STRONG></TD></TR>
+        <TR>
+          <TD vAlign=top align=left>&nbsp;</TD>
+          <TD align=left width=30>&nbsp;</TD>
+          <TD vAlign=top align=right><FONT size=2>
+            <SCRIPT language=JavaScript>
+<!--
+// create an instance of the Date object
+var now = new Date();
+// fix the bug in Navigator 2.0, Macintosh
+fixDate(now);
+// cookie expires in one year (actually, 365 days)
+// 365 days in a year
+// 24 hours in a day
+// 60 minutes in an hour
+// 60 seconds in a minute
+// 1000 milliseconds in a second
+now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+var visits = getCookie("counter");
+// if the cookie wasn't found, this is your first visit
+if (!visits) {
+  visits = 1; // the value for the new cookie
+  document.write("I guess this is your first time here. Hope you enjoyed it!");
+} else {
+  // increment the counter
+  visits = parseInt(visits) + 1;
+  document.write("Welcome back! I guess you've been here " + visits + " times.");
+}
+// set the new cookie
+setCookie("counter", visits, now);
+
+-->
+    </SCRIPT>
+            </FONT></TD></TR></TBODY></TABLE></CENTER>
+      <P></P></TD></TR></TBODY></TABLE></CENTER>
+<P></P></BODY></HTML>

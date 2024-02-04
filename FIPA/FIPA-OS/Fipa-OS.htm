@@ -1,0 +1,1074 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0037)http://wiki.cs.uiuc.edu/cs427/Fipa-OS -->
+<HTML><HEAD><TITLE>cs427: Fipa-OS</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1256">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY vLink=#000000 link=#0000ff bgColor=#ffffff><FONT color=#000000>
+<TABLE cellSpacing=2 cellPadding=0 width="100%" bgColor=#ffffc0>
+  <TBODY>
+  <TR>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/EDIT/Fipa-OS">Edit</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/RENAME/Fipa-OS">Rename</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/DIFF/191/190/Fipa-OS">Changes</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/HISTORY/Fipa-OS">History</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/UPLOAD">Upload</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/DOWNLOAD/">Download</A></FONT></TD>
+    <TD><FONT face=Arial><A href="http://wiki.cs.uiuc.edu/cs427">Back to 
+      Top</A></FONT></TD></TR></TBODY></TABLE>
+<H2><FONT face=Arial><A 
+href="http://wiki.cs.uiuc.edu/cs427/SEARCH/Fipa-OS">Fipa-OS</A></FONT></H2><!-- unformatted page contents --
+<a name='top'></a><center><span style='color:blue'><font size="+2"><b>The Architecture of FIPA System [[under construction]</b></font></span></center>
+*[Proposal]
+
+<UL>
+#[Introduction>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#introduction]
+#[Multi-Agent Systems>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#mas]
+#[Relationship to the Architecture Business Cycle>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#abc]
+#[Requirements and Qualities>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#raq]
+#[Specification Approach>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#approach]
+<UL>
+#[FIPA Specification Architecture : Interoperablity and Buildability >http://wiki.cs.uiuc.edu/cs427/Fipa-OS#specification]
+#[From FIPA Agent Management Reference Model to Nodamic Support : Extendibility >http://wiki.cs.uiuc.edu/cs427/Fipa-OS#modules]
+</UL>
+#[Object-Style Architecture of the Developed System >http://wiki.cs.uiuc.edu/cs427/Fipa-OS#os]
+#[Summary>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#summary]
+#[References>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#references]
+</UL>
+-----
+<a name='introduction'><font size="+1">
+<b>1. Introduction</b></font></a>
+
+<UL>
+Multi-agent systems are a powerful and relatively new paradigm for accessing and integrating heterogeneous distributed services. Here, the services providers, service users and intermediaries are represented as agents which can be thought of as autonomous software entities. Successful agent systems include systems that control air resources charged with defending a friendly region from enemy attack and a network topology discovery agent. 
+
+Currently most of multi-agent systems exist only within their own microcosms so that an agent from a multi-agent system cannot communicate with a agent from another multi-agent system. To realize the full power of this new paradigm, agents must be able to communicate across different multi-agent systems. In this report, we will look at a multi-agent system standardization effort by the Foundation of Intelligent Physical Agents (FIPA). The remaining of this report will be organized as follows: In section 2, we give a brief description of agent technology. In section 3, we will look at the architecture business cycle, i.e., the business environment which provided the impetus for the formation of FIPA and the relationship between the various players in the Architecture Business Cycle. In section 4 we examine the requirements of an agent architecture. In sections 5-6 we examine architecture of the FIPA. In section 5 we examine how the architecture proposed by FIPA specification satisfies the architectural requirements of section 4. In section 6, we analyse the architecture of a system which supports the FIPA specifications. In section 7 we will show some current applications of the FIPA standardization and the future of FIPA as our summary.
+
+</UL>
+<font size="-1">[Back to top>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top]</font>
+-----
+<a name='mas'><font size="+1">
+<b>2. Multi-Agent Systems</b></font></a>
+
+<UL>
+Consider the following scenario: The air traffic controls of a country X suddenly fails. Fortunately the computerized air traffic control systems in neighboring countries negotiate between themselves to track and deal with all affected flights and the potentially disastrous situation passes without any major incident.
+
+This is among the lofty aims of agent technology. Although such a technology is not just around the corner, there has recently been a lot of serious research and applications in this area. But what is an agent? 
+
+The term agent has many definitions in the literature. While an object is a software abstraction with behavior, inheritance, encapsulation, state and identity, an agent (more specifically a strong agent - see below) on the other hand is an active object that is able to reason and communicate via structured messages. Here, an active object is one which have their own thread of control and they are proactive which encompasses mobility. To give more details to the nature of agents, we follow [[Wooldridge M., Jennings N.R., Intelligent Agents: Theory and Practice, 1995]: An agent is weak if it is autonomous, social, reactive and proactive. An agent is strong if in addition to the above it has one or more of the following: mentalistic notions (beliefs, goals, plans, and intentions), rationality, veracity, and adaptability. Within autonomous behavior are the concepts of agent migration and transportability, and a social multi-agent system must be open. Because of these characteristics of agents. the agent paradigm differs from the traditional client-server approach in that agents can interact on a peer-to-peer level, mediating, collaborating and cooperating to achieve their goals. Agents interact using an agent communication language based on speech acts [[Searle, J.R., Speech Acts, Cambridge University Press, 1969] and shared vocabularies classed ontologies [[Guarino, N. Formal Ontologies, Conceptual Analysis and Knowledge Representation, Internal Journals of Human-Computer Studies, No.5/6,625-640,1995]. The use of an agent communication language based on these two theories enables agents to interact using semantically rich information.
+
+A multi-agent system is a platform for agents. In general, a multi-agent system architecture must address concurrency, synchronization, transportability, interoperability, flexibility, reusability, testability and maintainability. In the perfect agent universe of various multi-agent systems, a user would issue a request to an agent on a multi-agent system which in turn interact with agents to satisfy the request. These interoperating agents might live on different multi-agent systems. Hence the agent technology is an outgrowth of research in Distributed Artificial Intelligence and Cooperative Distributed Problem Solving. 
+
+It is interesting to compare agent systems with the other very common distributed communication model CORBA. We think FIPA, one of the most popluar multi-agent system we are going to study have many advantages:
+
+1. CORBA is the in a fixed client-server model, while agents can communicate in a wide variety of ways, including point-to-point, multicast, broadcast, some agent may even form a client-server relationship.
+
+2. Clients and servers are also not mobile and the communication part ORB attaches closely to the behavior of client and server. One important feature of agents is that they are mobile, i.e., besides the transport of messages agents themselves are allowed to move from one place to another, and agent itself is an independant part. It can automatically carry on some task without instructions from the client or server. In other words, it is a mobil and intelligent entity. An agent actually keeps a history of past interaction with other agents, including messages received and messages sent. So it is stateful. This is distinctly different from the way an object processes messages.
+
+3. In CORBA, the communication protocol is IIOP while FIPA will support multiple transport for full interoperability. In the case of FIPA, we will see that the architecture for this component is open and in fact supports IIOP, HTTP, TINA-C, etc. In the second point above, the richness of an agent's ability to communicate is built upon the fact that 
+ 
+</UL>
+<font size="-1">[Back to top>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top]</font>
+-----
+<a name='abc'><font size="+1">
+<b>3. Relationship to the Architecture Business Cycle</b></font></a>
+
+<UL>
+First let us look at the driving forces that gave rise to the establishment of FIPA. We have already mentioned the fact that the full power of agent technology can only be realized if agents from different multi-agents systems are allowed to communicate. Hence there is a need for the standardization of such agent platforms. Currently, there are three important agent standardization efforts: the KQML community, OMG MASIF and FIPA. 
+
+KQML (Knowledge Query Meta Language)  was one of the first initiatives to specify how to support social interaction characteristic of agents using a protocol based on speech acts and is now also one of the most pervasive agent communication languages. However, because of a lack of consensus in the community, variations of KQML exist and agent systems speaking different KQML dialects may not be able to interoperate fully. 
+
+MASIF (Mobile Agent System Interoperability Facility) was initiated by OMG (Open Management Group) a year before FIPA in 1995. The key characteristic of an agent under MASIF is that of its mobility from one location to another. In fact OMG's original call for proposals was for a Mobile Agent Facility. In contrast to MASIF, KQML and FIPA emphasize agency and social interaction between multi-agents as the defining properties for software agents. MASIF does not support or standardize interoperability between non-mobile agents on different agent platforms. In fact, MASIF restricts the interoperability of agents to those developed on CORBA platforms. On the other hand, we will see later that FIPA directly support the interoperability of agents deployed on agent frameworks which can support heterogeneous transports. OMG is currently exploring how to support other types of software agents and FIPA has has supplied its specifications to OMG.
+
+Besides the fact that KQML and MASIF do not take into consideration the complete requirements of multi-agent technology, there were other factors driving the establishment of FIPA.
+* One driving force is the vision to seed the market and attain a critical mass of customers, applications and products in the medium and long term. In fact this was the main driving force for FIPA.
+* Around 1995, many felt that research in multi-agent technology has reached or just passed its first peak. It was noticed that most research peaks twice and the best time for standardization is between the first peak and dip.
+* An agent standard will provide added confidence to potential adopters of this technology.
+* The standardization process shifts the emphasis from longer-term research issues to the practicalities of realizing commercial agent system, hence allowing the collaboration between the industrial and academic organizations on both theoretical and practical challenges of multi-agent systems.
+* It was also realized that the best time to established a standard was before too many "standards" are already in the industry.
+* Another important factor was that existing infrastructure was in place for a standard. For instance, CORBA and IIOP provided the needed infrastructure for message transport. (In fact they were the first to be adopted by FIPA in 1997.)
+
+With these driving forces, FIPA (Foundation for Intelligent Physical Agents),  an international non-profit organization, was established in 1996 and registered in Geneva, Switzerland. Its statutory purpose is 
+
+"to promote the development of specifications of generic agent technologies that maximize interoperatbility with and across agent based applications." 
+
+Part of its function is to produce, in a timely fashion, an internationally agreed specification for an agent enabling software framework which is usable across a large number of applications and yielding a high level of interoperability across applications. Contributors are free to produce their own implementations of this software framework as long as its construction and operation complies with the published FIPA specification. In this way the individual software frameworks are interoperable.
+
+The following is a diagram of the Architecture Business Cycle. <br>
+[Fipa-OS/abc.gif]
+<br>
+The requirements will be discussed in the next section. We end this section by briefly explaining the work process within FIPA. Currently, the standardization of specifications follows a three-stage process. A specification starts off as Preliminary. This is generated by the Technical Committees or Working Groups under the supervision of a Technical Committee. Extensive revision takes place at this point. When the Preliminary specification is deemed suitable for implementation, it is submitted to the FIPA Architecture Board. If approved, the specification enters the second Experimental stage. An Experimental specification then enters the final Standard stage after a period of successful implementation by more than one FIPA-compliant platforms. During the Preliminary and Experimental stage, time-outs are observed, i.e., if the standard does not enter the next stage within a pre-specified time, it automatically becomes obsolete. Also, if a specification at any of the above stage has been identified as unnecessary for the FIPA standard, it temporarily become Deprecated. A Deprecated specification can be either reconsidered or, after a grace period, it becomes Obsolete.
+
+</UL>
+<font size="-1">[Back to top>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top]</font>
+-----
+<a name='raq'><font size="+1">
+<b>4. Requirements and Qualities</b></font></a>
+
+<UL>
+Before examining the architectural requirements of FIPA, it is useful to look at the working principles of FIPA. We will also look at FIPA's own requirements of an agent through its interaction with another agent, with a user, and with information sources.
+
+At the second FIPA meeting the following set of principles were established in order to achieve the statutory goals of section 1. We list a subset of these principles:
+FIPA selects and adapts existing technologies and only occasionally develops its own technologies
+Specifications must be produced before industries make commitment
+Systems are not specified, only the generic technologies usable in different systems, only the external behavior is specified, not the internal working.
+ When a functionality need a technology it is highly desirable that the technology be unique.
+Technologies needed to support functionalities must be relocatable.
+FIPA specifies tools that can be assembled to provide systems of practical interest. However, it is the responsibility of the subsystem integrator to ensure that the overall system is fit for the purpose and complies with all the relevant regulatory requirements.
+FIPA specifications are of two kinds. It is normative when it mandates the behavior of a subsystem to ensure interoperability with other FIPA-specified subsystems. It is informative when its aim is to provide guidance to industry on some particular aspects of a subsystem.
+
+The specification developed in 1997, FIPA 97, consisted of the following parts. The first three are normative:
+* Agent Management
+* Agent Communication Language
+* Agent/Software Integration
+
+Four informative specifications were also developed. These involved specific agents in the following areas of application: (1) Personal Travel Assistance, (2) Personal Assistant, (3) Audio-Visual Entertainment, and (4)Broadcasting, Network Provisioning and Management. The specification of these specific agents also helped in understanding agent technology in general. Later work involved: (1) Extension Agent Management,   (2) new specifications for agent security, agent mobility, human-agent interaction, ontology services. An informative specification for the Product Design and Manufacturing Agents was also developed.
+
+FIPA defines an agent as follows:
+
+"An agent is a computational process that implements the autonomous, communicating functionality of an application."
+
+In greater detail, according to FIPA, an agent is an encapsulated software entity with its own state, behavior, thread of control, and an ability to interact and communicate with other entities, including people, other agents and legacy systems. FIPA lists 24 requirements for interactions between agent and agent, agent and user, and agent and existing information sources. The following is some of these requirements. Not all behaviors are present in a particular agent.  
+* An agents need to publish its services and resources to other agents as well as to discover services or resources of other agents.
+* Agents need to be able to communicate with each other. They should have the ability to decide which is the best means of doing so (point-to-point, broadcast, etc.). They also should be able to use existing infrastructure (TCP/IP networking, CORBA, TINA-C, HTTP, OLE, etc.)
+* Agents need to adapt to the preferences of their users. Furthermore, the communication should be robust in the sense that recovery from exception conditions should be possible.
+* Agents need to be able to access (existing) information sources.
+
+(Security requirements (trust, authentication, etc.) were also specified but so far work in this area has been slow.)
+
+<P>
+From the above sections, we see that the requirements for a successful architectural specification are as follows:
+* <b>Buildability:</b> The FIPA specification must lead to an actual FIPA implementation on a wide variety of platforms using currently available technology.
+* <b>Interoperability:</b> This is obviously a crucial requirement and was explictly stated in the first Call for Proposal in 1996. The specification must allow agents on different FIPA-compliant multi-agent systems to communicate with one another.
+* <b>Scalability:</b> Agent systems must scale well, i.e., performance should not degrade unacceptably or suddenly as the size of various demand-related variables grows. The particular performance variables are system dependent, but might include: the number of agents in the society, the number of messages being exchanged, the number of agents at a particular location, the information sources that the agents have. The agent society or system as a whole should be able to adjust itself to cope with increased demand or worload.
+* <b>Extensibility:</b> The architecture must be extensible since it must take into account the availability of relevant new technologies and hence their integration with the existing architecture.
+
+In the next two sections we will look at FIPA's architectural specification and see how these requirements are satisfied.
+</UL>
+<font size="-1">[Back to top>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top]</font>
+-----
+<a name='approach'><font size="+1">
+<b>5. Architecture Approach</b></font></a>
+
+<a name='specification'><b>FIPA Specification Architecture : Buildability and Interoperability</b></a>
+
+<UL>
+FIPA organization provides structured specifications of the FIPA system. To look at what they did and see how the quality requirements were being implemented in the specification will help us to understand how fipa works and how they achieve the quality requirements through specification design. 
+
+The specification structure is shown in figure 1. </br>
+[Fipa-OS/spec2.gif]
+</br>
+The whole structure is in a layered fasion. The Fipa-application developers only need to look at the upper level while the systme implementers need to read carefully all the 3 levels. In the lower level of the specification, there are many alternative specifications about the Agent Communication Language. People may choose one or more to be implemented in their system. As we put it above, FIPA specification can be classified as normative and informative. The top level has both normative and informative specification and the lower two layers are both norative specifications.
+
+The top level FIPA Application specifications is a set of reference models and ACL message sets. They can be divided into two parts. The first part is informative application prototypes in which FIPA agents can be deployed. It includes applications such as personal travel assistance, personal assistant, audio-visual entertainment,etc. The application developer can use these reference models to design its own architecture. The second part is normative, which includes Agent/Software Integration and a newly added part- nomadic support in the mobile computing environment. The Agent/Software Integration part is wrapper specificaiton define how many functions a legacy should provide to agent through that wrapper. For example, specification requires the Wrapper service should allow an agent to: <br>
+. Request a dynamic connection to a software, <br>
+· Invoke operations on the software system, <br>
+· To be informed of the results of operations,<br>
+· To query the properties of the software system, <br>
+. Set the parameters of a software system,<br>
+· Subscribe to events of the software system,<br>
+· Manage the state of the service, and,<br>
+· Terminate the service.<br>
+
+But it doesn't specify what the exact form of those functions. The Interoperability lies in the agreement of communication languages but not in functional interfaces and object formats.
+
+The normadic support part is based on basic FIPA reference model, adding an additional control agent component.
+
+The Abstract Architecture is a part aimed to foster interoperability and reusability of FIPA system. To achieve this, it is necessary to identify the elements of the architecture that must be codified. Specifically, if two or more systems use different technologies to achieve some functional purpose, it is necessary to identify the common characteristics of the various approaches. This leads to the identification of architectural abstractions: abstract designs that can be formally related to every valid implementation. In fact, in the Abstract Architecture part, there is no "Architecture", instead there are bounch of definitions about basic entities and UML graphs about relationship between these entities. Those entities include agent, message, directory entry, etc. The abstract architecture is more like a dictionary for reference when developing systems.
+
+The agent management part deals with the control and management of agents within and across agent platforms. Its reference model is basic reference model for sytem implementers. So the true system "Architecture" lies here. The reference model includes Agent, Directory Facilitator, Agent management system and message Transport Services. We will discuss it in detail later.Beyond this, in the Agent Management Part, we can also find mobility protocols. The actual agent mobility can be achieved through Agent Migration, Agent Cloning and Agent Invocation. So in fact, agent mobility here can be viewed as task mobility. Agent Mobility can be of many use. For example, in the web search application, one Agent can clone itself into many agents and do searching in parallel.<br>
+
+Agent communication part are specifications around ACL (Agent communication language)semantic and dynamic behavior. It has three parts: Interaction Protocols (IPs), Communicative actions (CAs) and Content languages(CLs). The IPs specifications defines pre-agreed message exchange protocols for ACL messages, including how request, query, recuiting actions, etc. An example of protocol definition can be presented in the following graph.
+<br>[Fipa-OS/query.gif]<br>
+The CAs specifications deal with different utterances for each kind of ACL messages, which are in formal specification. 
+For example, a failure is defined as follows:
+<br>[Fipa-OS/failure.gif]<br>
+CL specification focuses on the organization, structure, and status of the FIPA CLL and discusses the main requirements that a content language must satisfy in order to be FIPA compliant. The FIPA Content Library Registry document lists the current members of the library. The objectives of standardizing and defining a library of FIPA compliant content languages are:
+1.To allow more flexibility and efficiency for many applications (for example, web based, real-time, nomadic).
+
+2.To increase <b>interoperability</b> between agents developed in different contexts, by facilitating the reuse of content languages. This would enable for instance the use of RDF schemas emerging on the Web, or the capability of expressing choices in an agent content language, etc.
+
+The Agent Message Transport specification deals with the transport and representation of messages across different network transport protocols, including wireline and wireless environments. ACL message formats are presented in bit wise , string and XML. Different transport protocols for message delivery, includ IIOP, HTTP and WAP. This part enables FIPA - compliant system be able to operate over different networking protocols, further more, it can interoperate with different network applications and platforms.
+
+Till now, we can see that FIPA put much effort on Buildability and Interoperability support. To summarize:
+<UL>
+<br><b>Buildability support: </b><br>
+1. The informative part can assist greatly in application development. If the application follow the specification, it can make itself more open. <br><br>
+2. The agent management reference model, agent/software reference model and nodamic computing reference model and the message formats designment can specfies the behavior of system development.<br><br>
+3. The layered architecture of specification, especially the seperation of Abstract Architecture part made developer eaier to follow the common part of the specification. The UML diagrams in the specification clarify the mandatory agent behavior.<br><br>
+
+<b>Interoperablity support:</b><br>
+1. The Abstract Architecture focuses on core interoperability between agents. These includes: Managing multiple message transport schemes; Managing message encoding schemes and Locating agents and services via directory services. There are two ways in which the abstract architecture makes provision for interoperability. The first is transport interoperability. The second is message representation interoperability.
+To provide interoperability, there are certain elements that must be included throughout the architecture to permit multiple implementations. For example, earlier it was noted that an agent has both an agent-name and a locator. The locator contains transport-descriptions, each of which contains information necessary for a particular transport to send a message to the corresponding agent. The semantics of agent communication require that an agent’s name be preserved throughout its lifetime, regardless of what transports may be used to communicate with it. Within Abstract Architecture there are both textual and UML graph indicating the static relationship between Agents, Transport descriptions and Directory Services.
+<br>
+<br>
+2. The Agent communication part enables multiple ACL languages having a unified semantics. The semantic of the message are defined in formal specifications. To add more functionalities of the agent communication, we only need to add more formal specification semantics and there is a formal way to represent this semantics into different message parsers.<br><br>
+3. The Agent Message Transport is a very import part for the FIPA agents to operate on different networks and being implemented using existing technologies. FIPA can easily tune itself to different application environment since it has the ability to talk in different languages. For example, we can use CORBA to implement FIPA system since the message can be delivered in IIOP format. Maybe one day we could bridge CORBA and FIPA directly through IIOP. Another example is that the agent can query XML Database directly using a uniformed control message and content message. Great Interoperablity implies here. </br><br>
+4. To Interoper with legacy systems, FIPA system provides wrapper specifications.<br>
+</UL>
+<font size="-1">[Back to top>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top]</font>
+-----
+<a name='modules'>
+<b>From FIPA Agent Management Reference Model to Nomadic Support:Extensibility</b></font></a>
+<UL>
+[Fipa-OS/ref4.gif]
+</br>
+            Figure 3 FIPA Agent Management Reference Model <br>
+The FIPA Management reference model currently provides the normative framework within which FIPA Agents exist and operate. System developed on the FIPA specification will use this model as the main architecture of their system. The later versions only add no more fundamental changes to the reference model. Combined with the Agent Life cycle, this establishes the logical and temporal contexts for the creation, operation and retirement of Agents.
+
+*An Agent is the fundamental actor on an AP which combines one or more service capabilities into a unified and integrated execution model that may include access to external software, human users and communications facilities. An agent may have certain resource brokering capabilities for accessing software.
+
+*A Directory Facilitator (DF) provides yellow pages services to other agents. Agents may register their services with the DF or query the DF to find out what services are offered by other agents. Multiple DFs may exist within an AP and may be federated.
+
+*An Agent Management System (AMS) is a mandatory component of the AP. The AMS exerts supervisory control over access to and use of the AP. Only one AMS will exist in a single AP. The AMS maintains a directory of AIDs which contain transport addresses (amongst other things) for agents registered with the AP. The AMS is responsible for managing the operation of an AP, such as the creation of agents, the deletion of agents, deciding whether an agent can dynamically register with the AP and overseeing the migration of agents to and from the AP (if agent mobility is supported by the AP). Since different APs have different capabilities, the AMS can be queried to obtain a description of its AP. A life cycle is associated with each agent on the AP which is maintained by the AMS.
+
+*An Agent Communicatin Channel supports interoperability both within and across different platforms. It may not be a real entity in system implementation. It only represents the communications between Agent, AMS and DF in ACL language. 
+
+*An Message Transport Service (MTS) is the default communication method between agents on different APs. 
+
+*An Agent Platform (AP) provides the physical infrastructure in which agents can be deployed. The AP consists of the machine(s), operating system, agent support software, FIPA agent management components (DF, AMS and MTS) and agents.
+
+The internal design of an AP is an issue for agent system developers and is not a subject of standardisation within FIPA. AP’s and the agents which are native to those APs, either by creation directly within or migration to the AP, may use any proprietary method of inter-communication. 
+
+It should be noted that the concept of an AP does not mean that all agents resident on an AP have to be co-located on the same host computer. FIPA envisages a variety of different APs from single processes containing lightweight agent threads, to fully distributed APs built around proprietary or open middleware standards.
+
+FIPA is concerned only with how communication is carried out between agents who are native to the AP and agents outside the AP or agents who dynamically register with an AP. Agents are free to exchange messages directly by any means that they can support.
+
+The seperation of components in the middle layer enable us to add more component to it to achieve new functions. All these middle components are connected with each other through protocols which can be designed, added or switched. If necessary, new protocols other than HTTP or IIOP can be integrate into the MTS part and thus provide better <b>extensibility</b>. In a traditional Broker pattern, since one component usually takes up the whole layer, and each layer are depend strictly with each other through specified and complication messages, new functions are more differcult to be added. So in the broker structure, new functions are added as Services which is actually a seperate part from CORBA core and in an application. But in fipa such new functionality can be made directly into the core. A good example of Fipa's extensibility is the Nodamic support.
+
+Compared to today’s traditional distributed systems, the nomadic computing environment is very different in many respects, such as Bandwidth, latency, delay, error rate, quality of display. 
+
+Confronted with these circumstances, the nomadic end-user would benefit from having the following functionality provided by the infrastructure: information about expected performance, agent monitoring and controlling the transfer operations, and adaptability.
+
+FIPA uses the Wireless Application Protocol (WAP)as its wireless Message Transport Protocol.  The WAP Forum has developed industry-wide specifications for low bandwidth wireless services (such as GSM, GPRS, etc.) and wireless devices (such as mobile telephones and personal digital assistants). <br>
+[Fipa-OS/nodamic2.gif]
+<br>
+     Figure 4: Nodamic Support Architecture <br>
+The adaptation of applications to various nomadic computing environments is an important area. There are several tasks that agents need to carry out during application adaptation:
+1. Selection of MTP and Message Transport Connection (MTC) to be used for agent communication.<br>
+2. Selection of an ACL and content language representation to be used for agent communication.<br>
+3. Provision of support for application agents to carry out adaptation of application data, such as still images, video and audio, XML, etc. Today’s Internet application data (such as multimedia content) are designed with high performance desktop PCs and high quality displays in mind. Therefore, the application data is frequently unsuitable for nomadic computing using wireless wide-area networks and low performance mobile devices, and hence requires modification.<br>
+4. Communication between agents performing adaptation.<br>
+
+The functions required to carry out monitoring and controlling for quality of service can be split into several specific tasks: <br>
+1. Observing the quality of service of MTPs and MTCs,<br>
+2. Measuring (if there are no other means to obtain the required information) the quality of service of an MTP and MTC,<br>
+3. Collecting information from the observing and measuring sources, 
+4. Analysing the information, and,<br>
+5. Controlling an MTC and selecting an MTP.<br>
+
+Based on this division, the agent middleware consists of the following logical agents (see above Figure):
+
+1. A Monitor Agent (MA) which carries out tasks 1 through 4, and,<br>
+2. A Control Agent (CA) which carries out task 5.<br>
+
+To summarize how to achieve Fipa extensiblity:<br>
+1. Add more components to the middle layer(Agent/DF/AMS) of the reference model.<br>
+2. If necessary, adapt new message communciation protocols into the MTS layer.
+<br>
+
+</UL>
+<font size="-1">[Back to top>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top]</font>
+-----
+<a name='os'><font size="+1">
+<b>6. Object-Styled Architecture of Developed System </b></font></a>
+<UL>
+FIPA-OS supports the majority of the FIPA Experimental specifications and is being continuously improved as a managed Open Source project, making it an ideal choice for any FIPA compliant agent development activity. Because the FIPA specification didn't provide how agents can achieve intercommunication and action on a machine level. The specification implementation may have a little different architecture to the reference model. But it still functioned as the FIPA specification reference model.All the components in the reference model are indirectly implemented here. The system is object-based. Its components are divided into different classes. Though classes reference each other and have a complicate event-trigger relationship.<br>
+The top level(component) of the FIPA-OS system is as follows:<br>
+[Fipa-OS/osos.gif]
+<br>  Figure 5 Components within FIPA-OS in a layered fashion <br>
+
+Through all these components the Agent-Shell is at the central position. Agents are actually running on this class. It provides a shell for Agent implementation. Inside this class, there are references to MessageTransportService class, ConversationManager class and TaskManager class, so that through AgentShell we can reference those classes directly. It can provides the agent methods such as sendMessage(), registerWithAMS(), registerWithDF(), setting up new tasks and shut down an agent.
+
+Every complicate Object-Oriented system have event listeners and triggers. They are the new and flexible approach of system subroutine calling. The task manager here provides the ability to split the functionality of an Agent into smaler, disjoint units of works known as Tasks. The aim is that Tasks are self-contained pieces of code that carry out some taks and return a result, have the ability to send and receive messages, and have little or preferably no dependence on the Agent they are executed within. As we shall pointed later, the task manager provide functionalities of DF and AMS.
+
+The MTS class provides the ability to send and receive messages to an Agent implementation. It has a CM object that can reference to the CM class. The Conversation Manager provides the ablility to track conversation state at the performative level, as well as mechanisms for grouping messages of the same conversation together. These two parts formed the ACC layer in the reference model.
+
+The MTP is corresponding to the MTP in the reference model protocol implementation for sending and receiving messages among agents.
+
+Here we cannot find apperant classes implementing DF and AMS. Their data are residing in the Databases and their methods are implemented in the Task Manager. Review what is DF and AMS, we can see that they are actually tables: DF is a table with Agent type and Agent IDs and AMS The AMS maintains a directory of AIDs which contain transport addresses, life state, etc. for agents registered with the AP. So in the implementation system, it is not necessary to made them as seperate classes.
+
+<br>
+[Fipa-OS/os2.gif]
+<br>
+Figure 6 An Object-Oriented Reference Relationship of the Core Components in FIPA system<br>
+
+Below is a generic agent example. It could be viewed as a agent skeleton provided by the fipa-os organization.
+<br>public class GenericAgent extends FIPAOSAgent<br>
+{<br>        private static final String AGENT_TYPE	= "generic-agent";<br>        public GenericAgent( String platform_profile, String name, String owner )<br>        {<br>         super( platform_profile, name, owner, true );<br>         // This call should always be made in the agent constructor before any messaging needs to occur. It sets up the message buffers.<br>         startPushing();<br>        // Now we can register with the local AMS (i.e. the platform) as the fist action our agent makes<br>
+        try<br>        {<br>	               // Attempt to register with AMS<br>	               registerWithAMS();<br>	}<br>	      catch (AMSRegistrationException amsre)<br>	      { ...  }<br>	// Now we can register with the local DF<br>	try<br>	{<br>	                // Register with DF<br>	                registerWithDF( AGENT_TYPE );<br>	}<br>        catch (DFRegistrationException dfre)<br>	        { ....} <br>     }<br> 	//-----------------------------------<br>	// PRIVATE METHODS<br>	//-----------------------------------<br><br>   	//--------------------------------<br>    	// PUBLIC METHODS<br>   	//-----------------------------------<br><br>
+	
+	/**
+	 * Shuts down the agent by first deregistering with the DF and AMS
+	 * (if registered) and then invoking shutdown() on the FIPAOSAgent shell
+	 */<br>
+        public synchronized void shutdown()<br>        {<br>	        // Check if we've registered with the DF<br>                if (registeredWithDF() == true)<br>                {<br>                        try<br>                        {<br>				// Attempt to deregister with DF<br>				deregisterWithDF();<br>  	}<br>			catch (DFRegistrationException dfre)<br>			{ ... }<br>		// Check if we're registered with the AMS<br>		if (registeredWithAMS() == true)<br>		{<br>			try<br>			{<br>				// Deregister with AMS<br>				deregisterWithAMS();<br>			}<br>			catch (AMSRegistrationException amsre)<br>
+			{ ... }<br>
+ 
+} // End GenericAgent<br>
+
+Comparing the specification reference model and the implementation system architecture, we can see the different view of a system can result in a very differnt architecture. The reference model is focused on functionality division of a system which is more problem domain proned while the implementaion architecture cares about how to implement the sytem in machine efficiently and how to apply object-oriented idea better. They need to deal with interfaces, reference relationships and event-triggers. The gap between the two kind of architecture is appearent in large software systems. It is usually hard to discuss how machine-proned architecture can fullfill the requirements and hard to imagine how realworld-proned architecture can be migrate to systems.
+Even Object-Oriented technology which is considered as a technology one step bridge the real world and machine domain cannot fullfill the gap. The new learner of java swing have a difficult time to understand actions and events. This system is a good example of real-world model and machine model. 
+</UL>
+
+</UL>
+-----
+<a name='approach'><font size="+1">
+<b>7. Summary</b></font></a>
+
+The future research and widespread adoption of multi-agent systems depend on a standardization embraced by both the academic and industrial community. We saw above that the specification of FIPA satisfies important requirements and qualities for effective deployment of future multi-agent systems that allows their agents to interoperate. FIPA is quickly becoming a standard of choice among a small number of standards.
+The success of FIPA can be seen from the following list of multi-agent systems that support FIPA's specification:
+* April Agent Platform (Fujitsu Labs of America)
+* Java Agent DEvelopment (JADE)  (Bellifemine et al 1999)
+* Grasshopper (Breugst et al, 1998)
+* Zeus (Nwana et al, 1999)
+
+The open source implementation, FIPA-OS, has also been successful in the following projects and application domains:
+* A virual home environment concept and future wireless services project called 
+CAMELEON ([http://www.comnets.rwth-aachen.de/project/cameleon/cameleon.html])
+* Personalized retrieval of information found in the retail sector in a projectcalled MAPPA ([http://www.sics.se/mappa/])
+* A research project on agents infrastructures called CASBAH
+
+FIPA is a young organization, and there is still much to be done in both research of multi-agent systems and their standardization. FIPA itself continually looks into new agent technology to improve its standardization. Important areas of future work include agent mobility and agent security. It remains to be seen if FIPA will produce the ultimate standard in agent technology.
+
+</UL>
+<font size="-1">[Back to top>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top]</font>
+
+--------
+<a name='references'><font size="+1">
+<b>Relevant bibliography and resources</b></font></a>
+
+*<a href="http://fipa-os.sourceforge.net/index.htm">FIPA-OS homepage</a> </br>
+*<a href="http://fipa-os.sourceforge.net/docs/Developers_Guide.pdf"> Main reference </a> </br>
+*<a href="http://www.cselt.it/ufv/leonardo/paper/aia98/aiia98.html"> Discussion about Agent Standandization </a> </br>
+*<a href="http://www.multiagent.com/Software/Tools_for_building_MASs/"> For More Multi-Agent Systems <a> 
+* Guarino, N. Formal Ontologies, Conceptual Analysis and Knowledge Representation, Internal Journals of Human-Computer Studies, No.5/6,625-640,1995
+* Searle, J.R., Speech Acts, Cambridge University Press, 1969
+* Wooldridge M., Jennings N.R., Intelligent Agents: Theory and Practice, 1995 
+* <a href="http://www.fipa.org/repository/architecturespecs.html">FIPA Specification repository</a>
+
+<p>
+<font size="-1">[Back to top>http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top]</font>
+//-- unformatted page contents --><A name=top></A>
+<CENTER><SPAN style="COLOR: blue"><FONT size=+2><B>The Architecture of FIPA 
+System [under construction]</B></FONT></SPAN></CENTER>
+<UL>
+  <LI><A href="http://wiki.cs.uiuc.edu/cs427/Proposal">Proposal</A> </LI></UL>
+<UL>
+  <OL>
+    <LI><A 
+    href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#introduction">Introduction</A> 
+    <LI><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#mas">Multi-Agent 
+    Systems</A> 
+    <LI><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#abc">Relationship to the 
+    Architecture Business Cycle</A> 
+    <LI><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#raq">Requirements and 
+    Qualities</A> 
+    <LI><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#approach">Specification 
+    Approach</A> 
+    <UL>
+      <LI><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#specification">FIPA 
+      Specification Architecture : Interoperablity and Buildability</A> 
+      <LI><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#modules">From FIPA 
+      Agent Management Reference Model to Nodamic Support : Extendibility</A> 
+      </LI></UL>
+    <LI><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#os">Object-Style 
+    Architecture of the Developed System</A> 
+    <LI><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#summary">Summary</A> 
+    <LI><A 
+    href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#references">References</A> 
+  </LI></OL></UL>
+<HR>
+<A name=introduction><FONT size=+1><B>1. Introduction</B></FONT></A> 
+<OL></OL>
+<UL>Multi-agent systems are a powerful and relatively new paradigm for 
+  accessing and integrating heterogeneous distributed services. Here, the 
+  services providers, service users and intermediaries are represented as agents 
+  which can be thought of as autonomous software entities. Successful agent 
+  systems include systems that control air resources charged with defending a 
+  friendly region from enemy attack and a network topology discovery agent. 
+  <P>Currently most of multi-agent systems exist only within their own 
+  microcosms so that an agent from a multi-agent system cannot communicate with 
+  a agent from another multi-agent system. To realize the full power of this new 
+  paradigm, agents must be able to communicate across different multi-agent 
+  systems. In this report, we will look at a multi-agent system standardization 
+  effort by the Foundation of Intelligent Physical Agents (FIPA). The remaining 
+  of this report will be organized as follows: In section 2, we give a brief 
+  description of agent technology. In section 3, we will look at the 
+  architecture business cycle, i.e., the business environment which provided the 
+  impetus for the formation of FIPA and the relationship between the various 
+  players in the Architecture Business Cycle. In section 4 we examine the 
+  requirements of an agent architecture. In sections 5-6 we examine architecture 
+  of the FIPA. In section 5 we examine how the architecture proposed by FIPA 
+  specification satisfies the architectural requirements of section 4. In 
+  section 6, we analyse the architecture of a system which supports the FIPA 
+  specifications. In section 7 we will show some current applications of the 
+  FIPA standardization and the future of FIPA as our summary. 
+  <P></P></UL><FONT size=-1><A 
+href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top">Back to top</A></FONT> 
+<HR>
+<A name=mas><FONT size=+1><B>2. Multi-Agent Systems</B></FONT></A> 
+<P>
+<UL>Consider the following scenario: The air traffic controls of a country X 
+  suddenly fails. Fortunately the computerized air traffic control systems in 
+  neighboring countries negotiate between themselves to track and deal with all 
+  affected flights and the potentially disastrous situation passes without any 
+  major incident. 
+  <P>This is among the lofty aims of agent technology. Although such a 
+  technology is not just around the corner, there has recently been a lot of 
+  serious research and applications in this area. But what is an agent? 
+  <P>The term agent has many definitions in the literature. While an object is a 
+  software abstraction with behavior, inheritance, encapsulation, state and 
+  identity, an agent (more specifically a strong agent - see below) on the other 
+  hand is an active object that is able to reason and communicate via structured 
+  messages. Here, an active object is one which have their own thread of control 
+  and they are proactive which encompasses mobility. To give more details to the 
+  nature of agents, we follow [Wooldridge M., Jennings N.R., Intelligent Agents: 
+  Theory and Practice, 1995]: An agent is weak if it is autonomous, social, 
+  reactive and proactive. An agent is strong if in addition to the above it has 
+  one or more of the following: mentalistic notions (beliefs, goals, plans, and 
+  intentions), rationality, veracity, and adaptability. Within autonomous 
+  behavior are the concepts of agent migration and transportability, and a 
+  social multi-agent system must be open. Because of these characteristics of 
+  agents. the agent paradigm differs from the traditional client-server approach 
+  in that agents can interact on a peer-to-peer level, mediating, collaborating 
+  and cooperating to achieve their goals. Agents interact using an agent 
+  communication language based on speech acts [Searle, J.R., Speech Acts, 
+  Cambridge University Press, 1969] and shared vocabularies classed ontologies 
+  [Guarino, N. Formal Ontologies, Conceptual Analysis and Knowledge 
+  Representation, Internal Journals of Human-Computer Studies, 
+  No.5/6,625-640,1995]. The use of an agent communication language based on 
+  these two theories enables agents to interact using semantically rich 
+  information. 
+  <P>A multi-agent system is a platform for agents. In general, a multi-agent 
+  system architecture must address concurrency, synchronization, 
+  transportability, interoperability, flexibility, reusability, testability and 
+  maintainability. In the perfect agent universe of various multi-agent systems, 
+  a user would issue a request to an agent on a multi-agent system which in turn 
+  interact with agents to satisfy the request. These interoperating agents might 
+  live on different multi-agent systems. Hence the agent technology is an 
+  outgrowth of research in Distributed Artificial Intelligence and Cooperative 
+  Distributed Problem Solving. 
+  <P>It is interesting to compare agent systems with the other very common 
+  distributed communication model CORBA. We think FIPA, one of the most popluar 
+  multi-agent system we are going to study have many advantages: 
+  <P>1. CORBA is the in a fixed client-server model, while agents can 
+  communicate in a wide variety of ways, including point-to-point, multicast, 
+  broadcast, some agent may even form a client-server relationship. 
+  <P>2. Clients and servers are also not mobile and the communication part ORB 
+  attaches closely to the behavior of client and server. One important feature 
+  of agents is that they are mobile, i.e., besides the transport of messages 
+  agents themselves are allowed to move from one place to another, and agent 
+  itself is an independant part. It can automatically carry on some task without 
+  instructions from the client or server. In other words, it is a mobil and 
+  intelligent entity. An agent actually keeps a history of past interaction with 
+  other agents, including messages received and messages sent. So it is 
+  stateful. This is distinctly different from the way an object processes 
+  messages. 
+  <P>3. In CORBA, the communication protocol is IIOP while FIPA will support 
+  multiple transport for full interoperability. In the case of FIPA, we will see 
+  that the architecture for this component is open and in fact supports IIOP, 
+  HTTP, TINA-C, etc. In the second point above, the richness of an agent's 
+  ability to communicate is built upon the fact that 
+  <P></P></UL><FONT size=-1><A 
+href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top">Back to top</A></FONT> 
+<HR>
+<A name=abc><FONT size=+1><B>3. Relationship to the Architecture Business 
+Cycle</B></FONT></A> 
+<P>
+<UL>First let us look at the driving forces that gave rise to the 
+  establishment of FIPA. We have already mentioned the fact that the full power 
+  of agent technology can only be realized if agents from different multi-agents 
+  systems are allowed to communicate. Hence there is a need for the 
+  standardization of such agent platforms. Currently, there are three important 
+  agent standardization efforts: the KQML community, OMG MASIF and FIPA. 
+  <P>KQML (Knowledge Query Meta Language) was one of the first initiatives to 
+  specify how to support social interaction characteristic of agents using a 
+  protocol based on speech acts and is now also one of the most pervasive agent 
+  communication languages. However, because of a lack of consensus in the 
+  community, variations of KQML exist and agent systems speaking different KQML 
+  dialects may not be able to interoperate fully. 
+  <P>MASIF (Mobile Agent System Interoperability Facility) was initiated by OMG 
+  (Open Management Group) a year before FIPA in 1995. The key characteristic of 
+  an agent under MASIF is that of its mobility from one location to another. In 
+  fact OMG's original call for proposals was for a Mobile Agent Facility. In 
+  contrast to MASIF, KQML and FIPA emphasize agency and social interaction 
+  between multi-agents as the defining properties for software agents. MASIF 
+  does not support or standardize interoperability between non-mobile agents on 
+  different agent platforms. In fact, MASIF restricts the interoperability of 
+  agents to those developed on CORBA platforms. On the other hand, we will see 
+  later that FIPA directly support the interoperability of agents deployed on 
+  agent frameworks which can support heterogeneous transports. OMG is currently 
+  exploring how to support other types of software agents and FIPA has has 
+  supplied its specifications to OMG. 
+  <P>Besides the fact that KQML and MASIF do not take into consideration the 
+  complete requirements of multi-agent technology, there were other factors 
+  driving the establishment of FIPA. 
+  <UL>
+    <LI>One driving force is the vision to seed the market and attain a critical 
+    mass of customers, applications and products in the medium and long term. In 
+    fact this was the main driving force for FIPA. 
+    <LI>Around 1995, many felt that research in multi-agent technology has 
+    reached or just passed its first peak. It was noticed that most research 
+    peaks twice and the best time for standardization is between the first peak 
+    and dip. 
+    <LI>An agent standard will provide added confidence to potential adopters of 
+    this technology. 
+    <LI>The standardization process shifts the emphasis from longer-term 
+    research issues to the practicalities of realizing commercial agent system, 
+    hence allowing the collaboration between the industrial and academic 
+    organizations on both theoretical and practical challenges of multi-agent 
+    systems. 
+    <LI>It was also realized that the best time to established a standard was 
+    before too many "standards" are already in the industry. 
+    <LI>Another important factor was that existing infrastructure was in place 
+    for a standard. For instance, CORBA and IIOP provided the needed 
+    infrastructure for message transport. (In fact they were the first to be 
+    adopted by FIPA in 1997.) </LI></UL>With these driving forces, FIPA 
+  (Foundation for Intelligent Physical Agents), an international non-profit 
+  organization, was established in 1996 and registered in Geneva, Switzerland. 
+  Its statutory purpose is 
+  <P>"to promote the development of specifications of generic agent technologies 
+  that maximize interoperatbility with and across agent based applications." 
+  <P>Part of its function is to produce, in a timely fashion, an internationally 
+  agreed specification for an agent enabling software framework which is usable 
+  across a large number of applications and yielding a high level of 
+  interoperability across applications. Contributors are free to produce their 
+  own implementations of this software framework as long as its construction and 
+  operation complies with the published FIPA specification. In this way the 
+  individual software frameworks are interoperable. 
+  <P>The following is a diagram of the Architecture Business Cycle. <BR><IMG 
+  src="Fipa-OS_files/abc.gif" border=0> <BR>The requirements will be discussed 
+  in the next section. We end this section by briefly explaining the work 
+  process within FIPA. Currently, the standardization of specifications follows 
+  a three-stage process. A specification starts off as Preliminary. This is 
+  generated by the Technical Committees or Working Groups under the supervision 
+  of a Technical Committee. Extensive revision takes place at this point. When 
+  the Preliminary specification is deemed suitable for implementation, it is 
+  submitted to the FIPA Architecture Board. If approved, the specification 
+  enters the second Experimental stage. An Experimental specification then 
+  enters the final Standard stage after a period of successful implementation by 
+  more than one FIPA-compliant platforms. During the Preliminary and 
+  Experimental stage, time-outs are observed, i.e., if the standard does not 
+  enter the next stage within a pre-specified time, it automatically becomes 
+  obsolete. Also, if a specification at any of the above stage has been 
+  identified as unnecessary for the FIPA standard, it temporarily become 
+  Deprecated. A Deprecated specification can be either reconsidered or, after a 
+  grace period, it becomes Obsolete. 
+  <P></P></UL><FONT size=-1><A 
+href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top">Back to top</A></FONT> 
+<HR>
+<A name=raq><FONT size=+1><B>4. Requirements and Qualities</B></FONT></A> 
+<P>
+<UL>Before examining the architectural requirements of FIPA, it is useful to 
+  look at the working principles of FIPA. We will also look at FIPA's own 
+  requirements of an agent through its interaction with another agent, with a 
+  user, and with information sources. 
+  <P>At the second FIPA meeting the following set of principles were established 
+  in order to achieve the statutory goals of section 1. We list a subset of 
+  these principles: FIPA selects and adapts existing technologies and only 
+  occasionally develops its own technologies Specifications must be produced 
+  before industries make commitment Systems are not specified, only the generic 
+  technologies usable in different systems, only the external behavior is 
+  specified, not the internal working. When a functionality need a technology it 
+  is highly desirable that the technology be unique. Technologies needed to 
+  support functionalities must be relocatable. FIPA specifies tools that can be 
+  assembled to provide systems of practical interest. However, it is the 
+  responsibility of the subsystem integrator to ensure that the overall system 
+  is fit for the purpose and complies with all the relevant regulatory 
+  requirements. FIPA specifications are of two kinds. It is normative when it 
+  mandates the behavior of a subsystem to ensure interoperability with other 
+  FIPA-specified subsystems. It is informative when its aim is to provide 
+  guidance to industry on some particular aspects of a subsystem. 
+  <P>The specification developed in 1997, FIPA 97, consisted of the following 
+  parts. The first three are normative: 
+  <UL>
+    <LI>Agent Management 
+    <LI>Agent Communication Language 
+    <LI>Agent/Software Integration </LI></UL>Four informative specifications were 
+  also developed. These involved specific agents in the following areas of 
+  application: (1) Personal Travel Assistance, (2) Personal Assistant, (3) 
+  Audio-Visual Entertainment, and (4)Broadcasting, Network Provisioning and 
+  Management. The specification of these specific agents also helped in 
+  understanding agent technology in general. Later work involved: (1) Extension 
+  Agent Management, (2) new specifications for agent security, agent mobility, 
+  human-agent interaction, ontology services. An informative specification for 
+  the Product Design and Manufacturing Agents was also developed. 
+  <P>FIPA defines an agent as follows: 
+  <P>"An agent is a computational process that implements the autonomous, 
+  communicating functionality of an application." 
+  <P>In greater detail, according to FIPA, an agent is an encapsulated software 
+  entity with its own state, behavior, thread of control, and an ability to 
+  interact and communicate with other entities, including people, other agents 
+  and legacy systems. FIPA lists 24 requirements for interactions between agent 
+  and agent, agent and user, and agent and existing information sources. The 
+  following is some of these requirements. Not all behaviors are present in a 
+  particular agent. 
+  <UL>
+    <LI>An agents need to publish its services and resources to other agents as 
+    well as to discover services or resources of other agents. 
+    <LI>Agents need to be able to communicate with each other. They should have 
+    the ability to decide which is the best means of doing so (point-to-point, 
+    broadcast, etc.). They also should be able to use existing infrastructure 
+    (TCP/IP networking, CORBA, TINA-C, HTTP, OLE, etc.) 
+    <LI>Agents need to adapt to the preferences of their users. Furthermore, the 
+    communication should be robust in the sense that recovery from exception 
+    conditions should be possible. 
+    <LI>Agents need to be able to access (existing) information sources. 
+  </LI></UL>(Security requirements (trust, authentication, etc.) were also 
+  specified but so far work in this area has been slow.) 
+  <P>
+  <P>From the above sections, we see that the requirements for a successful 
+  architectural specification are as follows: 
+  <UL>
+    <LI><B>Buildability:</B> The FIPA specification must lead to an actual FIPA 
+    implementation on a wide variety of platforms using currently available 
+    technology. 
+    <LI><B>Interoperability:</B> This is obviously a crucial requirement and was 
+    explictly stated in the first Call for Proposal in 1996. The specification 
+    must allow agents on different FIPA-compliant multi-agent systems to 
+    communicate with one another. 
+    <LI><B>Scalability:</B> Agent systems must scale well, i.e., performance 
+    should not degrade unacceptably or suddenly as the size of various 
+    demand-related variables grows. The particular performance variables are 
+    system dependent, but might include: the number of agents in the society, 
+    the number of messages being exchanged, the number of agents at a particular 
+    location, the information sources that the agents have. The agent society or 
+    system as a whole should be able to adjust itself to cope with increased 
+    demand or worload. 
+    <LI><B>Extensibility:</B> The architecture must be extensible since it must 
+    take into account the availability of relevant new technologies and hence 
+    their integration with the existing architecture. </LI></UL>In the next two 
+  sections we will look at FIPA's architectural specification and see how these 
+  requirements are satisfied. </UL><FONT size=-1><A 
+href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top">Back to top</A></FONT> 
+<HR>
+<A name=approach><FONT size=+1><B>5. Architecture Approach</B></FONT></A> 
+<P><A name=specification><B>FIPA Specification Architecture : Buildability and 
+Interoperability</B></A> 
+<P>
+<UL>FIPA organization provides structured specifications of the FIPA system. 
+  To look at what they did and see how the quality requirements were being 
+  implemented in the specification will help us to understand how fipa works and 
+  how they achieve the quality requirements through specification design. 
+  <P>The specification structure is shown in figure 1. <BR><IMG 
+  src="Fipa-OS_files/spec2.gif" border=0> <BR>The whole structure is in a 
+  layered fasion. The Fipa-application developers only need to look at the upper 
+  level while the systme implementers need to read carefully all the 3 levels. 
+  In the lower level of the specification, there are many alternative 
+  specifications about the Agent Communication Language. People may choose one 
+  or more to be implemented in their system. As we put it above, FIPA 
+  specification can be classified as normative and informative. The top level 
+  has both normative and informative specification and the lower two layers are 
+  both norative specifications. 
+  <P>The top level FIPA Application specifications is a set of reference models 
+  and ACL message sets. They can be divided into two parts. The first part is 
+  informative application prototypes in which FIPA agents can be deployed. It 
+  includes applications such as personal travel assistance, personal assistant, 
+  audio-visual entertainment,etc. The application developer can use these 
+  reference models to design its own architecture. The second part is normative, 
+  which includes Agent/Software Integration and a newly added part- nomadic 
+  support in the mobile computing environment. The Agent/Software Integration 
+  part is wrapper specificaiton define how many functions a legacy should 
+  provide to agent through that wrapper. For example, specification requires the 
+  Wrapper service should allow an agent to: <BR>. Request a dynamic connection 
+  to a software, <BR>· Invoke operations on the software system, <BR>· To be 
+  informed of the results of operations,<BR>· To query the properties of the 
+  software system, <BR>. Set the parameters of a software system,<BR>· Subscribe 
+  to events of the software system,<BR>· Manage the state of the service, 
+  and,<BR>· Terminate the service.<BR>
+  <P>But it doesn't specify what the exact form of those functions. The 
+  Interoperability lies in the agreement of communication languages but not in 
+  functional interfaces and object formats. 
+  <P>The normadic support part is based on basic FIPA reference model, adding an 
+  additional control agent component. 
+  <P>The Abstract Architecture is a part aimed to foster interoperability and 
+  reusability of FIPA system. To achieve this, it is necessary to identify the 
+  elements of the architecture that must be codified. Specifically, if two or 
+  more systems use different technologies to achieve some functional purpose, it 
+  is necessary to identify the common characteristics of the various approaches. 
+  This leads to the identification of architectural abstractions: abstract 
+  designs that can be formally related to every valid implementation. In fact, 
+  in the Abstract Architecture part, there is no "Architecture", instead there 
+  are bounch of definitions about basic entities and UML graphs about 
+  relationship between these entities. Those entities include agent, message, 
+  directory entry, etc. The abstract architecture is more like a dictionary for 
+  reference when developing systems. 
+  <P>The agent management part deals with the control and management of agents 
+  within and across agent platforms. Its reference model is basic reference 
+  model for sytem implementers. So the true system "Architecture" lies here. The 
+  reference model includes Agent, Directory Facilitator, Agent management system 
+  and message Transport Services. We will discuss it in detail later.Beyond 
+  this, in the Agent Management Part, we can also find mobility protocols. The 
+  actual agent mobility can be achieved through Agent Migration, Agent Cloning 
+  and Agent Invocation. So in fact, agent mobility here can be viewed as task 
+  mobility. Agent Mobility can be of many use. For example, in the web search 
+  application, one Agent can clone itself into many agents and do searching in 
+  parallel.<BR>
+  <P>Agent communication part are specifications around ACL (Agent communication 
+  language)semantic and dynamic behavior. It has three parts: Interaction 
+  Protocols (IPs), Communicative actions (CAs) and Content languages(CLs). The 
+  IPs specifications defines pre-agreed message exchange protocols for ACL 
+  messages, including how request, query, recuiting actions, etc. An example of 
+  protocol definition can be presented in the following graph. <BR><IMG 
+  src="Fipa-OS_files/query.gif" border=0> <BR>The CAs specifications deal with 
+  different utterances for each kind of ACL messages, which are in formal 
+  specification. For example, a failure is defined as follows: <BR><IMG 
+  src="Fipa-OS_files/failure.gif" border=0> <BR>CL specification focuses on the 
+  organization, structure, and status of the FIPA CLL and discusses the main 
+  requirements that a content language must satisfy in order to be FIPA 
+  compliant. The FIPA Content Library Registry document lists the current 
+  members of the library. The objectives of standardizing and defining a library 
+  of FIPA compliant content languages are: 1.To allow more flexibility and 
+  efficiency for many applications (for example, web based, real-time, nomadic). 
+
+  <P>2.To increase <B>interoperability</B> between agents developed in different 
+  contexts, by facilitating the reuse of content languages. This would enable 
+  for instance the use of RDF schemas emerging on the Web, or the capability of 
+  expressing choices in an agent content language, etc. 
+  <P>The Agent Message Transport specification deals with the transport and 
+  representation of messages across different network transport protocols, 
+  including wireline and wireless environments. ACL message formats are 
+  presented in bit wise , string and XML. Different transport protocols for 
+  message delivery, includ IIOP, HTTP and WAP. This part enables FIPA - 
+  compliant system be able to operate over different networking protocols, 
+  further more, it can interoperate with different network applications and 
+  platforms. 
+  <P>Till now, we can see that FIPA put much effort on Buildability and 
+  Interoperability support. To summarize: 
+  <UL><BR><B>Buildability support: </B><BR>1. The informative part can assist 
+    greatly in application development. If the application follow the 
+    specification, it can make itself more open. <BR><BR>2. The agent management 
+    reference model, agent/software reference model and nodamic computing 
+    reference model and the message formats designment can specfies the behavior 
+    of system development.<BR><BR>3. The layered architecture of specification, 
+    especially the seperation of Abstract Architecture part made developer eaier 
+    to follow the common part of the specification. The UML diagrams in the 
+    specification clarify the mandatory agent behavior.<BR><BR>
+    <P><B>Interoperablity support:</B><BR>1. The Abstract Architecture focuses 
+    on core interoperability between agents. These includes: Managing multiple 
+    message transport schemes; Managing message encoding schemes and Locating 
+    agents and services via directory services. There are two ways in which the 
+    abstract architecture makes provision for interoperability. The first is 
+    transport interoperability. The second is message representation 
+    interoperability. To provide interoperability, there are certain elements 
+    that must be included throughout the architecture to permit multiple 
+    implementations. For example, earlier it was noted that an agent has both an 
+    agent-name and a locator. The locator contains transport-descriptions, each 
+    of which contains information necessary for a particular transport to send a 
+    message to the corresponding agent. The semantics of agent communication 
+    require that an agent’s name be preserved throughout its lifetime, 
+    regardless of what transports may be used to communicate with it. Within 
+    Abstract Architecture there are both textual and UML graph indicating the 
+    static relationship between Agents, Transport descriptions and Directory 
+    Services. <BR><BR>2. The Agent communication part enables multiple ACL 
+    languages having a unified semantics. The semantic of the message are 
+    defined in formal specifications. To add more functionalities of the agent 
+    communication, we only need to add more formal specification semantics and 
+    there is a formal way to represent this semantics into different message 
+    parsers.<BR><BR>3. The Agent Message Transport is a very import part for the 
+    FIPA agents to operate on different networks and being implemented using 
+    existing technologies. FIPA can easily tune itself to different application 
+    environment since it has the ability to talk in different languages. For 
+    example, we can use CORBA to implement FIPA system since the message can be 
+    delivered in IIOP format. Maybe one day we could bridge CORBA and FIPA 
+    directly through IIOP. Another example is that the agent can query XML 
+    Database directly using a uniformed control message and content message. 
+    Great Interoperablity implies here. <BR><BR>4. To Interoper with legacy 
+    systems, FIPA system provides wrapper specifications.<BR></P></UL><FONT 
+  size=-1><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top">Back to 
+  top</A></FONT> 
+  <HR>
+  <A name=modules><B>From FIPA Agent Management Reference Model to Nomadic 
+  Support:Extensibility</B></FONT></A> 
+  <UL><IMG src="Fipa-OS_files/ref4.gif" border=0> <BR>Figure 3 FIPA Agent 
+    Management Reference Model <BR>The FIPA Management reference model currently 
+    provides the normative framework within which FIPA Agents exist and operate. 
+    System developed on the FIPA specification will use this model as the main 
+    architecture of their system. The later versions only add no more 
+    fundamental changes to the reference model. Combined with the Agent Life 
+    cycle, this establishes the logical and temporal contexts for the creation, 
+    operation and retirement of Agents. 
+    <P>
+    <UL>
+      <LI>An Agent is the fundamental actor on an AP which combines one or more 
+      service capabilities into a unified and integrated execution model that 
+      may include access to external software, human users and communications 
+      facilities. An agent may have certain resource brokering capabilities for 
+      accessing software. </LI></UL>
+    <UL>
+      <LI>A Directory Facilitator (DF) provides yellow pages services to other 
+      agents. Agents may register their services with the DF or query the DF to 
+      find out what services are offered by other agents. Multiple DFs may exist 
+      within an AP and may be federated. </LI></UL>
+    <UL>
+      <LI>An Agent Management System (AMS) is a mandatory component of the AP. 
+      The AMS exerts supervisory control over access to and use of the AP. Only 
+      one AMS will exist in a single AP. The AMS maintains a directory of AIDs 
+      which contain transport addresses (amongst other things) for agents 
+      registered with the AP. The AMS is responsible for managing the operation 
+      of an AP, such as the creation of agents, the deletion of agents, deciding 
+      whether an agent can dynamically register with the AP and overseeing the 
+      migration of agents to and from the AP (if agent mobility is supported by 
+      the AP). Since different APs have different capabilities, the AMS can be 
+      queried to obtain a description of its AP. A life cycle is associated with 
+      each agent on the AP which is maintained by the AMS. </LI></UL>
+    <UL>
+      <LI>An Agent Communicatin Channel supports interoperability both within 
+      and across different platforms. It may not be a real entity in system 
+      implementation. It only represents the communications between Agent, AMS 
+      and DF in ACL language. </LI></UL>
+    <UL>
+      <LI>An Message Transport Service (MTS) is the default communication method 
+      between agents on different APs. </LI></UL>
+    <UL>
+      <LI>An Agent Platform (AP) provides the physical infrastructure in which 
+      agents can be deployed. The AP consists of the machine(s), operating 
+      system, agent support software, FIPA agent management components (DF, AMS 
+      and MTS) and agents. </LI></UL>The internal design of an AP is an issue for 
+    agent system developers and is not a subject of standardisation within FIPA. 
+    AP’s and the agents which are native to those APs, either by creation 
+    directly within or migration to the AP, may use any proprietary method of 
+    inter-communication. 
+    <P>It should be noted that the concept of an AP does not mean that all 
+    agents resident on an AP have to be co-located on the same host computer. 
+    FIPA envisages a variety of different APs from single processes containing 
+    lightweight agent threads, to fully distributed APs built around proprietary 
+    or open middleware standards. 
+    <P>FIPA is concerned only with how communication is carried out between 
+    agents who are native to the AP and agents outside the AP or agents who 
+    dynamically register with an AP. Agents are free to exchange messages 
+    directly by any means that they can support. 
+    <P>The seperation of components in the middle layer enable us to add more 
+    component to it to achieve new functions. All these middle components are 
+    connected with each other through protocols which can be designed, added or 
+    switched. If necessary, new protocols other than HTTP or IIOP can be 
+    integrate into the MTS part and thus provide better <B>extensibility</B>. In 
+    a traditional Broker pattern, since one component usually takes up the whole 
+    layer, and each layer are depend strictly with each other through specified 
+    and complication messages, new functions are more differcult to be added. So 
+    in the broker structure, new functions are added as Services which is 
+    actually a seperate part from CORBA core and in an application. But in fipa 
+    such new functionality can be made directly into the core. A good example of 
+    Fipa's extensibility is the Nodamic support. 
+    <P>Compared to today’s traditional distributed systems, the nomadic 
+    computing environment is very different in many respects, such as Bandwidth, 
+    latency, delay, error rate, quality of display. 
+    <P>Confronted with these circumstances, the nomadic end-user would benefit 
+    from having the following functionality provided by the infrastructure: 
+    information about expected performance, agent monitoring and controlling the 
+    transfer operations, and adaptability. 
+    <P>FIPA uses the Wireless Application Protocol (WAP)as its wireless Message 
+    Transport Protocol. The WAP Forum has developed industry-wide specifications 
+    for low bandwidth wireless services (such as GSM, GPRS, etc.) and wireless 
+    devices (such as mobile telephones and personal digital assistants). 
+    <BR><IMG src="Fipa-OS_files/nodamic2.gif" border=0> <BR>Figure 4: Nodamic 
+    Support Architecture <BR>The adaptation of applications to various nomadic 
+    computing environments is an important area. There are several tasks that 
+    agents need to carry out during application adaptation: 1. Selection of MTP 
+    and Message Transport Connection (MTC) to be used for agent 
+    communication.<BR>2. Selection of an ACL and content language representation 
+    to be used for agent communication.<BR>3. Provision of support for 
+    application agents to carry out adaptation of application data, such as 
+    still images, video and audio, XML, etc. Today’s Internet application data 
+    (such as multimedia content) are designed with high performance desktop PCs 
+    and high quality displays in mind. Therefore, the application data is 
+    frequently unsuitable for nomadic computing using wireless wide-area 
+    networks and low performance mobile devices, and hence requires 
+    modification.<BR>4. Communication between agents performing adaptation.<BR>
+    <P>The functions required to carry out monitoring and controlling for 
+    quality of service can be split into several specific tasks: <BR>1. 
+    Observing the quality of service of MTPs and MTCs,<BR>2. Measuring (if there 
+    are no other means to obtain the required information) the quality of 
+    service of an MTP and MTC,<BR>3. Collecting information from the observing 
+    and measuring sources, 4. Analysing the information, and,<BR>5. Controlling 
+    an MTC and selecting an MTP.<BR>
+    <P>Based on this division, the agent middleware consists of the following 
+    logical agents (see above Figure): 
+    <P>1. A Monitor Agent (MA) which carries out tasks 1 through 4, and,<BR>2. A 
+    Control Agent (CA) which carries out task 5.<BR>
+    <P>To summarize how to achieve Fipa extensiblity:<BR>1. Add more components 
+    to the middle layer(Agent/DF/AMS) of the reference model.<BR>2. If 
+    necessary, adapt new message communciation protocols into the MTS layer. 
+<BR>
+    <P></P></UL><FONT size=-1><A 
+  href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top">Back to top</A></FONT> 
+  <HR>
+  <A name=os><FONT size=+1><B>6. Object-Styled Architecture of Developed System 
+  </B></FONT></A>
+  <UL>FIPA-OS supports the majority of the FIPA Experimental specifications 
+    and is being continuously improved as a managed Open Source project, making 
+    it an ideal choice for any FIPA compliant agent development activity. 
+    Because the FIPA specification didn't provide how agents can achieve 
+    intercommunication and action on a machine level. The specification 
+    implementation may have a little different architecture to the reference 
+    model. But it still functioned as the FIPA specification reference model.All 
+    the components in the reference model are indirectly implemented here. The 
+    system is object-based. Its components are divided into different classes. 
+    Though classes reference each other and have a complicate event-trigger 
+    relationship.<BR>The top level(component) of the FIPA-OS system is as 
+    follows:<BR><IMG src="Fipa-OS_files/osos.gif" border=0> <BR>Figure 5 
+    Components within FIPA-OS in a layered fashion <BR>
+    <P>Through all these components the Agent-Shell is at the central position. 
+    Agents are actually running on this class. It provides a shell for Agent 
+    implementation. Inside this class, there are references to 
+    MessageTransportService class, ConversationManager class and TaskManager 
+    class, so that through AgentShell we can reference those classes directly. 
+    It can provides the agent methods such as sendMessage(), registerWithAMS(), 
+    registerWithDF(), setting up new tasks and shut down an agent. 
+    <P>Every complicate Object-Oriented system have event listeners and 
+    triggers. They are the new and flexible approach of system subroutine 
+    calling. The task manager here provides the ability to split the 
+    functionality of an Agent into smaler, disjoint units of works known as 
+    Tasks. The aim is that Tasks are self-contained pieces of code that carry 
+    out some taks and return a result, have the ability to send and receive 
+    messages, and have little or preferably no dependence on the Agent they are 
+    executed within. As we shall pointed later, the task manager provide 
+    functionalities of DF and AMS. 
+    <P>The MTS class provides the ability to send and receive messages to an 
+    Agent implementation. It has a CM object that can reference to the CM class. 
+    The Conversation Manager provides the ablility to track conversation state 
+    at the performative level, as well as mechanisms for grouping messages of 
+    the same conversation together. These two parts formed the ACC layer in the 
+    reference model. 
+    <P>The MTP is corresponding to the MTP in the reference model protocol 
+    implementation for sending and receiving messages among agents. 
+    <P>Here we cannot find apperant classes implementing DF and AMS. Their data 
+    are residing in the Databases and their methods are implemented in the Task 
+    Manager. Review what is DF and AMS, we can see that they are actually 
+    tables: DF is a table with Agent type and Agent IDs and AMS The AMS 
+    maintains a directory of AIDs which contain transport addresses, life state, 
+    etc. for agents registered with the AP. So in the implementation system, it 
+    is not necessary to made them as seperate classes. 
+    <P><BR><IMG src="Fipa-OS_files/os2.gif" border=0> <BR>Figure 6 An 
+    Object-Oriented Reference Relationship of the Core Components in FIPA 
+    system<BR>
+    <P>Below is a generic agent example. It could be viewed as a agent skeleton 
+    provided by the fipa-os organization. <BR>public class GenericAgent extends 
+    FIPAOSAgent<BR>{<BR>private static final String AGENT_TYPE = 
+    "generic-agent";<BR>public GenericAgent( String platform_profile, String 
+    name, String owner )<BR>{<BR>super( platform_profile, name, owner, true 
+    );<BR>// This call should always be made in the agent constructor before any 
+    messaging needs to occur. It sets up the message 
+    buffers.<BR>startPushing();<BR>// Now we can register with the local AMS 
+    (i.e. the platform) as the fist action our agent makes<BR>try<BR>{<BR>// 
+    Attempt to register with AMS<BR>registerWithAMS();<BR>}<BR>catch 
+    (AMSRegistrationException amsre)<BR>{ ... }<BR>// Now we can register with 
+    the local DF<BR>try<BR>{<BR>// Register with DF<BR>registerWithDF( 
+    AGENT_TYPE );<BR>}<BR>catch (DFRegistrationException dfre)<BR>{ ....} 
+    <BR>}<BR>//-----------------------------------<BR>// PRIVATE 
+    METHODS<BR>//-----------------------------------<BR><BR>//--------------------------------<BR>// 
+    PUBLIC METHODS<BR>//-----------------------------------<BR><BR>
+    <P>/** 
+    <UL>
+      <LI>Shuts down the agent by first deregistering with the DF and AMS 
+      <LI>(if registered) and then invoking shutdown() on the FIPAOSAgent shell 
+      <LI>/<BR>public synchronized void shutdown()<BR>{<BR>// Check if we've 
+      registered with the DF<BR>if (registeredWithDF() == 
+      true)<BR>{<BR>try<BR>{<BR>// Attempt to deregister with 
+      DF<BR>deregisterWithDF();<BR>}<BR>catch (DFRegistrationException 
+      dfre)<BR>{ ... }<BR>// Check if we're registered with the AMS<BR>if 
+      (registeredWithAMS() == true)<BR>{<BR>try<BR>{<BR>// Deregister with 
+      AMS<BR>deregisterWithAMS();<BR>}<BR>catch (AMSRegistrationException 
+      amsre)<BR>{ ... }<BR></LI></UL>} // End GenericAgent<BR>
+    <P>Comparing the specification reference model and the implementation system 
+    architecture, we can see the different view of a system can result in a very 
+    differnt architecture. The reference model is focused on functionality 
+    division of a system which is more problem domain proned while the 
+    implementaion architecture cares about how to implement the sytem in machine 
+    efficiently and how to apply object-oriented idea better. They need to deal 
+    with interfaces, reference relationships and event-triggers. The gap between 
+    the two kind of architecture is appearent in large software systems. It is 
+    usually hard to discuss how machine-proned architecture can fullfill the 
+    requirements and hard to imagine how realworld-proned architecture can be 
+    migrate to systems. Even Object-Oriented technology which is considered as a 
+    technology one step bridge the real world and machine domain cannot fullfill 
+    the gap. The new learner of java swing have a difficult time to understand 
+    actions and events. This system is a good example of real-world model and 
+    machine model. </P></UL>
+  <P></P></UL>
+<HR>
+<A name=approach><FONT size=+1><B>7. Summary</B></FONT></A> 
+<P>The future research and widespread adoption of multi-agent systems depend on 
+a standardization embraced by both the academic and industrial community. We saw 
+above that the specification of FIPA satisfies important requirements and 
+qualities for effective deployment of future multi-agent systems that allows 
+their agents to interoperate. FIPA is quickly becoming a standard of choice 
+among a small number of standards. The success of FIPA can be seen from the 
+following list of multi-agent systems that support FIPA's specification: 
+<UL>
+  <LI>April Agent Platform (Fujitsu Labs of America) 
+  <LI>Java Agent DEvelopment (JADE) (Bellifemine et al 1999) 
+  <LI>Grasshopper (Breugst et al, 1998) 
+  <LI>Zeus (Nwana et al, 1999) </LI></UL>The open source implementation, FIPA-OS, 
+has also been successful in the following projects and application domains: 
+<UL>
+  <LI>A virual home environment concept and future wireless services project 
+  called CAMELEON (<A 
+  href="http://www.comnets.rwth-aachen.de/project/cameleon/cameleon.html">www.comnets.rwth-aachen.de/project/cameleon/cameleon.html</A>) 
+
+  <LI>Personalized retrieval of information found in the retail sector in a 
+  projectcalled MAPPA (<A 
+  href="http://www.sics.se/mappa/">www.sics.se/mappa/</A>) 
+  <LI>A research project on agents infrastructures called CASBAH </LI></UL>FIPA is 
+a young organization, and there is still much to be done in both research of 
+multi-agent systems and their standardization. FIPA itself continually looks 
+into new agent technology to improve its standardization. Important areas of 
+future work include agent mobility and agent security. It remains to be seen if 
+FIPA will produce the ultimate standard in agent technology. 
+<P>
+<UL></UL><FONT size=-1><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top">Back 
+to top</A></FONT> 
+<P>
+<HR>
+<A name=references><FONT size=+1><B>Relevant bibliography and 
+resources</B></FONT></A> 
+<P>
+<UL>
+  <LI><A href="http://fipa-os.sourceforge.net/index.htm">FIPA-OS homepage</A> 
+  <BR>
+  <LI><A href="http://fipa-os.sourceforge.net/docs/Developers_Guide.pdf">Main 
+  reference </A><BR>
+  <LI><A 
+  href="http://www.cselt.it/ufv/leonardo/paper/aia98/aiia98.html">Discussion 
+  about Agent Standandization </A><BR>
+  <LI><A href="http://www.multiagent.com/Software/Tools_for_building_MASs/">For 
+  More Multi-Agent Systems <A>
+  <LI>Guarino, N. Formal Ontologies, Conceptual Analysis and Knowledge 
+  Representation, Internal Journals of Human-Computer Studies, 
+  No.5/6,625-640,1995 
+  <LI>Searle, J.R., Speech Acts, Cambridge University Press, 1969 
+  <LI>Wooldridge M., Jennings N.R., Intelligent Agents: Theory and Practice, 
+  1995 
+  <LI><A href="http://www.fipa.org/repository/architecturespecs.html">FIPA 
+  Specification repository</A> </LI></UL>
+<P><FONT size=-1><A href="http://wiki.cs.uiuc.edu/cs427/Fipa-OS#top">Back to 
+top</A></FONT>
+<P>
+<HR>
+
+<FORM action=/cs427/SEARCH method=post><INPUT type=hidden value=SEARCH 
+name=COMMAND> <INPUT type=submit value=Find...> <INPUT size=40 
+name=SEARCHPATTERN> </FORM>
+<TABLE cellSpacing=2 cellPadding=0 width="100%" bgColor=#ffffc0>
+  <TBODY>
+  <TR>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/EDIT/Fipa-OS">Edit</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/RENAME/Fipa-OS">Rename</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/DIFF/191/190/Fipa-OS">Changes</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/HISTORY/Fipa-OS">History</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/UPLOAD">Upload</A></FONT></TD>
+    <TD><FONT face=Arial><A 
+      href="http://wiki.cs.uiuc.edu/cs427/DOWNLOAD/">Download</A></FONT></TD>
+    <TD><FONT face=Arial><A href="http://wiki.cs.uiuc.edu/cs427">Back to 
+      Top</A></FONT></TD></TR></TBODY></TABLE></FONT></BODY></HTML>

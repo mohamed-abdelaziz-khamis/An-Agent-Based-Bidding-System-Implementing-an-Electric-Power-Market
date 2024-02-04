@@ -1,0 +1,247 @@
+Using our AgentBuilder Pro software product, we have implemented and tested a
+simple, agent-based electronic auction for buying and selling electric power.
+
+This white paper describes the design of a prototypi-cal
+electronic marketplace for buying and selling electric power. We also devel-oped
+a simple demonstration system to show the operation of the agents and the
+marketplace.
+
+The distributed, multiple agent approach is significantly more useful than a cen-tral
+server, since individual agent behaviors are under the control of the stake-holder
+and not subject to the rules and constraints of a central authority.
+
+Intelligent Agents in the Power Industry
+Intelligent software agents are a new class of software that act on behalf of the user
+to find and filter information, negotiate for services, easily automate complex tasks,
+or collaborate with other software agents to solve complex problems.
+
+A software agent is viewed as an autono-mous
+software construction; i.e., one that is capable of executing without user
+intervention.
+
+We define a software agent as a software component that:
+• executes autonomously
+• communicates with other agents or the user
+• monitors the state of its execution environment
+
+Agents and Agency
+While agents are useful and powerful computational entities and a single agent can
+be used to perform a wide variety of tasks, agents are most useful when multiple
+agents communicate, cooperate and collaborate to solve complex problems. A col-lection
+of agents that work together to provide some service is called an agency.
+
+These agents communicate and cooperate with each other to implement an elec-tronic
+marketplace. In this marketplace, agents with excess electric power auction
+power to agents who need to purchase power. Likewise, an agent that needs to pur-chase
+power can initiate an auction to buy power from other agents who have
+excess capacity.
+
+Agency - Market Operation
+The proposed energy market will consist of an agency of buyers and suppliers inter-acting
+directly to establish bilateral contracts for the sale and delivery of energy.
+Information is provided to all participants via a public forum,
+
+The market will operate continuously under a pro-cess
+having three basic stages:
+• Auction
+• Transaction Definition
+• Transaction Execution
+
+Stage 1: Auction
+Buyers and suppliers/sellers are matched using a modified Dutch auction format.
+In this format both buyers and sellers may conduct an auction session by posting
+buy/sell information in a public forum
+
+Buyers and sellers conduct individual Dutch auction sessions using the public
+forum without the assistance or oversight of an auctioneer. The process begins
+when the auctioning party (buyer or seller) posts auction information (e.g., amount
+and timing of the capacity (for sale or purchase), price, auction session identifier,
+minimum acceptable contract quantity, etc.). The auctioning party is not responsi-ble
+for calculating delivery costs (transmission) since this depends on the physical
+location of the bidder, which is not known to the auctioning party at the time of
+posting.
+
+In accordance with the Dutch auction format, the price of the next posting during
+the auction session is modified using a known price modifier.
+
+Stage 2: Transaction Definition
+Prospective bidders access the public information and evaluate information on the
+various auction sessions relative to their needs. If a decision is made to bid then
+bids are electronically submitted directly to the auctioning party
+
+Transaction information relative to the price and starting time of
+the energy delivery are set in the auction posting so only the quantity and duration
+of the delivery need to be identified in order to fully define the transaction.
+
+Stage 3: Transaction Execution
+Transaction execution is a two step process. The first step requires that the auction-ing
+party check the transaction for system feasibility. This is accomplished using
+the system power model and information on transactions already recorded (as read
+from the web site). If a transaction appears feasible then it is posted as a “pending’
+transaction on the Auction web site. The auctioning party checks and posts each
+transaction separately until all transactions have been entered. Larger transactions
+are checked and executed first (to maximize income).
+
+The second step of the transaction execution process involves final system
+approval. As currently envisioned this function will be provided by the OASIS /
+Auction web site itself. Pending transactions will be evaluated for system feasibil-ity
+in the order that they are received. Feasible transactions are approved and move
+from a “pending” to “recorded” status.
+
+Buyer/Supplier Agent Types
+Under the proposed market format both buyers (energy users) and suppliers may
+conduct auction sessions. Therefore, market participants have the option to:
+• Conduct an auction session and wait for bidders to approach them,
+• Review and subsequently bid into the various auction sessions, or
+• Both conduct an auction session and bid into the auctions of others.
+
+1. Agent Configuration
+Seller Agents           Buyer Agents
+Auctioning Supplier   Bidding Supplier
+Auctioning User       Bidding User
+
+Auctioning Agent Description
+An auctioning agent conducts auction sessions as needed to fulfill its energy
+requirements. Both buyers and sellers/suppliers may conduct auctions. The basic
+auction process is similar in both cases.
+
+The auctioning process starts with a status evaluation that includes:
+1. Establishing the buyer/seller capacity needs (whether it is the anticipated gener-ation
+capacity or a user’s expected load).
+2. Checking the status of all potential transactions previously recorded by the
+buyer/seller that have yet to be transacted (e.g., energy delivery/acceptance is
+still in the future, etc.). Some transactions may have changed status due to
+transmission system problems and it may now be necessary to open a new auc-tion
+session to accommodate the change.
+3. Identifying any auctions that the buyer/seller is currently conducting.
+4. Checking transmission system status (availability and cost).
+
+The auctioning party can attempt to eliminate the bid collision problem by:
+• equitably distributing the capacity amongst the bidders, or
+• selecting bidders that are the most advantageous to the auctioning party (i.e., a
+single large transaction versus many smaller ones, etc.).
+
+Bidding Agent Description
+By definition, a bidding agent will always fulfill their energy needs by participating
+in the auctions of other agents. Both buyers and sellers/suppliers may bid into the
+auctions of others with the process being very similar in both cases.
+
+The bidding process begins with a status evaluation that includes:
+1. Establishing the buyer/seller capacity needs (whether it is the anticipated gener-ation
+capacity or a user’s expected load).
+2. Checking the status of all potential transactions previously recorded by the
+buyer/seller not yet transacted (e.g., energy delivery/acceptance is still in the
+future, etc.). Some transactions may have changed status due to transmission
+system problems and it may now be necessary fill this capacity from current
+auctions.
+
+Initially, the bidding agent will use the following procedure to select auctions and
+formulate bids:
+1. Select auctions with the best price first (lowest price for buyer, highest price for
+supplier). If two auctions have an equal price then the bidding agent will give
+preference to the auction providing the largest transaction size. If competing
+auctions have both the same price and transaction size then preference would be
+given to the auction involving the least amount of transmission system assets.
+2. Select the maximum bid size that can be accommodated by the auctioning party
+up to the bidding agent’s total requirement (i.e., obtain all of the needed capac-ity
+from a single auction if possible).
+3. Modify the bids to insure that no bid is below the minimum acceptable transac-tion
+size. This will be accomplished by reducing the size of other bids in the
+reverse order as noted in 1 above (least favorable bids are reduced first).
+
+Agent information can be classified into three basic types: predictions, status, and
+historical.
+
+Bidder Defections
+Bidder defection is when a bidder backs out of a transaction prior to its execution.
+
+Roles and Functions of Buyer/Seller Agent (BSA)
+Role    Function  Description
+Buyer  Auctioneer  Buy power
+Seller Auctioneer Supply power
+Buyer  Bidder      Buy Power
+Seller Bidder     Supply Power
+
+Each BSA exhibits unique and individual behavior determined by its own unique
+economic and behavioral model. There are three components of each agent’s
+behavior. These are:
+• buying/selling strategy
+• market supply/demand characteristics
+• operational power quantity requirements
+
+The Market Place
+The market consists of a combination of buyer and seller agents taking on roles as
+either bidders or auctioneers.
+The agents are each assigned a role (as buyer or seller
+and auctioneer or bidder) by the demonstration operator using the GIA.
+
+GIA:Grid Interface Agent
+
+Agent Communication
+In order to perform their individual tasks, each agent must communicate with other
+agents in the agency. The following paragraphs provide an overview of the commu-nication
+between the various agents in the auction agency.
+
+Auction Sessions
+Once the Buyer/Seller Agents are properly set up and ready to begin execution, the
+auction session cycle begins.
+
+Interface Description
+The Experiment Control Agent provides a graphical user interface to control the
+simulated auction session and view the results as they are generated. Figure 10
+illustrates the user interface.
+
+Control Panel Buttons
+The Control Panel contains five buttons that are used to control the operation of the
+software. Any of the buttons may be pressed at any time during the auction. The
+software checks for button presses at the end of each auction session. The last but-ton
+pressed in an auction session is the button press that is used for subsequent pro-cessing.
+If more than one button is pressed or a button is pressed multiple times
+during an auction session, all but the last press will be ignored.
+
+Buyer Status Information
+The Buyer text panel contains information for one buyer and a specific hour. The
+panel contains a combo box that allows the user to select any of the buyers in the
+agency. The panel also contains a text field that allows the user to specify the deliv-ery
+hour of the day. The delivery hour is an integer between zero and 23.
+
+Agent Information
+A block of static agent information is the first information written to the log file.
+There is a one-line header for the block containing the “Agent Information” label.
+This is followed by smaller blocks of text for each of the Buyer/Seller Agents. Each
+of the smaller blocks contains eight lines of text.
+
+Session Information
+A block of session information is written to the log file at the end of each auction
+session. The information in this block represents activity in only the auction session
+identified and is not a running total across multiple sessions.
+
+Overall Market Information
+A block of overall market information is written to the log file at the end of each
+auction session. The information in this block represents a running total of overall
+market activity. There are three lines of header information for a block of overall
+market information.
+
+Running the System
+There are 5 basic operations performed with the Control Panel: Initializing, Step-ping,
+Running, Stopping and Exiting.
+
+The Auction Control Panel contains five buttons that are used to control the opera-tion
+of the software.
+
+There are four steps to the con-figuration
+process; these are accomplished by completing the worksheets/tabs in
+this workbook. The four basic steps are:
+1. Auction Setup (session type, number of suppliers and buyers, and their energy
+requirements/capacities).
+2. Supplier Agent Setup (generation type, profit goal, and auction strategy).
+3. Buyer Agent Setup (business type and bidding strategy).
+4. Save Setup.
+
+Distributing the Agents
+Each agent runs in its own Java virtual machine, so it may be necessary when run-ning
+the system in multi-agent mode to distribute the agents across multiple
+machines. Several steps must be completed in order to distribute the agents. The
+AgentBuilder manuals are included in the distribution and should be referenced for
+more details about the distribution process.
+

@@ -1,0 +1,282 @@
+A.cart:hover {
+	COLOR: #cc3300
+}
+A {
+	COLOR: #003399
+}
+A:active {
+	COLOR: #cc3300
+}
+A:visited {
+	COLOR: #666666
+}
+A:hover {
+	COLOR: #cc3300; TEXT-DECORATION: none
+}
+BODY {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Helvetica, sans-serif
+}
+TH {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Helvetica, sans-serif
+}
+P {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Helvetica, sans-serif
+}
+DIV {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Helvetica, sans-serif
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.footer {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Helvetica, sans-serif
+}
+.headerBg {
+	FONT-SIZE: 10px; BACKGROUND-COLOR: #004f99
+}
+.searchBox {
+	MARGIN-TOP: 5px
+}
+.sideNav {
+	BACKGROUND-COLOR: #fbfbf1
+}
+.sideNavBg {
+	BACKGROUND-COLOR: #666666
+}
+.sideNavHeader {
+	BACKGROUND-COLOR: #f0f0de
+}
+.subNav {
+	FONT-SIZE: 10px; BACKGROUND-COLOR: #e0e0c1
+}
+.calloutHead {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #7ca7cf
+}
+.smallLinks {
+	FONT-SIZE: 11px; COLOR: #003399; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.smtitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.about2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; TEXT-TRANSFORM: uppercase; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #f0f0de
+}
+.title2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ver10 {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.calloutHead {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #7ca7cf
+}
+HR {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; WIDTH: 100%; COLOR: #666666; BORDER-BOTTOM: 0px; HEIGHT: 0.5pt
+}
+.about {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; TEXT-TRANSFORM: uppercase; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ddddd2
+}
+.aboutbgcolor {
+	BACKGROUND-COLOR: #efefe5
+}
+.aboutborder {
+	BACKGROUND-COLOR: #cccccc
+}
+.aboutcurrent {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.aboutlinks {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.associate {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.authenticated {
+	BACKGROUND-COLOR: #ffffcc
+}
+.authname {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.bgWhite {
+	BACKGROUND-COLOR: #ffffff
+}
+.button {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #999999 1px solid; CURSOR: hand; COLOR: #666666; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ddddd2
+}
+.button2 {
+	BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #666666 1px solid; CURSOR: hand; COLOR: #ffffff; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #999999
+}
+.button3 {
+	FONT-SIZE: 12px; CURSOR: hand; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ddddd2
+}
+.cart {
+	FONT-SIZE: 11px; COLOR: #ff6600; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.courseDivHR {
+	COLOR: #ddddd2
+}
+.greytxt {
+	FONT-SIZE: 11px; COLOR: #999999; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.hand {
+	CURSOR: hand
+}
+.headerBIG {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #cccccc; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #999999
+}
+.input {
+	FONT-SIZE: 12px; COLOR: #cc3300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.price {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.small {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.specificsupps {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #cc6600; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.usave {
+	FONT-SIZE: 11px; COLOR: #cc3300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ver11 {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ver12 {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ver12red {
+	FONT-SIZE: 12px; COLOR: #cc3300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ver12whitebold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ver14 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #efefe5
+}
+.ver146 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ver14w {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.vpblue {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #336699; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.adhoc {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #e5e5e5
+}
+.authorAffiliation {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.authorName {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.blurb {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.clH {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; TEXT-TRANSFORM: uppercase; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.copyrightNew {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #cc3300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.coursebullet1 {
+	FONT-SIZE: 10px; COLOR: #999966; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.coursebullet2 {
+	FONT-SIZE: 10px; COLOR: #666699; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.courseprod {
+	FONT-SIZE: 12px; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.defBullet {
+	FONT-SIZE: 10px; COLOR: #999999; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.disciplinedrop {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.hilite {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; TEXT-TRANSFORM: uppercase; COLOR: #cc3300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffcc
+}
+.leftnav {
+	FONT: 9pt Arial, Verdana, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: none
+}
+.leftnav:visited {
+	FONT: 9pt Arial, Verdana, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: none
+}
+.leftnav:hover {
+	TEXT-DECORATION: underline
+}
+.leftnav2 {
+	FONT: 9pt Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.lowernav {
+	FONT: 9pt Arial, Verdana, Helvetica, sans-serif; COLOR: #cc6600; TEXT-DECORATION: none
+}
+.mcH {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.nolinkleftnav2 {
+	FONT: 9pt Arial, Verdana, Helvetica, sans-serif; COLOR: #666666; TEXT-DECORATION: none
+}
+.orderlist1 {
+	FONT-SIZE: 10px; COLOR: #666699; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.promH {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; TEXT-TRANSFORM: none; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.resourcenav {
+	FONT: bold 9pt Arial, Verdana, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: underline
+}
+.rightnav {
+	FONT: 9pt Arial, Verdana, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: none
+}
+.small {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.smallB {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.smallRedB {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #cc3300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.sort {
+	FONT-SIZE: 12px; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.sort:visited {
+	COLOR: #003399
+}
+.spTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.subclH {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; TEXT-TRANSFORM: uppercase; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.subleftnav2 {
+	FONT: 8pt Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.titlebullet1 {
+	FONT-SIZE: 10px; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.titlebullet2 {
+	FONT-SIZE: 10px; COLOR: #999966; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.topnav {
+	FONT: bold 10pt Arial, Verdana, Helvetica, sans-serif; COLOR: #ccccff; TEXT-DECORATION: none
+}
+.topnav:hover {
+	FONT: bold 10pt Arial, Helvetica, sans-serif; CURSOR: hand; COLOR: #ffffcc; TEXT-DECORATION: none
+}
+.topnav:link {
+	FONT: bold 10pt Arial, Helvetica, sans-serif; COLOR: #ccccff
+}
+.topnav:visited {
+	FONT: bold 10pt Arial, Helvetica, sans-serif; COLOR: #ccccff
+}

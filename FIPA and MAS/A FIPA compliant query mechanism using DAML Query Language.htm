@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0050)http://www.cs.umbc.edu/~finin//papers/dqlFIPA.html -->
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:st1 = 
+"urn:schemas-microsoft-com:office:smarttags"><HEAD><TITLE>A FIPA compliant query mechanism using DAML Query Language</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content=Word.Document name=ProgId>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<META content="Microsoft Word 11" name=Originator><LINK 
+href="dqlFIPA_files/filelist.xml" rel=File-List><o:SmartTagType name="place" 
+namespaceuri="urn:schemas-microsoft-com:office:smarttags"></o:SmartTagType><o:SmartTagType 
+name="PlaceType" 
+namespaceuri="urn:schemas-microsoft-com:office:smarttags"></o:SmartTagType><o:SmartTagType 
+name="PlaceName" 
+namespaceuri="urn:schemas-microsoft-com:office:smarttags"></o:SmartTagType><o:SmartTagType 
+name="City" 
+namespaceuri="urn:schemas-microsoft-com:office:smarttags"></o:SmartTagType><o:SmartTagType 
+name="State" 
+namespaceuri="urn:schemas-microsoft-com:office:smarttags"></o:SmartTagType><o:SmartTagType 
+name="PostalCode" 
+namespaceuri="urn:schemas-microsoft-com:office:smarttags"></o:SmartTagType><o:SmartTagType 
+name="country-region" 
+namespaceuri="urn:schemas-microsoft-com:office:smarttags"></o:SmartTagType><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>anu1</o:Author>
+  <o:LastAuthor>tim finin</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:LastPrinted>2003-07-02T15:30:00Z</o:LastPrinted>
+  <o:Created>2003-07-02T15:43:00Z</o:Created>
+  <o:LastSaved>2003-07-02T15:43:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1441</o:Words>
+  <o:Characters>8216</o:Characters>
+  <o:Company>UMBC</o:Company>
+  <o:Lines>68</o:Lines>
+  <o:Paragraphs>19</o:Paragraphs>
+  <o:CharactersWithSpaces>9638</o:CharactersWithSpaces>
+  <o:Version>11.4920</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:_AdHocReviewCycleID dt:dt="float">-678366124</o:_AdHocReviewCycleID>
+  <o:_EmailSubject dt:dt="string">Final copy!</o:_EmailSubject>
+  <o:_AuthorEmail dt:dt="string">Mithun.Sheshagiri@hp.com</o:_AuthorEmail>
+  <o:_AuthorEmailDisplayName dt:dt="string">Sheshagiri, Mithun</o:_AuthorEmailDisplayName>
+  <o:_ReviewingToolsShownOnce dt:dt="string"></o:_ReviewingToolsShownOnce>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:AutoHyphenation/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]>
+<OBJECT id=ieooui classid=clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D></OBJECT>
+<STYLE>st1\:* {
+	BEHAVIOR: url(#ieooui)
+}
+</STYLE>
+<![endif]-->
+<STYLE>@font-face {
+	font-family: Wingdings;
+}
+@font-face {
+	font-family: Tahoma;
+}
+@page  {mso-footnote-separator: url("dqlFIPA_files/header.html") fs; mso-footnote-continuation-separator: url("dqlFIPA_files/header.html") fcs; mso-endnote-separator: url("dqlFIPA_files/header.html") es; mso-endnote-continuation-separator: url("dqlFIPA_files/header.html") ecs; }
+@page Section1 {size: 8.5in 11.0in; margin: 1.0in 1.25in 1.0in 1.25in; mso-header-margin: .5in; mso-footer-margin: .5in; mso-paper-source: 0; }
+P.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoFootnoteText {
+	FONT-SIZE: 10pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-noshow: yes
+}
+LI.MsoFootnoteText {
+	FONT-SIZE: 10pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-noshow: yes
+}
+DIV.MsoFootnoteText {
+	FONT-SIZE: 10pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-noshow: yes
+}
+P.MsoHeader {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 207.65pt right 415.3pt
+}
+LI.MsoHeader {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 207.65pt right 415.3pt
+}
+DIV.MsoHeader {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 207.65pt right 415.3pt
+}
+P.MsoFooter {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 207.65pt right 415.3pt
+}
+LI.MsoFooter {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 207.65pt right 415.3pt
+}
+DIV.MsoFooter {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 207.65pt right 415.3pt
+}
+SPAN.MsoFootnoteReference {
+	VERTICAL-ALIGN: super; mso-style-noshow: yes
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+PRE {
+	FONT-SIZE: 10pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Courier New"; mso-pagination: widow-orphan; mso-fareast-font-family: "Courier New"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-ansi-language: EN-GB
+}
+DIV.Section1 {
+	page: Section1
+}
+OL {
+	MARGIN-BOTTOM: 0in
+}
+UL {
+	MARGIN-BOTTOM: 0in
+}
+</STYLE>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]--></HEAD>
+<BODY lang=EN-US style="tab-interval: .5in" vLink=purple link=blue>
+<DIV class=Section1>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 18pt">A FIPA 
+Compliant Query Mechanism <BR>Using DAML Query Language (DQL)</SPAN></B><SPAN 
+class=MsoFootnoteReference><SPAN style="FONT-SIZE: 18pt"> </SPAN></SPAN><SPAN 
+style="FONT-SIZE: 18pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN 
+style="FONT-SIZE: 14pt">Mithun Sheshagiri and Anugeetha 
+Kunjithapatham<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><st1:PlaceType 
+w:st="on"><SPAN style="FONT-SIZE: 14pt">University</SPAN></st1:PlaceType><SPAN 
+style="FONT-SIZE: 14pt"> of <st1:PlaceName w:st="on">Maryland</st1:PlaceName>, 
+<st1:PlaceName w:st="on">Baltimore</st1:PlaceName> <st1:PlaceType 
+w:st="on">County</st1:PlaceType><BR><st1:place w:st="on"><st1:City 
+w:st="on">Baltimore</st1:City> <st1:State w:st="on">MD</st1:State> 
+<st1:PostalCode w:st="on">21250</st1:PostalCode> <st1:country-region 
+w:st="on">USA</st1:country-region></st1:place><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN 
+style="FONT-SIZE: 14pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN 
+style="FONT-SIZE: 14pt">Draft 2 June 2003<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal"><o:p>&nbsp;</o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal"><o:p>&nbsp;</o:p></B></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 11pt">Exchange of information is a very important aspect of a 
+multi-agent system. The two most common forms of information are; a ‘push’ like 
+mechanism where an agent informs other agents and a ‘pull/query’ like mechanism 
+in which the agent asks other agents for information.<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>We propose a mechanism which could let 
+heterogeneous agents interact with each other using a query-response mechanism. 
+We have used DAML Query Language (DQL) [1] for query description and a FIPA [2] 
+compliant protocol is used as the transport mechanism.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt"><SPAN 
+class=MsoFootnoteReference><SPAN 
+style="FONT-SIZE: 11pt; VERTICAL-ALIGN: baseline">This work was supported by 
+DARPA contract </SPAN></SPAN><SPAN 
+style="FONT-SIZE: 11pt">F30602-97-1-0215.<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>Please contact Mithun Sheshagiri (mits1@csee.umbc.edu) or Anugeetha 
+Kunjithapatham (<A href="mailto:anu1@csee.umbc.edu">anu1@csee.umbc.edu</A>) for 
+more information.<o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0.5in 0pt 0.25in; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal"><o:p>&nbsp;</o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal">1. Introduction<o:p></o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal"><o:p>&nbsp;</o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">Distributed planning, distributed 
+problem solving, co-operation, collaboration, team formation and team work, 
+joint intentions and goals etc are some of the concepts that let us harness the 
+benefits of multi-agent systems. The common thread that runs along all the above 
+concepts is effective communication methods. Although simple communication 
+mechanisms can be made effective in a narrow domain, they can’t handle the 
+challenges of an open environment. As pointed out earlier querying forms an 
+important mechanism for information exchange. The manner in which the querying 
+mechanism is implemented varies for different systems. As a result, querying 
+across agent applications is difficult. By describing the query using DQL and 
+using FIPA interaction protocol for message transport, we propose a mechanism 
+that can be used by FIPA compliant heterogeneous agents which commit to the DQL 
+ontology.</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">This note briefly describes an 
+implementation based on the <SPAN lang=EN-GB 
+style="mso-ansi-language: EN-GB">August 2002 DQL specifications. Some additional 
+protocol elements have been added since then. Some of the interaction protocols 
+and communicative acts have been deprecated.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal">2. DQL <o:p></o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">DAML Query Language (DQL) is a 
+formal language that defines a set of protocol elements for conducting a <I 
+style="mso-bidi-font-style: normal">query-answer </I>conversation between 
+agents. A DQL query contains, among other things, a <I 
+style="mso-bidi-font-style: normal">query pattern</I> framed in DAML+OIL. Some 
+literals in this query pattern are unbound variables. The <I 
+style="mso-bidi-font-style: normal">answer </I>consists of a set of terms that 
+bind to the variables and the conjunction of answer sentences are entailed by 
+the knowledge base (referred to as the <I 
+style="mso-bidi-font-style: normal">answer </I>KB) of the replying agent.</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">A DQL query should <I 
+style="mso-bidi-font-style: normal">necessarily </I>contain the following 
+elements:</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify; tab-stops: list .5in; mso-list: l6 level1 lfo10"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><SPAN 
+style="mso-list: Ignore">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><![endif]>Query pattern (explained above)</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify; tab-stops: list .5in; mso-list: l6 level1 lfo10"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><SPAN 
+style="mso-list: Ignore">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><![endif]>An answer KB pattern that could be an answer KB, 
+a list of answer KBs or a variable. If the variable forms the answer KB pattern 
+then, the replying agent should send reference(s) to the answer KB(s) that was 
+used.</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify; tab-stops: list .5in; mso-list: l6 level1 lfo10"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><SPAN 
+style="mso-list: Ignore">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><![endif]>All variables should either be categorized as <I 
+style="mso-bidi-font-style: normal">must-bind</I> or <I 
+style="mso-bidi-font-style: normal">may-bind.</I> The answer must contain 
+bindings to all must-bind variables and may or may-not contain bindings to 
+may-bind variables.</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><I 
+style="mso-bidi-font-style: normal">Optional</I> elements that can be specified 
+in a query are:</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify; tab-stops: list .5in; mso-list: l0 level1 lfo8"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><SPAN 
+style="mso-list: Ignore">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><![endif]>Query premise: statements that need to be 
+asserted into answer KB before querying it.</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify; tab-stops: list .5in; mso-list: l0 level1 lfo8"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><SPAN 
+style="mso-list: Ignore">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><![endif]>Answer Bundle Size: Size of packets sent as 
+answers (default value infinity)</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">The response to a query (an 
+answer) has the following components: </P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify; tab-stops: list .5in; mso-list: l4 level1 lfo7"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><SPAN 
+style="mso-list: Ignore">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><![endif]>Answer sentences to the query</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify; tab-stops: list .5in; mso-list: l4 level1 lfo7"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><SPAN 
+style="mso-list: Ignore">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><![endif]>The query pattern</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 0.5in; TEXT-INDENT: -0.25in; TEXT-ALIGN: justify; tab-stops: list .5in; mso-list: l4 level1 lfo7"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><SPAN 
+style="mso-list: Ignore">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><![endif]>The agent/server that replied to the query.</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">The answer set is enveloped in an 
+<I style="mso-bidi-font-style: normal">answer bundle</I> which contains a 
+continuation token that indicates future interaction patterns. The continuation 
+token could be a <I style="mso-bidi-font-style: normal">process handle </I>that 
+can used by querying agent to request further answers or an <I 
+style="mso-bidi-font-style: normal">end</I> (unexplained termination) or <I 
+style="mso-bidi-font-style: normal">none</I> (no more answers in answer KB) 
+token. Interested readers are asked to refer the latest DQL specifications for 
+detailed explanations.</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal">3. Motivation</B> </P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">DQL requires you to adhere to 
+certain protocol elements during a query-answer conversation. It does not 
+describe the interaction protocols that need to be used among participating 
+agents. The query pattern by itself is just a set of triples and does not anyway 
+convey the intention behind sending the set of triples. Attaching communicative 
+acts improves the semantics of the query. We use FIPA communicative acts and 
+protocols to enhance DQL and provide it a transport mechanism.</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">ITtalks [3] is a talk 
+notification service with agent and human interfaces. This agent application was 
+developed to demonstrate various ways of using semantic web descriptions and 
+inferencing in a multi-agent environment. One of the goals was to demonstrate 
+DAML+OIL as an inter-lingua. We wanted our agents to be capable of asking and 
+replying arbitrary queries. The application uses JADE [4] agents that support 
+FIPA protocols. Therefore use of DQL along with FIPA interaction protocols 
+seemed to be a natural choice.</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal">4. FIPA Communicative 
+Acts<o:p></o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal"><o:p>&nbsp;</o:p></B></P><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">There is fixed pattern involved in querying. First an agent poses a query and waits for an answer. This is followed by one or more replies from agents who were queried.<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">The following sub-sections discuss possible candidates for a suitable communication protocols.<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">4.1.</SPAN></B><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"> <B style="mso-bidi-font-weight: normal">FIPA Query Interaction Protocol<o:p></o:p></B></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">The Query Interaction Protocol consists of a <I style="mso-bidi-font-style: normal">query-ref</I> message followed by a reply from the answering agent. The content of query-ref message is an object described by a referential expression. When we adapt this in the context of DQL, the content would be the query pattern. An agent on receiving a query-ref responds either with a <I style="mso-bidi-font-style: normal">refuse</I>, <I style="mso-bidi-font-style: normal">failure </I>message or with an <I style="mso-bidi-font-style: normal">inform-result</I> when it has an answer. Although this protocol is a good fit, it does not support the DQL notion of sending answers in multiple-bundles: the protocol terminates as soon as a failure or inform-result is received. <o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">4.2. FIPA Request Interaction Protocol<o:p></o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">The Request Interaction Protocol is also a reasonable fit into the DQL framework. The protocol consists of a <I style="mso-bidi-font-style: normal">request</I> message consists of a description of the action that it wants the receiving agent to perform. In our case the action description is <I style="mso-bidi-font-style: normal">querying</I> the answer KB. The agent receiving the request could reply with a refuse, failure, or (<I style="mso-bidi-font-style: normal">inform-done </I>or <I style="mso-bidi-font-style: normal">inform-result</I>). The communicative act inform-done just informs of the completion of the action and inform-result also provides the result. Obviously, inform-result is appropriate in our case. Again, this protocol almost satisfies out need. Again there is no commitment on the receiving agent’s behalf to send multiple inform-results.<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"> <o:p></o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">4.3. New Interaction Protocol<o:p></o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">We could alternatively specify our own interaction protocol which could support the requirements posed by DQL completely. This interaction protocol is very similar to the above protocol in which we could use query-ref to send the query across to the receiving agent. However, in reply the receiving agents can send multiple inform-result messages followed by a single <I style="mso-bidi-font-style: normal">inform-end</I> message.<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">We chose to use Query Interaction Protocol with multiple inform-result in the interest of sticking to standards. <o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">5. JESS KB<o:p></o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></B></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">Personal agent in the ITtalks system used JESS (Java Expert System Shell) [5] and DAMLJessKB[6] as the knowledge base and inferencing. We found it convenient to use JESS <I style="mso-bidi-font-style: normal">defqueries</I> for the purpose of querying the answer KB and returning the answers. We have built an ontology [7] that lets us express query-patterns in DAML+OIL. The DAML statements that represent the query pattern are packed into query-ref messages. The agent on receiving the query re-builds the query pattern from DAML sentences and forms a JESS defquery from it. The defquery is fired to obtain the answer set. The answer set is packed into an inform-result and sent across the querying agent. For the sake of readability and compactness, we have not included complete URIs.<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">We represent facts in our JESS KB as follows:<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></PRE><PRE style="MARGIN-LEFT: 0.5in; TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">(PropertyValue (p predicate) (s subject) (o object))<o:p></o:p></SPAN></I></PRE><PRE style="TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></I></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"> A query has the form: <o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></PRE><PRE style="MARGIN-LEFT: 0.5in; TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">(PropertyValue (p place-ont#city) (s person-ont#tom) (o ?x))<o:p></o:p></SPAN></I></PRE><PRE style="TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></I></PRE><PRE style="TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">x </SPAN></I><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">is the variable here. In addition the query also contains a simple reference to the answer KB and other details. If the query contains a query premise, then the facts that constitute the premise are asserted before querying.<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">The corresponding defquery looks like this:<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></I></PRE><PRE style="MARGIN-LEFT: 0.5in; TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">(defquery foo<o:p></o:p></SPAN></I></PRE><PRE style="MARGIN-LEFT: 0.5in; TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>(PropertyValue (p place-ont#city) <o:p></o:p></SPAN></I></PRE><PRE style="MARGIN-LEFT: 0.5in; TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>(s person-ont#tom) <o:p></o:p></SPAN></I></PRE><PRE style="MARGIN-LEFT: 0.5in; TEXT-ALIGN: justify"><I style="mso-bidi-font-style: normal"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>(o ?x)))<o:p></o:p></SPAN></I></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"> <o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'">The answer returned is in the form of triples and sent back to the querying agent.<o:p></o:p></SPAN></PRE><PRE style="TEXT-ALIGN: justify"><SPAN lang=EN-GB style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'"><o:p>&nbsp;</o:p></SPAN></PRE>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal">5. Conclusion &amp; Future 
+Work<o:p></o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal"><o:p>&nbsp;</o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">We have discussed a system that 
+uses FIPA interaction protocols that act as the transport mechanism for DQL. 
+Existing protocols and communicative acts with slight changes satisfy our needs. 
+We also demonstrate our ideas by implementing our mechanism on our agent 
+test-bed. There do not exist ways to elegantly represent the answer set. </P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN 
+style="mso-spacerun: yes"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal">6. References<o:p></o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal"><o:p>&nbsp;</o:p></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">[1] <A 
+href="http://www.daml.org/2002/08/dql/dql">http://www.daml.org/2002/08/dql/dql</A></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">[2] <A 
+href="http://www.fipa.org/">http://www.fipa.org/</A></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">[3] <A 
+href="http://www.ittalks.org/">http://www.ittalks.org/</A></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">[4] <A 
+href="http://sharon.cselt.it/projects/jade/">http://sharon.cselt.it/projects/jade/</A></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">[5] <A 
+href="http://herzberg.ca.sandia.gov/jess/">http://herzberg.ca.sandia.gov/jess/</A></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">[6] <A 
+href="http://plan.mcs.drexel.edu/projects/legorobots/design/software/DAMLJessKB/">http://plan.mcs.drexel.edu/projects/legorobots/design/software/DAMLJessKB/</A></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify">[7] <SPAN 
+style="mso-fareast-language: EN-GB"><A 
+href="http://userpages.umbc.edu/~anu1/DAML/DQLOntology.daml">http://userpages.umbc.edu/~anu1/DAML/DQLOntology.daml</A></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B 
+style="mso-bidi-font-weight: normal"><o:p>&nbsp;</o:p></B></P></DIV></BODY></HTML>

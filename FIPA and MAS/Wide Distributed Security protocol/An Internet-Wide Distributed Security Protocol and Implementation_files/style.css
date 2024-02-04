@@ -1,0 +1,12 @@
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+DIV.floatright {
+	BORDER-RIGHT: silver thin solid; PADDING-RIGHT: 0.5em; BORDER-TOP: silver thin solid; PADDING-LEFT: 0.5em; FLOAT: right; PADDING-BOTTOM: 0.5em; MARGIN: 0.5em; BORDER-LEFT: silver thin solid; WIDTH: 40%; PADDING-TOP: 0.5em; BORDER-BOTTOM: silver thin solid; TEXT-ALIGN: left
+}
+P.caption {
+	FONT-SIZE: smaller; TEXT-INDENT: 0px; FONT-STYLE: italic
+}
+IMG.float {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 100%; BORDER-RIGHT-WIDTH: 0px
+}

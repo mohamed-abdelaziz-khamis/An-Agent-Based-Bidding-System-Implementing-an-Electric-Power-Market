@@ -1,0 +1,47 @@
+1) "Agentcities projects" web page:
+Displays the agent cities projects that are either already active, submitted as funding proposals or being planned 
+
+2)"eBay bidding agent" web page:
+The home page of the "PhantomBidder" web site:
+The best eBay Bidding Agent on the Web
+-->PhantomBidder is an eBay bidding service that lets you:
+    *Win eBay Auctions with the Best Price
+    *Win 1 item out of a Group of Auctions
+    *Win while you Sleep and your computer is turned off
+
+3) " eBay transaction agent" web page:
+A home page of an  eBay transaction agent web site
+
+
+4)"FIPA-OS" web page: (very important)
+It contains the following diagrams:
+* The Architecture Business Cycle for FIPA diagram
+   (which is known by ABC for FIPA)
+
+*FIPA Specification Architecure diagram 
+
+*FIPA interaction protocol diagram
+
+*FIPA Agent Management Reference Model diagram
+
+*Nodamic Support Architecture diagram:
+i.e. The support of the wireless services and the wireless devices.
+note:
+FIPA uses the Wireless Application Protocol (WAP)as its wireless Message Transport Protocol. The WAP Forum has developed industry-wide specifications for low bandwidth wireless services (such as GSM, GPRS, etc.) and wireless devices (such as mobile telephones and personal digital assistants). 
+
+*Components within FIPA-OS in a layered fashion 
+
+*An Object-Oriented Reference Relationship of the Core Components in FIPA system
+
+5)FIPA protocol documentation (slides):     (very important)
+How to document the FIPA protocol.
+
+6)e-banking services for Automated Agent-Based  trading (pdf):   (important)
+An electronic banking transactions MAS using the FIPA-ACL protocol
+
+7)Proxy-Bidding Strategies where agents communicate using FIPA- compliant messages (pdf):
+A bidding MAS where the agents communicate using the FIPA messages. 
+
+		
+ 
+

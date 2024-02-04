@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0065)http://www.objs.com/agility/tech-reports/9807-comparing-ACLs.html -->
+<HTML><HEAD><TITLE>ACL_Tech_Note</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Venu Vasudevan" name=Author>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H2><IMG height=52 src="ACL_Tech_Note_files/objs.gif" width=127></H2></CENTER>
+<CENTER>
+<H2>OBJS Technical Note</H2></CENTER>
+<CENTER>
+<H1>Comparing Agent Communication Languages</H1></CENTER>
+<CENTER><B>Venu Vasudevan</B></CENTER>
+<CENTER><B><FONT color=#000000>Object Services and Consulting, 
+Inc.</FONT></B></CENTER>
+<CENTER><B>July 1998</B></CENTER>
+<H2>Introduction</H2>Agent architectures need both representation and 
+communication models. Agent representation models include <I>ontologies </I>that 
+define the domain model/vocabulary etc. of a particular domain of discourse, and 
+<I>content languages</I> that represent the agent's mental model of the world 
+(e.g beliefs, desires, intentions). Given a particular domain of discourse, and 
+a particular community of agents that know and do something in this domain, one 
+needs an agent communication model that models the flow of knowledge and 
+attitudes about such knowledge within the agent community.&nbsp; An ACL (agent 
+communication language) provides language primitives that implement the agent 
+communication model. ACLs are commonly thought of as <I>wrapper 
+languages</I>&nbsp; in that they implement a knowledge-level communication 
+protocol that is unaware of the choice of content language and ontology 
+specification mechanism. 
+<P>Nearly all the ACLs&nbsp; around derive their language primitives from the 
+linguistic theory of <I>speech acts</I>. Speech act theory categorizes human (or 
+machine) "utterances" into different categories depending on the intent of the 
+<I>speaker </I>(human or agent), the effect on the <I>listener </I>(human or 
+agent), and any other physical manifestations of the act of uttering the 
+utterance. Since speech acts are a human knowledge-level communication protocol, 
+it is felt that they would be effective as an agent communication protocol, esp. 
+since agents might operate on behalf of humans. However, the case has also been 
+made for speech acts as appropriate programming language primitives for next 
+generation programming languages (not just ACLs) [McCart92]. 
+<P>KQML [KQML94] is the ACL resulting from the DARPA KSE (Knowledge Sharing 
+Effort) effort, which also produced <I>KIF </I>as the content language 
+(first-order logic + set theory) and <I>Ontolingua </I>as the ontology 
+specification language. In keeping with the wrapper philosophy of ACLs, KQML is 
+insensitive to whether the content it is communicating about is in 
+KIF/Ontolingua or something else. What follows is a brief description of speech 
+acts, a database bigot's view on KQML, and some elaboration on the motivation 
+behind the <I>KQML-Lite</I> (and/or <I>KQML-Right</I>) [KQML-LITE] effort. 
+<P>
+<HR width="100%">
+
+<H2>Speech Act Theory: In Brief</H2>Speech act theory is a linguistic analysis 
+of human communication.&nbsp; It is relevant to ACLs in that speech act 
+theory&nbsp; serves as one (but not the only) formal basis for deciding ACL 
+language primitives.There are 4600 speech acts at last count, and I doubt if it 
+is the goal of any ACL to cover them all. What does seem to be true is that any 
+ACL primitive that is a true speech act is easily defensible by the language's 
+defenders. Anything that is not, is up for debate. <BR>&nbsp; <BR>&nbsp; 
+<CENTER><B>Table I: Speech Act Types</B></CENTER>
+<TABLE cols=3 width="100%" border=1 NOSAVE>
+  <TBODY>
+  <TR>
+    <TD><B>Speech Act Category</B></TD>
+    <TD><B>Intent</B></TD>
+    <TD><B>Example</B></TD></TR>
+  <TR>
+    <TD>representatives</TD>
+    <TD>state a proposition (represent a state of affairs)</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>directives</TD>
+    <TD>request or command</TD>
+    <TD>"Mr.Sulu, engage"</TD></TR>
+  <TR>
+    <TD>commissives</TD>
+    <TD>promise or threat (commit the speaker to a future course of action)</TD>
+    <TD>" I <I>promise </I>to give you ten dollars"</TD></TR>
+  <TR>
+    <TD>expressives</TD>
+    <TD>thanks and apologies (indicate a mental attitude on the part of the 
+      speaker)</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>declarations</TD>
+    <TD>things that actually change the state of the world</TD>
+    <TD>"I now pronounce you man and wife"</TD></TR>
+  <TR>
+    <TD>verdicatives</TD>
+    <TD>pass judgement</TD>
+    <TD>"Microsoft stinks"</TD></TR></TBODY></TABLE>&nbsp; 
+<P>Above is the list of Searle's categories of speech acts and their meanings. 
+Speech acts are useful in that one can formally represent their <I>illocutionary 
+</I>(i.e what the speaker intended by something) and <I>perlocutionary </I>(i.e 
+the actual effect of the speech act on the hearer) effects.&nbsp; It is upto the 
+agent theory and the agent infrastructure to ensure that agents in the community 
+are ethical and trustworthy, and therefore the perlocutionary behavior of a 
+speech act on the hearing agent is predictable. All this is not the concern of 
+ACLs, which are merely providing the language primitives. 
+<H3>
+<HR width="100%">
+</H3>
+<H2>KQML</H2>
+<H4>Description</H4>The architecture underlying KQML is that of a community of 
+agents, each&nbsp; owning and managing a <I>virtual KB</I> (VKB) that represents 
+its mental model of the world. KQML doesn't care about the content language used 
+to represent the mental model (could be&nbsp; KIF, RDF,SL or some other content 
+language). Its goal is to provide knowledge transportation protocol for blobs of 
+content, in some ontology that the sending agent can point to and the receiving 
+agent can access.&nbsp;&nbsp; Agents then query and manipulate&nbsp; the 
+contents of each others VKBs, using KQML as the communication and transport 
+language. KQML presupposes a white-box (or at least gray-box) model of agent 
+community VKBs, and includes <I>direct edits</I> to an agent's VKB by another 
+agent as part of its language primitives. 
+<P>The KQML specification defines the syntax (and informally the semantics) 
+for&nbsp; a collection of messages (or <I>performatives </I>to be politically 
+correct from a speech act point of view)&nbsp; that collectively define the 
+language in which agents communicate. There is a core set of reserved 
+performatives, but the set is extensible (e.g COOL[Barb95]) and has been 
+extended for different applications. The table below classifies the core KQML 
+performatives based on the KBMS-level communication function, and whether they 
+apply to communicating agent-pairs or to larger communities of agents. 
+Obviously, the latter implies the former. Performatives in <FONT 
+color=#663366>purple </FONT>were part of the KQML '94 spec but seem to&nbsp; 
+have been eliminated in the KQML'97 proposal. 
+<CENTER>&nbsp;</CENTER>
+<CENTER><B>&nbsp;Table II: Classification of KQML Performatives</B></CENTER>
+<TABLE cols=3 width="100%" border=3 NOSAVE>
+  <TBODY>
+  <TR NOSAVE>
+    <TD NOSAVE><B>Function Class</B></TD>
+    <TD><B>Member Performatives</B></TD>
+    <TD><B>Level</B></TD></TR>
+  <TR>
+    <TD>Query and Response</TD>
+    <TD>ask-if,ask-all,<FONT color=#663366>ask-about</FONT>, ask-one, 
+      tell,untell,deny, sorry</TD>
+    <TD>agent-pair</TD></TR>
+  <TR>
+    <TD>Cursor Manipulation and Result Formatting</TD>
+    <TD>ready, next, discard, rest&nbsp;&nbsp; stream-all, <FONT 
+      color=#663366>stream-about</FONT>, eos</TD>
+    <TD>agent-pair</TD></TR>
+  <TR>
+    <TD>advertise or commit to a capability</TD>
+    <TD>advertise, unadvertise</TD>
+    <TD>agent community</TD></TR>
+  <TR>
+    <TD>kb editing</TD>
+    <TD>insert,uninsert,delete-one, delete-all, undelete</TD>
+    <TD>agent-pair</TD></TR>
+  <TR>
+    <TD>enactment</TD>
+    <TD>achieve, unachieve</TD>
+    <TD>agent-pair</TD></TR>
+  <TR>
+    <TD>error handling</TD>
+    <TD>error</TD>
+    <TD>agent-pair</TD></TR>
+  <TR>
+    <TD>communication primitives other than pure asynchronous messages</TD>
+    <TD>broadcast, forward, standby, subscribe and <FONT color=#663366>monitor 
+      </FONT>(like a kb alerter), <FONT color=#663366>pipe</FONT>, <FONT 
+      color=#663366>break (make and dismantle a pipe), generator</FONT></TD>
+    <TD>either</TD></TR>
+  <TR>
+    <TD>trading</TD>
+    <TD>broker-one, broker-all, recommend-one, recommend-all, recruit-one, 
+      recruit-all</TD>
+    <TD>agent-community</TD></TR>
+  <TR>
+    <TD>name service</TD>
+    <TD>register, unregister, transport-address</TD>
+    <TD>agent-community</TD></TR></TBODY></TABLE>&nbsp; 
+<H4>Critique</H4>
+<UL>
+  <LI>It is fairly confusing to have a single specification for pair-wise 
+  inter-agent communication and management of agent communities. The CORBA 
+  analogy would have been a single document that covered IDL and all of COSS. 
+  <LI>Services are not adequately described in terms of their minimum required 
+  functionality, optional functionality and interfaces that fulfill the 
+  functionality.&nbsp; Even where one assembles the provided KQML operations 
+  into a service specification, the set of services and the specification of 
+  each service in the set seem incomplete. 
+  <LI>The rationale for whether something should be in the ACL, not in the ACL, 
+  or assumed by the ACL to be in the content language, is unclear. For example, 
+  should the ACL provide cursors, or should it assume that the content language 
+  is providing some sort of result set object. 
+  <LI>It is unclear why each individual operation has a specialized undo 
+  operator, and why some don't have one (e.g&nbsp; no unask) 
+  <LI>The choice of communication primitives is seemingly arbitrary (why have 
+  standby, but not the equivalent of LISP futures) </LI></UL>
+<H3>
+<HR width="100%">
+</H3>
+<H2>FIPA ACL</H2>
+<H4>Description</H4>FIPA ACL is the agent communication language associated with 
+FIPA's open agent architecture. As with KQML, FIPA-ACL maintains orthogonality 
+with the content language and is designed to work with any content language and 
+any ontology specification approach. Beyond the commonality of goals and a 
+similarity in syntax, there are a number of significant differences between 
+FIPA-ACL and KQML. 
+<UL>
+  <LI>In FIPA-ACL's semantic model, agents are<I> </I><B>not allowed</B> to 
+  directly manipulate another agent's VKB. Therefore KQML performatives such as 
+  <I>insert</I>,<I>uninsert</I>,<I>delete-one</I>, <I>delete-all</I>, 
+  <I>undelete </I>are not meaningful. 
+  <LI>The ACL limits itself to primitives that are used in communications 
+  between agent pairs. The FIPA architecture has an AMS (Agent Management 
+  System) specification (roughly equivalent to CORBA COSS) that specifies 
+  services that manage agent communities. This eliminates the need for 
+  <I>register/unregister</I>, <I>recommend</I>,<I>recruit</I>,<I>broker </I>and 
+  <I>(un)advertise </I>primitives in the ACL (to be more precise, these 
+  primitives are moved to the AMS). 
+  <LI>FIPA-ACL and KQML have philosophical differences in terms of what is done 
+  in the wrapper language and what is delegated by the wrapper language to the 
+  content language. An agent A could tell an agent B to achieve a goal X in a 
+  couple of different ways (where the ACL performatives are in <FONT 
+  color=#ff6600>orange </FONT>and the content language clauses in <FONT 
+  color=#3333ff>blue</FONT>): 
+  <UL>
+    <LI><FONT color=#ff6600>from A to B:&nbsp; achieve goal X</FONT>,&nbsp; - 
+    thus agents A asks agent B to achieve goal X (all in the ACL vocabulary) 
+    <LI><FONT color=#ff6600>from A to B: tell </FONT><FONT 
+    color=#3366ff>(achieve goal X). </FONT><FONT color=#000000>- here agent A 
+    says something to agent B that the ACL does not understand (but the content 
+    language interpreter interprets as a request to achieve goal X).</FONT> 
+  </LI></UL><FONT color=#000000>In the former (the KQML way), the wrapper 
+  language has a specific <I>achieve </I>performative for achieving goals, as it 
+  does not assume the content language necessarily has this capability. In the 
+  latter case (the FIPA-ACL way), the achieve performative is pushed into the 
+  content language, thus eliminating the need for the same in the ACL. To me, 
+  this general question (i.e the dividing line between an ACL and the content 
+  language) is still unresolved.</FONT> 
+  <LI><FONT color=#000000>For the same reasons as the last point, FIPA-ACL does 
+  not provide primitives for cursor manipulation. The FIPA point of view is that 
+  iterator objects are part of the content language.</FONT> </LI></UL><FONT 
+color=#000000>Below are two tables, one a categorization of operators like the 
+KQML table above, and another a list of equivalent operators in FIPA-ACL and 
+KQML.</FONT> <BR>&nbsp; 
+<CENTER><B>Table III: Taxonomy of FIPA Performatives</B></CENTER>
+<TABLE cols=2 width="100%" border=1 NOSAVE>
+  <TBODY>
+  <TR>
+    <TD><B>Function Class</B></TD>
+    <TD><B>Member Performatives</B></TD></TR>
+  <TR>
+    <TD>query and response</TD>
+    <TD>
+      <UL>
+        <LI>query-if, query-ref 
+        <LI>request, request-when, request-whenever 
+        <LI>inform, inform-if, inform-ref,&nbsp; 
+        <LI>confirm,disconfirm </LI></UL></TD></TR>
+  <TR>
+    <TD>communication primitives other than pure asynchronous messages</TD>
+    <TD>cfp, propose, reject-proposal, accept-proposal, subscribe (like a kb 
+      alerter)</TD></TR>
+  <TR>
+    <TD>error handling</TD>
+    <TD>failure, not-understood</TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>?</TD>
+    <TD>agree, cancel</TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR></TBODY></TABLE>&nbsp; 
+<CENTER><B>Table IV: Equivalent Operations in FIPA-ACL and KQML</B></CENTER>
+<TABLE cols=2 width="100%" border=1 NOSAVE>
+  <TBODY>
+  <TR>
+    <TD><B>KQML Performative</B></TD>
+    <TD><B>Equivalent FIPA Performative</B></TD></TR>
+  <TR>
+    <TD>ask-if`</TD>
+    <TD>query-if</TD></TR>
+  <TR>
+    <TD>tell, untell</TD>
+    <TD>inform</TD></TR>
+  <TR>
+    <TD>deny</TD>
+    <TD>inform or disconfirm</TD></TR>
+  <TR>
+    <TD>insert, uninsert</TD>
+    <TD>inform, disconfirm</TD></TR>
+  <TR>
+    <TD>subscribe</TD>
+    <TD>subscribe</TD></TR>
+  <TR>
+    <TD>error</TD>
+    <TD>not-understood</TD></TR>
+  <TR>
+    <TD>sorry</TD>
+    <TD>refuse or failure</TD></TR></TBODY></TABLE>
+<H4>Critique</H4>
+<UL>
+  <LI>delegating certain functions to the content language (as opposed to 
+  fattening the ACL with wrapper primitives) seems like a plausible approach. It 
+  would be desirable for the FIPA-ACL specification to <B>explicitly </B>state 
+  what it needs from the content language that it wraps. 
+  <LI>cfp seems to be made out to be the universal coordination primitive. I 
+  tend to think that other high-level coordination primitives are needed, and a 
+  coherent rule about what coordination primitive is in the core language and 
+  what in the extension, is needed. 
+  <LI>iiop mandated as the transport protocol? Why iiop only, and why mandate.? 
+  What should be mandated is a transport model (e.g reliable and strictly 
+  sequenced delivery of messages) not the protocol! </LI></UL>
+<H3>
+<HR width="100%">
+</H3>
+<H2>KQML Lite (or Right?)</H2>
+<H4>Description</H4>KQML Lite is an attempt to merge KQML and FIPA ACL. Implicit 
+in this is the idea that merging KQML and FIPA-ACL is better than adopting 
+either one of these in their entirety. A key assumption is made in the merging 
+strategy is that FIPA-ACL and KQML are at different levels of abstraction, and 
+that the notion of an ACL can itself be further subdivided into an <I>outer 
+</I>ACL and an <I>inner </I>ACL. Given that, the KQML-Lite authors propose a 
+merging strategy that uses a subset of FIPA-ACL as the <I>outer </I>ACL and a 
+subset of KQML as the <I>inner </I>one.The authors of KQML-Lite state the 
+2-layer ACL model as self-evident, and go on to a detailed listing of primitives 
+in the merged language. The notion of such a model is not obvious at all to me, 
+esp. after the FIPA spec has indicated the equivalence between FIPA-ACL and KQML 
+operators, and made an argument for why other operators belong outside the scope 
+of a "well designed" ACL. The KQML-Lite authors need to elaborate and convince 
+readers of the validity of&nbsp; the 2-layer ACL model, and the ACL merging 
+strategy. The KQML-Lite proposal does do a much better job than other KQML 
+specs.,&nbsp; of enumerating agent services and their interfaces separately and 
+in detail. 
+<P>Note: KQML-Lite is an odd name for a merging of FIPA-ACL and KQML (it is 
+actually heavier than both KQML and FIPA-ACL in terms of the number of 
+performatives). 
+<H3>Discussion</H3>
+<UL>
+  <LI>As mentioned earlier, FIPA vs KQML brings up some philosophical issues 
+  about the line between wrapper languages and content languages that need to be 
+  looked at. In fact, should wrapper languages be insensitive to the content 
+  they carry and therefore completely unaware of content languages at all? 
+</LI></UL>
+<H3>References</H3>
+<UL>
+  <LI>[Barb95] Barbuceanu,M. and Fox,M., "COOL: A Language for Describing 
+  Coordination in Multi Agent Systems" 
+  <LI>[Fini97] Finin,T., <A 
+  href="http://www.cs.umbc.edu/agents/ir/sigir97/tutorial/">Software Agents for 
+  Information Retrieval(tutorial)</A> 
+  <LI>[Fini97b] Finin,T., <A 
+  href="http://www1.cs.dartmouth.edu/~agent/workshop/slides/finin/ppframe.htm">Presentation 
+  on Agent Communication at the Dartmouth Agents Workshop</A> 
+  <LI>[FIPA97] FIPA Version 1.0 specifications - Agent Management (Part 1 of the 
+  spec) and Agent Communication Language (Part 2 of the spec). 
+  <LI>[Gens94] Genesereth,M. and Ketchpel,S., "Software Agents" 
+  <LI>[KQML97] Finin,T. et al., "<A 
+  href="http://www.objs.com/agility/tech-reports/www.cs.umbc.edu/kqml/papers/kqml-acl.ps">KQML 
+  as an Agent Communication Language</A>", in Software Agents, J.Bradshaw ed., 
+  MIT Press, 1995. 
+  <LI>[KQML94] Finin,T., Wiederhold,G. et al., "Specification of the KQML 
+  Agent-Communication Language plus example policies and architectures", DARPA 
+  KSE External Interfaces Working Group Draft. 
+  <LI>[KQML-LITE] KQML Lite Specification Report, Lockheed Martin Report for the 
+  ALPS program 
+  <LI>[Labr] Labrou, Y. and Finin,T., "<A 
+  href="http://www.objs.com/agility/tech-reports/www.cs.umbc.edu/kqml/kqmlspec.ps">A 
+  Proposal for a new KQML Specification</A>" 
+  <LI>[McCart92] McCarthy, J., "Elephant 2000: A Programming Language Based on 
+  Speech Acts", unpublished manuscript (on MacCarthy's home page) 
+  <LI>[Shoh92] Shoham,Y., "Agent-Oriented Programming", Artificial Intelligence, 
+  60(1993), 51-92. 
+  <LI>[SA] <A 
+  href="http://www.general.uwa.edu.au/u/shelly/lin100/speech_acts.html">Linguistics 
+  web page summarizing speech act theory</A> 
+  <LI>[Sear69] Searle,J., Speech Acts: An Essay in the Philosophy of Language, 
+  Cambridge University Press, 1969 </LI></UL></BODY></HTML>

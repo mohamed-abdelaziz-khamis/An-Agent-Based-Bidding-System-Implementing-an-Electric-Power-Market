@@ -1,0 +1,298 @@
+From: <Saved by Microsoft Internet Explorer 5>
+Subject: Tutorial 2. Jade containers
+Date: Sun, 21 Nov 2004 01:35:34 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_001C_01C4CF6A.65699DC0";
+	type="text/html"
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4927.1200
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_001C_01C4CF6A.65699DC0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ryerson.ca/~dgrimsha/courses/cps720/JADEAdmin/JadeContainerTutorial.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Tutorial 2. Jade containers</TITLE>
+<META http-equiv=3Dcontent-type =
+content=3Dtext/html;charset=3Diso-8859-1>
+<META content=3D"MSHTML 6.00.2600.0" name=3DGENERATOR><LINK=20
+href=3D"http://www.ryerson.ca/~dgrimsha/courses/cps720/cps.css"=20
+rel=3Dstylesheet></HEAD>
+<BODY bgColor=3D#ffffff>
+<H1>Tutorial 2. JADE Containers, Local and Remote</H1>
+<P>This tutorial shows how to add local and remote containers to a JADE=20
+platform. As before, DummyAgent and PingAgent are used to demonstrate =
+agent=20
+communication.</P>
+<H2>Multiple Containers on One Computer</H2>
+<P>As in Tutorial 1, open a Command Prompt window,and use <A=20
+href=3D"http://www.ryerson.ca/~dgrimsha/courses/cps720/JADEAdmin/runjade.=
+bat">runjade.bat</A>=20
+as done in Tutorial 1.</P>
+<DL>
+  <DD>runjade -gui -host frodo=20
+  <DD>The local name for the computer is frodo. If you leave out the =
+-host flag,=20
+  JADE defaults to the local name of the computer on which the platform =
+is being=20
+  booted. </DD></DL>
+<P>If you are using computers in different domains you would want to =
+include the=20
+full host name to prevent JADE from just using localhost. For =
+example,</P>
+<P>runjade -gui -host frodo.scs.ryerson.ca </P>
+<P>Display the container tree in the RMA agent window. You see the main=20
+container with the df, ams and RMA agents.</P>
+<P>Now open another Command Prompt window. In that window we create a =
+satellite=20
+container and put the PingAgent in it.</P>
+<P>runjade -host frodo -container ping0:examples.PingAgent.PingAgent</P>
+<DL>
+  <DD></DD></DL>
+<H3>Notes on the syntax</H3>
+<UL>
+  <LI>The -host switch here is used somewhat differently than when used =
+when=20
+  creating the platform and its Main container (that is, when used with =
+the -gui=20
+  switch). In the -gui case, -host just names the host where the =
+platform and=20
+  its RMI naming service are located.<I> But when you are adding a =
+container to=20
+  a platform, the -host switch tells which host is hosting the platform =
+you want=20
+  to hook up your container to.</I>=20
+  <LI>The -container switch tells the system that this is just a =
+container.=20
+  After this switch you can list agents which you want to put in the =
+container=20
+  (separated by spaces). If your agent needs command line arguments you =
+can list=20
+  them inside parentheses immediately following the agent's name.=20
+  <LI>You specify an agent by its nickname, followed by a colon, =
+followed by its=20
+  fully qualified class name. </LI></UL>
+<H3>Try out the agents</H3>
+<P>Display the RMA window you will see an entry "container-1" added. =
+Expanding=20
+the tree shows the ping0 agent.</P>
+<P>Invoke the DummyAgent and use it to send a message to ping0 in the =
+same way=20
+as was done in Tutorial 1. (Fill in the =
+receivers=3Dping0@Frodo:1099/JADE,=20
+communicative act=3DQUERY-REF, Content=3Dping) If you examine the return =
+message it=20
+is the same as in Tutorial 1, namely "(pong)" or "alive", depending on =
+your JADE=20
+version..</P>
+<P>Try changing the commutative act to INFORM and send the message to =
+ping0. You=20
+will get a NOT-UNDERSTOOD reply. Look at the content of this message for =
+an=20
+example of the SL&nbsp;language constructed by JADE.</P>
+<H2>Remote Containers</H2>
+<P>So far, this tutorial is just a repeat of Tutorial 1. It is not =
+surprising to=20
+find that you can send messages from agent to agent on the same platform =
+whether=20
+they are in different containers or not. More interesting is that JADE =
+is a=20
+distributed system. A platform can have containers on remote systems as =
+well as=20
+locally. So if you have a second computer networked to the first, try =
+this.</P>
+<P>On the second computer set up and run a JADE container with a =
+PingAgent in=20
+it. In other words, simply, type,</P>
+<DL>
+  <DD>runjade -host frodo -container ping1:examples.PingAgent.PingAgent. =
+
+</DD></DL>
+<P>This is exactly the same command as used above to create a container =
+on=20
+machine frodo itself! Thanks to RMI, the system is transparent with =
+respect to=20
+hosts. Notice that, since an agent nicknamed ping0 already exists on =
+this=20
+platform, I must use a different nickname for this second PingAgent, =
+even though=20
+the new agent is running on a different machine.</P>
+<P>Looking on the original machine (frodo in my case) I see that a new=20
+container, Container-2 has appeared on the RMA agent window in which =
+ping1 is=20
+listed. I can, once again, send the usual message from the DummyAgent on =
+frodo=20
+to ping1 which lives on another machine&nbsp;(named IBM in my case). The =
+
+location of ping1 is transparent to the user of RMA on Frodo. It could =
+be=20
+anywhere.</P>
+<P>The container on the other computer is a client of the RMI server =
+running on=20
+frodo. So is ping0 a client which happens to exist on the same machine =
+as the=20
+RMI server itself.</P>
+<H3>Running an RMA (Remote Monitoring Agent) with a container</H3>
+<P>If you have followed the tutorial to this point you have a main JADE =
+platform=20
+on one machine (frodo in my case). This machine is the home of the Main=20
+Container and the RMI server. A second container, Container-1 is =
+installed on=20
+this machine and contains one agent, ping0@frodo:1099/JADE, to give it =
+its full=20
+name. On a second machine, IBM in my case, there is a second container,=20
+Container-2 containing one agent, ping1@frodo:1099/JADE. This agent =
+lives on=20
+machine IBM but "belongs" to the platform running on machine frodo.Hence =
+its=20
+address refers to frodo, not to IBM.</P>
+<P>A user on machine IBM can't see anything or do anything. The user of =
+machine=20
+frodo is in complete control. It would be nice to run an RMA agent and a =
+
+DummyAgent on a machine remote from the platform machine.</P>
+<P>To do this we need to know the fully qualified names of Dummy agent =
+and RMA=20
+agent. These are,</P>
+<UL>
+  <LI>java.tools.DummyAgent.DummyAgent=20
+  <LI>java.tools.rma.rma </LI></UL>
+<P>So start another container with these two agents and yet another ping =
+agent,=20
+ping2, on some machine connected to the JADE platform machine. For =
+example,</P>
+<DL>
+  <DD>runjade -host Frodo -container =
+dummy0:jade.tools.DummyAgent.DummyAgent=20
+  RMA1:jade.tools.rma.rma </DD></DL>
+<P>(Don't forget to include a nickname for your agents! AND make sure =
+the names=20
+don't clash with names on other containers on the platform. Note RMA1 =
+not=20
+RMA.)</P>
+<P>You will get the windows for the two agents on the remote machine. =
+RMA1 will=20
+show all the containers and agents on the platform, just like RMA on the =
+main=20
+platform server. Try sending one of the ping agents the usual message =
+from=20
+dummy0.</P>
+<H3>Note</H3>
+<UL>
+  <LI>If you just launch the RMA agent on the remote machine and try =
+using its=20
+  button to launch the Dummy Agent, the Dummy Agent fails to appear if =
+one is=20
+  running elsewhere. This is because of a clash of nicknames (da0 in =
+both=20
+  cases). Instead, select the container, right click and choose Start =
+New Agent.=20
+  Choose a none-clashing nickname for the new Dummy Agent, and enter its =
+full=20
+  class name jade.tools.DummyAgent.DummyAgent.=20
+  <LI>A JADE platform is a cooperative system. If you hook up to the =
+main=20
+  platform server from a remote machine and run an RMA agent on the =
+remote=20
+  machine you can use that agent to destroy the whole platform! Be nice. =
+
+  Security will eventually be added to JADE. If this is a problem, you =
+can run=20
+  JADE-S, the secure version of JADE. See the JADE&nbsp;documentations =
+</LI></UL>
+<H2>Containers and theJADE Program Development Cycle</H2>
+<P>The simplest way to develop JADE agents is to use a plain text editor =
+such as=20
+TextPad to create the code. Then compile from the command prompt, and =
+then run a=20
+JADE main container from the command prompt and load agent classes into =
+the JADE=20
+main container. Finally, test the code.</P>
+<P>Suppose you want to improve your code. You re-edit and re-compile, =
+but you=20
+cannot just reload it into the JADE runtime. There are two possible =
+reasons. If=20
+you keep the same agent local name, you would have a name clash. But =
+even if you=20
+killed the previous version of the agent or change its local name you =
+run into a=20
+"gotcha". The Java language class loader does not allow classes to be =
+replaced.=20
+So you wind up running the old version of your code. What you have to do =
+is kill=20
+the old JADE&nbsp;platform and load your new agent code into a newly =
+re-booted=20
+version of the platform.</P>
+<P>This approach is ok when there are few agents. But if you have many =
+agents=20
+which will interact with your new agent, it is quite slow and =
+inconvenient to=20
+keep reloading all the other agents every time you want to reload a new =
+version=20
+of the agent you are developing. You can circumvent this problem by =
+loading your=20
+agent under development into its own container. After testing you just =
+kill this=20
+container. The other agents in the system remain the Main platform =
+container or=20
+in other satellite containers which need not even be on the same =
+host.</P>
+<P>For example, run a platform with runjade -gui, then load in your =
+agent with=20
+runjade -container me0:examples.mine.MyAgent. When you want to change =
+MyAgent's=20
+code, select its container, right click and select kill. Re-edit and =
+re-compile=20
+your agent, and then just run runjade -container =
+me0:examples.mine.MyAgent from=20
+the command prompt again. And so on.</P>
+<H3>Borland's JBuilder</H3>
+<P>Of course, you could also use a fancy IDE such as JBuilder. To see =
+how to do=20
+this consult the <A=20
+href=3D"http://www.ryerson.ca/~dgrimsha/courses/cps720/JADEAdmin/jadeJbui=
+lderTutorial2.html">JADE+JBuilder=20
+Tutorial</A>.</P>
+<P></P>
+<P></P>
+<P></P>
+<P></P></BODY></HTML>
+
+------=_NextPart_000_001C_01C4CF6A.65699DC0
+Content-Type: text/css;
+	charset="windows-1256"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ryerson.ca/~dgrimsha/courses/cps720/cps.css
+
+BODY {
+	BACKGROUND-COLOR: white
+}
+H1 {
+	FONT-SIZE: x-large; COLOR: navy; FONT-STYLE: oblique; FONT-FAMILY: =
+FontName, "Times New Roman", Georgia, Times; BACKGROUND-COLOR: silver; =
+TEXT-DECORATION: none
+}
+H2 {
+	FONT-SIZE: large; COLOR: blue; FONT-FAMILY: FontName, Arial, Helvetica, =
+Geneva, Swiss, SunSans-Regular; BACKGROUND-COLOR: silver; =
+TEXT-DECORATION: none
+}
+H3 {
+	FONT-SIZE: medium; COLOR: blue; FONT-FAMILY: Arial, Helvetica, Geneva, =
+Swiss, SunSans-Regular; BACKGROUND-COLOR: silver; TEXT-DECORATION: none
+}
+H4 {
+	FONT-SIZE: medium; COLOR: blue; FONT-STYLE: oblique; BACKGROUND-COLOR: =
+silver
+}
+P {
+	MARGIN-LEFT: 2em; COLOR: black; MARGIN-RIGHT: 1em; FONT-FAMILY: =
+Helvetica, Arial, Geneva, Swiss, SunSans-Regular; BACKGROUND-COLOR: =
+white
+}
+
+------=_NextPart_000_001C_01C4CF6A.65699DC0--

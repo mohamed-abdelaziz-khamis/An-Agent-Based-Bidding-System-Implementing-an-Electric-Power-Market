@@ -1,0 +1,75 @@
+BODY {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+FONT {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+P {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+DIV {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+INPUT {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TEXTAREA {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+FORM {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+SELECT {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-VARIANT: normal; TEXT-DECORATION: underline
+}
+A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-VARIANT: normal; TEXT-DECORATION: underline
+}
+A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-VARIANT: normal; TEXT-DECORATION: underline
+}
+A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #1e90ff; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-VARIANT: normal; TEXT-DECORATION: underline
+}
+.note {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #006699; FONT-FAMILY: "Times New Roman", Times, serif; TEXT-DECORATION: none
+}
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.storytitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #363636; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.boxtitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+.option {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #6495ed; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.storycat {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.tiny {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.slogan {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #c5dff0; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-VARIANT: small-caps; TEXT-DECORATION: none
+}
+.content {
+	FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.boxcontent {
+	FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.bannerbackground {
+	BACKGROUND-IMAGE: url(../images/BannerContentBG.jpg)
+}
+.blockrightcontent {
+	BACKGROUND-IMAGE: url(../images/BlockRContent.gif)
+}

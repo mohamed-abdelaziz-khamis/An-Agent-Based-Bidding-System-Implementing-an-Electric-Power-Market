@@ -1,0 +1,45 @@
+BODY {
+	BACKGROUND-IMAGE: url(/pics/bg/lbg052v.jpg); COLOR: #000000; BACKGROUND-COLOR: #cecece
+}
+TABLE {
+	BACKGROUND-IMAGE: url(/pics/bg/lbg052v.jpg)
+}
+BODY {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+DIV {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+P {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+BLOCKQUOTE {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+OL {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+UL {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+DL {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+LI {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+DT {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+DD {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-WEIGHT: 400; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+B {
+	FONT-WEIGHT: 700
+}
+STRONG {
+	FONT-WEIGHT: 700
+}

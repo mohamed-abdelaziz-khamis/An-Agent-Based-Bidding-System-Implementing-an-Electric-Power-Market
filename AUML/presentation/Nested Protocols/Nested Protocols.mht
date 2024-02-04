@@ -1,0 +1,2660 @@
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="----=_NextPart_01C4B4AD.093FBB10"
+
+This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Microsoft Internet Explorer.
+
+------=_NextPart_01C4B4AD.093FBB10
+Content-Location: file:///C:/AF2349F3/PresentationofNestedProtocols.htm
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="us-ascii"
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:o=3D"urn:schemas-microsoft-com:office:office"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=3DContent-Type content=3D"text/html; charset=3Dus-ascii">
+<meta name=3DProgId content=3DWord.Document>
+<meta name=3DGenerator content=3D"Microsoft Word 11">
+<meta name=3DOriginator content=3D"Microsoft Word 11">
+<link rel=3DFile-List href=3D"PresentationofNestedProtocols_files/filelist.=
+xml">
+<link rel=3DEdit-Time-Data href=3D"PresentationofNestedProtocols_files/edit=
+data.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Parameterized protocol</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Ahmed Ragab</o:Author>
+  <o:LastAuthor>3M</o:LastAuthor>
+  <o:Revision>73</o:Revision>
+  <o:TotalTime>149</o:TotalTime>
+  <o:Created>2004-10-17T16:59:00Z</o:Created>
+  <o:LastSaved>2004-10-17T22:54:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>968</o:Words>
+  <o:Characters>5524</o:Characters>
+  <o:Company>Ragab group</o:Company>
+  <o:Lines>46</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>6480</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:ApplyBreakingRules/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState=3D"false" LatentStyleCount=3D"156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;
+	mso-font-alt:"Courier New";
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	background:navy;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"8194"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=3DEN-US style=3D'tab-interval:36.0pt'>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-family:Arial'>Nest=
+ed
+Protocols:</span></b><span style=3D'font-family:Arial'><o:p></o:p></span></=
+p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Nested
+protocols are applied to specify complex systems in a modular way. <o:p></o=
+:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>A nested protocol can =
+be
+defined and applied, if it is used several times within the same specificat=
+ion.
+<o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>A paramet=
+erized
+protocol is only an abbreviation for a fixed (part of a) protocol. <o:p></o=
+:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Nested protocols are u=
+sed
+for the definition of repetition of a nested protocol according to guards a=
+nd
+constraints. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Interleav=
+ed
+protocols show that a protocol is performed between different agents. <o:p>=
+</o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>In order to finish/pro=
+ceed
+the protocol, an agent has to perform another protocol with other agents. <=
+o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Semantics:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp; </span>If the nested protocol is ma=
+rked
+with some constraints the nested protocol is repeated as long as the constr=
+aints
+evaluate to true.<o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Notation:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp; </span>A nested protoc=
+ol is
+shown as a rectangle with rounded corners. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp; </span>It may have one or more
+compartments, these compartments are optional, and they are as follows:<o:p=
+></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Name
+compartment</span></b><span style=3D'font-size:10.0pt;font-family:Arial'>:<=
+o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>This holds the (optional) name of the nested protocol as a string. <=
+o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Nested protocols without names are anonymous. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>It is
+undesirable to show the same named nested protocol twice in the same diagram
+except when they define the <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>same
+nested protocol. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The compartment is written in the upper left-hand corner of the
+rectangle. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Guard
+compartment:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;</span></span></b><span style=3D'font-size=
+:10.0pt;
+font-family:Arial'><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>This=
+ holds
+the (optional) guard of the nested protocol in the usual guard notation as =
+</span><span
+style=3D'font-size:10.0pt;font-family:Courier;mso-bidi-font-family:Courier'=
+>[guard-condition]</span><span
+style=3D'font-size:10.0pt;font-family:Arial'>. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Nested protocols without guards are equivalent with nested protocols
+with guard </span><span style=3D'font-size:10.0pt;font-family:Courier;mso-b=
+idi-font-family:
+Courier'>[true]</span><span style=3D'font-size:10.0pt;font-family:Arial'>. =
+<o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The =
+guard
+compartment is written together with the constraint compartment in the lower
+left-hand corner of the rectangle. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Constraint
+compartment </span></b><span style=3D'font-size:10.0pt;font-family:Arial'><=
+o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p=
+></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>This holds the (optiona=
+l)
+constraint of the nested protocol in the usual constraint notation as </spa=
+n><span
+style=3D'font-size:10.0pt;font-family:Courier;mso-bidi-font-family:Courier'=
+>{constraint-condition}</span><span
+style=3D'font-size:10.0pt;font-family:Arial'>. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Nest=
+ed
+protocols without constraints are equivalent with nested protocols with
+constraint </span><span style=3D'font-size:10.0pt;font-family:Courier;mso-b=
+idi-font-family:
+Courier'>{1}</span><span style=3D'font-size:10.0pt;font-family:Arial'>. <o:=
+p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The
+constraint compartment is written together with the guard compartment in the
+lower left-hand corner of the rectangle. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The
+constraint </span><span style=3D'font-size:10.0pt;font-family:Courier;mso-b=
+idi-font-family:
+Courier'>n<span class=3DGramE>..m</span> </span><span style=3D'font-size:10=
+.0pt;
+font-family:Arial'>denotes that the nested protocol is repeated <i>n </i>up=
+ to <i>m
+</i>times with <i>n </i>, <i>m </i>{*}. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Presentation Options:</span></b><span style=3D'font-size:10.0pt;
+font-family:Arial'><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The
+abbreviations </span><span style=3D'font-size:10.0pt;font-family:Courier;
+mso-bidi-font-family:Courier'>n </span><span style=3D'font-size:10.0pt;
+font-family:Arial'>and </span><span style=3D'font-size:10.0pt;font-family:C=
+ourier;
+mso-bidi-font-family:Courier'>* </span><span style=3D'font-size:10.0pt;
+font-family:Arial'>can be applied to denote <i>n</i><span class=3DGramE>..<=
+/span><i>n
+</i>and 0..*, respectively. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Nested protocols=
+ can
+also be used applying parameterized protocols or instantiated parameterized
+protocols. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>The interleaved protocols:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>When a nested protocol=
+ is a part
+of another protocol, the rectangle representing it has to be completely dra=
+wn
+within the <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>other one. <o:p></o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>If interleaved protoco=
+ls are
+defined, that is, during performing one IP another IP has to be processed, =
+the
+rectangles are not<span style=3D'mso-spacerun:yes'>&nbsp; </span><o:p></o:p=
+></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>drawn within each othe=
+r. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Example:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><!--[if gte vml 1=
+]><v:shapetype
+ id=3D"_x0000_t75" coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=
+=3D"t"
+ path=3D"m@4@5l@4@11@9@11@9@5xe" filled=3D"f" stroked=3D"f">
+ <v:stroke joinstyle=3D"miter"/>
+ <v:formulas>
+  <v:f eqn=3D"if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn=3D"sum @0 1 0"/>
+  <v:f eqn=3D"sum 0 0 @1"/>
+  <v:f eqn=3D"prod @2 1 2"/>
+  <v:f eqn=3D"prod @3 21600 pixelWidth"/>
+  <v:f eqn=3D"prod @3 21600 pixelHeight"/>
+  <v:f eqn=3D"sum @0 0 1"/>
+  <v:f eqn=3D"prod @6 1 2"/>
+  <v:f eqn=3D"prod @7 21600 pixelWidth"/>
+  <v:f eqn=3D"sum @8 21600 0"/>
+  <v:f eqn=3D"prod @7 21600 pixelHeight"/>
+  <v:f eqn=3D"sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok=3D"f" gradientshapeok=3D"t" o:connecttype=3D"rect"/>
+ <o:lock v:ext=3D"edit" aspectratio=3D"t"/>
+</v:shapetype><v:shape id=3D"_x0000_i1025" type=3D"#_x0000_t75" style=3D'wi=
+dth:415.5pt;
+ height:179.25pt'>
+ <v:imagedata src=3D"PresentationofNestedProtocols_files/image001.png" o:ti=
+tle=3D""/>
+</v:shape><![endif]--><![if !vml]><img width=3D554 height=3D239
+src=3D"PresentationofNestedProtocols_files/image002.jpg" v:shapes=3D"_x0000=
+_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Mapping:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>A nested
+protocol maps into a PD. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The name
+compartment of a nested protocol maps into the name of the Collaboration. <=
+o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The guard=
+ and
+constraint compartment maps into a constraint on the complete Interaction.<=
+o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-family:Arial'>Comp=
+lex
+Nested Protocols:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;</span></span></b><span style=3D'font-size=
+:10.0pt;
+font-family:Arial'><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Semantics: <o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>A complex=
+ nested
+protocol defines the parallel or decisional combination of nested protocols=
+. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>It has to take into
+consideration the thread of interaction at the beginning and at the end of =
+the
+complex nested protocol. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The start=
+ing
+and ending point within the nested protocols have to be considered. <o:p></=
+o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Notation:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Three kin=
+ds of
+complex nested protocols are distinguished. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>All three complex nest=
+ed
+protocols are drawn over the lifeline and threads of interaction within a P=
+D. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Each individual nested
+protocol in a complex nested protocol is introduced by a line that is
+terminated by the rectangle of a<span style=3D'mso-spacerun:yes'>&nbsp;&nbs=
+p;
+</span><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>nested protocol. <o:p>=
+</o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>These lines are connec=
+ted
+either by: <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=3DGramE>a</span> heavy bar defining AND parallelism, <o:p></o:p></spa=
+n></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=3DGramE>a</span> heavy bar with a non-filled diamond defining OR
+parallelism (inclusive-or), or, <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=3DGramE>a</span> heavy bar with a non-filled diamond defining decisio=
+ns
+(exclusive-or) with an &quot;x&quot; inside the diamond. <o:p></o:p></span>=
+</p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The threads of interac=
+tion which
+are continued in the different nested protocols are drawn as usual. <o:p></=
+o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>No Presentation Options <o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Example:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><!--[if gte vml 1=
+]><v:shape
+ id=3D"_x0000_i1026" type=3D"#_x0000_t75" style=3D'width:137.25pt;height:14=
+7pt'>
+ <v:imagedata src=3D"PresentationofNestedProtocols_files/image003.png" o:ti=
+tle=3D""/>
+</v:shape><![endif]--><![if !vml]><img width=3D183 height=3D196
+src=3D"PresentationofNestedProtocols_files/image004.jpg" v:shapes=3D"_x0000=
+_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Mapping:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><span style=3D'font-size:10.0pt;font-fami=
+ly:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>A complex
+nested protocol maps into a PD.<b><o:p></o:p></b></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><b><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o=
+:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-family:Arial'>Thre=
+ads of
+Interaction and Messages Inside and Outside Nested Protocols </span></b><sp=
+an
+style=3D'font-family:Arial'><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Usually, nested protoc=
+ols
+have input and output parameters, namely threads of interaction and message=
+s. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Semantics:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></b>=
+</p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Nested protocols are d=
+efined
+in detail either within a PD where it is used or outside another PD. <o:p><=
+/o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Threads of interaction=
+ and
+messages inside and outside nested protocols define the input and output
+parameter for nested <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>protocols. <o:p></o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The input parameters a=
+re the
+threads of interaction, which are carried on in the nested protocol, and the
+messages which are <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>received from other IP=
+s.<o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The output parameters =
+are on
+the one side the threads of interaction which are started within the nested
+protocol and are carried<span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>on outside the nested =
+protocol
+and the messages which are sent from inside the nested protocol to AgentRol=
+es
+not involved in<span style=3D'mso-spacerun:yes'>&nbsp; </span><o:p></o:p></=
+span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>the actual nested prot=
+ocol. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>A message or thread of
+interaction ending at an input or starting at an output parameter of a nest=
+ed
+protocol describes the<span style=3D'mso-spacerun:yes'>&nbsp; </span><o:p><=
+/o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>connection of a whole =
+PD
+with the embedded nested protocol. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Notation: <o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The input and output
+parameters for the threads of interaction of a nested protocol are shown as=
+ a
+tall thin rectangle <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>(like a thread of
+interaction) which is drawn beyond the bounds of over the top line and bott=
+om
+line of the nested protocol<span style=3D'mso-spacerun:yes'>&nbsp;&nbsp; </=
+span><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>rectangle, respectivel=
+y. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The input and output m=
+essage
+parameters are shown by arrows starting with a small solid filled circle, a=
+nd
+arrows ending at a<span style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;
+</span><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span=
+><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>circle surrounding a s=
+mall
+solid filled circle (a bull's eye), respectively.<o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Presentation Options:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'><span style=3D'mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></b>=
+</p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The message arrows can=
+ be
+marked like usual messages. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>In this context, the
+predecessor denotes the number of the input/output parameter. <o:p></o:p></=
+span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The input/output threa=
+d of
+interaction can be marked with natural numbers to define the exact number of
+the parameter. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Example:<o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><!--[if gte vml 1=
+]><v:shape
+ id=3D"_x0000_i1027" type=3D"#_x0000_t75" style=3D'width:165pt;height:184.5=
+pt'>
+ <v:imagedata src=3D"PresentationofNestedProtocols_files/image005.png" o:ti=
+tle=3D""/>
+</v:shape><![endif]--><![if !vml]><img width=3D220 height=3D246
+src=3D"PresentationofNestedProtocols_files/image006.jpg" v:shapes=3D"_x0000=
+_i1027"><![endif]><o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-outline-level:1;mso-layout-grid-align:none;text-autospace:none;
+direction:ltr;unicode-bidi:embed'><b><span style=3D'font-size:10.0pt;font-f=
+amily:
+Arial'>Mapping: <o:p></o:p></span></b></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The order of the messa=
+ges within
+the protocol is defined according to the combination of the complex nested
+protocol. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>The ordering of the me=
+ssages
+in the nested protocol is the ordering of these protocols. <o:p></o:p></spa=
+n></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p>=
+</span></p>
+
+<p class=3DMsoNormal style=3D'text-align:justify;text-justify:kashida;text-=
+kashida:
+0%;mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bid=
+i:
+embed'><span style=3D'font-size:10.0pt;font-family:Arial'><span
+style=3D'mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Depending on the combi=
+nation
+the messages are sent in AND/OR parallelism or decision ordering.<o:p></o:p=
+></span></p>
+
+</div>
+
+</body>
+
+</html>
+
+------=_NextPart_01C4B4AD.093FBB10
+Content-Location: file:///C:/AF2349F3/PresentationofNestedProtocols_files/image001.png
+Content-Transfer-Encoding: base64
+Content-Type: image/png
+
+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
+KAKKgCLw/wHR+PvKpn2dpAAAAABJRU5ErkJggk==
+
+------=_NextPart_01C4B4AD.093FBB10
+Content-Location: file:///C:/AF2349F3/PresentationofNestedProtocols_files/image002.jpg
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCADvAioDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2Wiii
+gAoorn0udf1DVdUhsr7TrW3sblYEWaxkmdswxyElhMo6yEYx2oA6CisX7L4p/wCgzpH/AIKpf/ki
+j7L4p/6DOkf+CqX/AOSKANqisX7L4p/6DOkf+CqX/wCSKPsvin/oM6R/4Kpf/kigDaorF+y+Kf8A
+oM6R/wCCqX/5Io+y+Kf+gzpH/gql/wDkigDaornL+48SaVFBcz6jpdxE13bwPGmnSRsVkmSMkMZ2
+wQHz0PSujoAKKKKACiiszxDfXWn6UJrIwrcSXNvAjTIXRfMmSMkqGUnAcnGR0oA06Kxfsvin/oM6
+R/4Kpf8A5Io+y+Kf+gzpH/gql/8AkigDaorF+y+Kf+gzpH/gql/+SKPsvin/AKDOkf8Agql/+SKA
+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
+
+------=_NextPart_01C4B4AD.093FBB10
+Content-Location: file:///C:/AF2349F3/PresentationofNestedProtocols_files/image003.png
+Content-Transfer-Encoding: base64
+Content-Type: image/png
+
+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
+
+------=_NextPart_01C4B4AD.093FBB10
+Content-Location: file:///C:/AF2349F3/PresentationofNestedProtocols_files/image004.jpg
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCADEALcDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2Wiiu
+Zm0bStX8b6h/aemWd95Wm2nl/aYFk2Zkuc43A4zgflQB01FYv/CG+Fv+ha0j/wAAYv8A4mq2oeHf
+BumW32i68Nabs3BAItLWViScABUQk/gKAOjornrLw14O1G1W5tvDmlNGxI+fTURlIOCCrKCCCOhA
+NC+GvBrX8tiPD2kfaIokldPsEfCuWVTnbjko35e4oA6GisX/AIQ3wt/0LWkf+AMX/wATR/whvhb/
+AKFrSP8AwBi/+JoA2qKxf+EN8Lf9C1pH/gDF/wDE0eDf+RI0H/sG2/8A6LWgDaooooAKKKKACiuS
+0DwzoGoWV1dXuh6ddXEmpX2+Wa0jd2xdSgZJGTwAPwrT/wCEN8Lf9C1pH/gDF/8AE0AbVFck2n+B
+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
+
+------=_NextPart_01C4B4AD.093FBB10
+Content-Location: file:///C:/AF2349F3/PresentationofNestedProtocols_files/image005.png
+Content-Transfer-Encoding: base64
+Content-Type: image/png
+
+iVBORw0KGgoAAAANSUhEUgAAANwAAAD2CAIAAAAyD36GAAAAAXNSR0IArs4c6QAAFTlJREFUeF7t
+XV9oVFcany4RJmAhAQsZUOiIBSdYaEKFJqwPG+lDIxaaUKGG3YeNXajKwjaxUM360E0UatKHohba
+Zh+2mEJLUlBMH4rTB8ukYJkRlEyh4hQUZsDABCpkwED3d3Om1zFmcs+5f87cO+d3CcOdm++c853f
++c13/nzfOfeZ33//PcaLCIQJgT+FSRnqQgQsBEhK8iB0CJCUoWsSKkRSkgOhQ4CkDF2TUCGSkhwI
+HQIkZeiahAqRlORA6BAgKUPXJFSIpCQHQocASRm6JqFCJpIy/UO6Uqmw7SURmPtmTlLSLzEjSXk5
+Xfi14BeCTZ9PZiGjuY4mkrISq8Rb4pqBZnHyCJhIykR7orLK7luWJO3t7bKiPsk9w3hKn5BkNr4h
+YKKlnPlipnCfY0pZDo2+Nyor6pOciaTM3srG2Hv7RKAgsjGRlPFYnGPKIMjkV54mkrLv9b5ER8Iv
+BJs+n6HDQ5rraCIpO5/vjMe5JKSZaQrFmUjKyY8ni/eLCiCZLXpp5pJmAEwkJceUmkmmWpyJpIRH
+J9aiChTl9SFg4uJ54U4hsT3BYaUky5aXltu2tUkK+yJmoqUslUqMEpJnz+yVWXlhXyRNJOXVy1eL
+JU50ZPlTyOv2fplISo4pZfm4JmfBpfcykZRW2MuqXpijXFr3i92a1TdxoqMZYhanioCJlnLq7FT+
+57wqUsbKj703prnuJpKyWC5ynVKeZxxTymPlXhIeHY4p5eGz4NJ7mWgpu/d2M0pInmYHXj8gL+yL
+pIkTneXlZbhz6NGRJFDpfqlje4eksC9iJlrK8TPj3A4hzx4EVckL+yJpIik5pvSFOsFlYiIpue87
+OD75kjPHlL7A2MyZMEpIR+tmb2cZJSQPdPp6Wl7YF0kTu+/05TSjhOTZw7OE5LFyL8kxpXvstKQ0
+0VLyLCElavEsISW4KNycCJhoKSfOTjBKSJ7OjBKSx0pN8pmaa+zkWGeqs/aJWl6GSTNKKMAGx6GH
+G14BFtkUWTNKqCmasbkqgaOXNFfIxDGlZoijXlz7Vt0n+ZKUUedM4PrzLKHAIWYB4UfAU0AGJrDh
+ryE1bBQCro/Td0lKm46uC9aMFBSup+om/9KsZDiLcxcl5IUhymNKsbwH+MTySjhxpFY+IuDuLCGb
+Hi66U2VSko4+tncksvJylpAwW6q8VCOlau6RAJ1Kbo6AR4+OC16qkVKYSbaiUQh4P0tIlTMKEx17
+KOljkyz8tNDzco9qhssPl3FoeWp3Sj4hJzryWAUhqTSbVLOUqpSvV7309+npz6YRqoOjIl1AkLme
+Kfyi+9BEF3o2R5JoRAnhfdkgfm9PL15QjA3UuMHXC59cwNoB7vE3ODA4dW4KD+e/nS8tlaoPDw1O
+nJuwHl6Zb93SitcrXfrfpYn/TCz8sPB0KjQnWAvhwUODyEHIWF8HBrG95kD/ARzbgOfN0eohr4XH
+MaWL2qlZSlHA2Imx4r0iAsByN3LTF6fHTo+VH5ThjCo/LOPgKHAutSeFvjWby8KkiZcYg52pXamu
+PV3ZG9nMjczKoxU8H/rb0Kl/n7J64ZbY3JW52lQ4lQFJYJiH/zqc+d6ST+xI4CtS4Zdwdf4qTGzH
+Nq3HNrgAtzmSRCBKyLJbPy7gHI/+g/0Dbw7k7+RxNA8Oau/b1wcmJZ5L4D6RSCCGXpyLAosIPrW1
+tSWTSeuolK1rr6DbYj0X/8UnUoFhSBW3ElmpFn9ZnPtmDqYRFjGTy0C+7y9WrEpi19qbwnDkKV/v
+oIvy+s8SUraUYE/PKz3gH8aFsJGwfzB+YCo2YlonzqxxBfYMtk2AZlnKtWNz0Qug164+ebT2fO2/
+9jYu6wmer53x1flC58AbA2IBdvLMpPX8D3krL5TCo3h1kTL5fFJXUdVylEmJdOPnxmH89vftH/77
+8PDR4fEPxmHq8AY/K8ZJ8G/NForLuhdMjf3B1NWYGFMmtiUwpgSnbatpPV87YduyxK/1C+8R2C/k
+qzYSWcXj+PlyS4Merug/S0htSciv2bceNGtL4ZKQa8zxvu/JD72ecRXgkpDrijEhEZBHgJbS8sxG
+tweQb2nXku6ihNYVpwSymzGl6+oxYRQR4FlCUWy1JteZZwk1eQPXqx48AuglDa38U9Vm9x0KJkz/
+d7q45Ol1kUOHhgKqif6zhKoB5PU26tc+R51lxMIps4ny7up1/uJ5OBGG3x6GxxU3yASeT9R9/MNx
+3OP5559+fi19DZ94eOr9U4v5xbv37grJ2cuzllNgbZ0FT65dv4YbuMds6CAsnuC/cOGiLOvrGwMo
+626hmonIuVbSTm6XG562UAJZgWdK+YYHDjsuv55K7uoFTsDdL7gFF//KbyuH3zwMxoBJuJ/8aBIC
+eH7+0/M2KW1JIYNyQSmhFWIA7HshD/8+coMMGCbkZ7+aRQ6QBPvL5TL4Co6KPIVkQJifOnHKe85K
+6rH7dtnpwcOU3GH53xBf0ruvt/XZ1pmvZxAzBR89/PvJXda/rLiTmjcj2ZJzX89BEvYSRxoh+gmu
+KeGvQgwUlk4QmyIiCuDfg3UUfn/kmXoxBS7mb+eRBLEEeIgIGOSZ3J0M1BMYjSghl83YXMls/37v
+3l7YKmFLktuTiGmqPKwU7hSEr79QKCDWDrQDO9dJwsgVHxRH3x21Y6lm56xufeDggIgowOwHUSnw
++4s887fyGN4hlgrTYbwKCN5X+HWRp5AMDl39UUIKNl/JAns3+P7mEMSYEmNBKGmPKTGOXFlZscd/
+6L7BOfS8YnRYO6YUkuLkCfTCGGuKVHaVkafkmFKMU8XoM6Axpaimx0uJPArODKVF+eB+uO5y1uz7
+RlQyWAjyudNWpIL925ncCTZ4ycR72tzNXNdLXR7zUSIPSenSzRiJjZ2+EJoBGR5/kPqSe+zO9CTX
+B4evJXH27SucWjLL/ZTTUk7DCmH37bL7lmmx2i4eU+yePytvJt6wFKXxmYyem8tg9QqrCh7zUdK5
+CS1lqEZ7opvGBBaL4WhX7PkUezLh6cbudezVxNfjR49jfUfs28Ti0ejJ0XWSmPGIIPyZL2ewL0/8
+1yNL5JOXftW9a1SZlAId+5Kvm05JoZ7OEuuVJTTZv28/tgWDWyAfOIpZ+fx387CdWGXE2hBef2bt
+Xlp9vA8JklibtCXz+Tx8PPh6+K3D2K+Hso69c0xb7dztzfeinhopn27pkLR9LQTCOOFJGKgJTdCo
+4FDqpRT6QfhyoBUIunhrEcyDbwb7jbDJ2Npn11Ld2wl2Yl8e/EO2JLw7WC3HV2xr9tLY7tJG0qOz
+znbKfHWHjlKq8FATtg1eQdhFjMzgHxeKjZ8Zh28Qvhnh7xGWsrxUtk7+aLH2zdnxGZCE1YQnEzYV
+bwACO5Vw8C7s/SwhZR3k1ybqZS2fg00UZS39SFBPT+StWgVJeTtn+F1wb8f74B4cLf9WFr0w+Ieo
+CzHoxP3I+yPIX/h4cGE8Cs+QCC8SkUG2jKQaYRBTAllt9r0hN3xZofWDdRvkUTu6qKen0sQwCD1x
+QA0iM/yam/uuIRfPfYPUHlA2yjzLDGOEzJF/HEHvLC8fhrGyb+20UUZqE52njU0IzWTD6ShwDrrT
+9IUW4eS3GimfxtoXaPzNxGaDv9k2ZW4yyxRYItBcd2VSataPxQWNgOMyBRZTg9ZhXf5qE50QdtaS
+eNWbzYRwnVWyRo0Sc8cBpdmk6aRE0yrh1SgqaCtX/Ep9X6lQApndt7bmDntB4Zn0kJRh50rQ+tlL
+UfYsNugSHfMnKR0hamYBu7Nu1GruhuCSlM3MOce6hYqLtrYkpWPDUUA3AiSlbsRZniMCJKUjRBTQ
+jQBJqRtxlueIAEnpCBEFdCNAUupGnOU5IkBSOkJEAd0IkJS6EWd5jgiQlI4QUUA3AiSlbsRZniMC
+JKUjRBTQjQBJqRtxlueIAEnpCBEFdCNAUupGnOU5IkBSOkJEAd0IkJS6EWd5jgiQlI4QUUA3AiSl
+bsRZniMCJKUjRBTQjQBJqRtxlueIAEnpCBEFdCNAUupGnOU5IkBSOkJEAd0IkJS6EWd5jgiQlI4Q
+UWBjBDY5e2jdqcSqCJKUqohRvopAvQNXnz4KRvW8RZKSJHOPwCYHrtrG0sV5liSl+yZhSoHA5mcB
+q5pJZEhSklpqCNR7i0W9XGgp1fCltAsENnzrhZ2PoGAtEWkpXYDMJJ4Q2PAFMevOqFY1luy+PTWJ
+yYnrva+odoi5zmpKwkVSSgJFsfUIbP6+Ii9vMyIpybbQIUBShq5JqBBJSQ6EDgGSMnRNQoVISnIg
+dAiQlKFrEipEUpIDoUOApAxdk1AhkpIcCB0CJGXomoQKkZTh4kDuZi5cCjVCG76EPlwvoVd6WXtA
+hNlEB9fqKSWkpfTastOfTff29B4/ejz9fVoEzuR/zlceVoYODeFePF/4YQFiKGns5Fjh54ItiXtI
+Dh4aFJLzV+Yhc+GzC7ZOgwODIh/kUPi10LuvF/f4LC2V8Jn7KVepVFB6rfzy8rLXKjU6PUnptQUq
+q5Xj/zx+/uJ5EK74oHj33t2pj6bS19OdeztXVlaKpWLrltaVRyt2MZVYRUgW7xUnPpoo3C/EVmPl
+B2Xk0H+wH2LH3j72WKeW2PA7w4v5xZETI8nnk5nrGUTfdKY6y0vlocNDIHdmIYPSbfnZudm2tjav
+VWp0epLSawvEW+IdHR2wTws/LiSeS+zcsRNGsXi/2NfTF4/HU3tSYCR4CS6KkpaXqpKJHQlIpnan
+INP+XDssJeyfkBG2c/7befC1u6sbMsgcCYVVxifsK25AQfAy9ULKax1Clp6k9NogsJTgHOxTzys9
+sH8ijjCxPQEbhr41fzsf2xIDL4uF4vLD5fydfNu2JyTRBZdKJSRBPujNhTazX83iSf9r/bGWGJJA
+Zvjt4fnv5iGDLn7gjYFypdz1Uhck09+lu162bprpIim9tiYspeidx8+Mw1LCwsGS9e3rKxQKra2t
+YFXskWXtMNBsf7Ydli8ei9dKglLIAanwCZ4NvDmAzv2xTquxkX+NdO/tHnl3BBYR1hRdPCxrpWzZ
+XXTcsKm1FcAYtAnGlNX9kRvuBlr3EJWXEQunzCbKB1ovjBTFQNDdBY7a1vfpHE69fypzw33m9VQK
+AislkLkk5GlJyMVWPa+WWSK96katdVk2fEmIpPRESgmGRE+k4aTkmDJ6pMGCZTMMHOsDT1IGSMrR
+k6P2eRIXPnm8JO6xyOlPp7H86TGTMCcnKQNsHUyose6NER7WxjFxRklwzNheH3ydOjeFr0eOHsGE
+HSuOVa/P6TFM1Uv3S1iJtFYrr8xjaQnTauH1wb8mzk6Mnx4PUO9GZ01SBtkCqzF4X0AmrI1jGo6S
+4JgBQe8W7l74+AJ6Ycydy7+VU8kUFiCxnGl9xqqfl768BMriv9NfTOdu57C0hGk4MsFCOibdYx/U
+LBsFWYOG5E1SBgl7SwyWEu5ErKsPHhwUvhwQdGdyJ3pz2MK+V/vatraBZ7CpWM60PmPVz+yNLLzb
+WNqc+3quY2tHalcKi6Cwqc09mhSNQVIGSEph+Tq2d4ydHpu8OCl8ObCUYoEQz+GPsdw8COBYcwvl
+C/mqEygWg+v82vVrQrL0sAQu4gYL79lcNkCNw5E1SblBO9izE49tJCwfLsvBc8cKDkKPDEuJ/BEK
+hACL/lf7YQvhkIQk7CVk4AQSqYbfGh47MSbGkV17uuA6F2uiGGgmkgmMCjzqFubkXKd8Yp3SXgz3
+uP6s1OSY/WRvZY+9UxMcpJTeb+GGr1OSlFVS+k7HoJ09wf1sSEq/f+Z18tscaE1KNEUx7n4MSpHn
+tJSWpbTZ4g7xpiBb3UogDDm5Pemxjkqk5ETHQltMcnEjpjgeG6DJkmNJVXONSMrHgJOamslXrziS
+cj0ytdQMSSOZpgbHlAxdc+A8HFFY9vf4w+CY0iOATP4EAtgkpBkRdt+aAY9ecdgzqVlpklIz4CzO
+GQGS0hkjwyXa29s1I8CJDic6OijHiY4OlM0pY/S9Uc2VZfetGXAW54wASemMESU0I0BSagY8esXV
+HjWoR3uSUg/OES6ld+/j8y/1VIOk1INzhEuZ/HhSs/YkpWbAo1ccdqtpVpqk1Ax49Iqzj3vVpjoX
+z7l47kA27E/HbmCPjAxw8ZxR2R7bJorJrVPZ9V4K3Tf3r+htmrCUFoEoIRrLsJAlOnqockbBUgIE
+GsvoMME3TT1GCQlGKjFHYaIjaumiDN/g8ZBREBvsPahjSlJ3bFGzlDbl/Tptx5TGiXI93UUJ2ZuV
+lWxk1fC5SGMjrDpWiHLTUHdlBFxTS7n7VlYtHAnYfbtuB1jKyQ+1ehqVu2/XdWPCiCLAKKGINlwz
+q921V/dr9mgpm5lPvtSNZwn5AiMziTYCtJTRbr+m1J6zb0YJORDbl7OElH48tJRKcJkozLOETGz1
+kNc5AlFCIUeQ6jUBAuy+m6ARg62CxyghF8pxosOJjgvaBJvEIEtpRzatuwkW4Ojn7i5KyEu9TSGl
+OMlcXHiV7OIv1huP7csLgkzrOwKmkLIWOGsj86rvSDJD3xAwkZTde7vbt+o+CNS3FtOekf4oIVMm
+OrVNidcUx9cu7e0byQJ92fetVHMTLeX4mXH9e5mVWiVUwjxLSEdzcEyphDLPElKCy6UwDsexXw/v
+MguTkoX6LKGmaYj8zXxyd5JjSskG5ZhSEihPYvjp4/KUhUmJ9Y+/TZzozM7MFktFk3jlqa6MEvIE
+n2RijiklgWqUmImWEtPJyiq7b1nKMUpIFinKNTECJlrKmS9m9A/eo8uhibMTmpU3kZTZW9kYe29p
+opXLZWlZfwRNJCXHlP5wJ7BcTCQlo4SU6MQoISW4KKwDAXp0dKCM+P7CHd1vPNBRsWDKYJRQMLg+
+mSvHlEooM0pICS6XwlbYS4vLtAYmY5SQjkbP3cwltyfbtrXpKCz6ZXBMqasNaSmlkdbvaDBxSYhR
+QtKEtAQZJaQEl0thjildAqcrmYmW0gp74b5vaYYxSkgaKg+CpaVSxzav7wr2UD6TOiBgoqXMXM9g
+RklqSCLAs4QkgfIkllnIlCu6I188aWxYYhMtJfd9h5zkJpKSUUJKpGSUkBJcLoV5lpAScPToKMHl
+UphnCSkBpz9KyMRT1+D7Tu1O8YQMSWrqt5QmklKyMSjWKARMnOg0CmuWK4kASSkJFMX0IUBS6sOa
+JUkiQFJKAkUxfQiQlPqwZkmSCJCUkkBRTB8CJKU+rFmSJAIkpSRQFNOHAEmpD2uWJIkASSkJFMX0
+IUBS6sOaJUki8H+vZfarsNI6NQAAAABJRU5ErkJggk==
+
+------=_NextPart_01C4B4AD.093FBB10
+Content-Location: file:///C:/AF2349F3/PresentationofNestedProtocols_files/image006.jpg
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAD2ANwDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2Wiii
+gAooooAKKKKACiiigAooooAKKgtLpbuOR1UrsleIg9yrEZ/Sp6ACiiigAooooAKKKKACiiigAooo
+oAKKhurgWsSyFS2ZEjwP9pwufwzmpqACiiigAooooAKKKKACiiigAooooAKKKKACiiigCnprl4Zi
+ZzNi4lGSCNuHPy8+nT8KuVT0zd5M25YlP2mXHlkYxvPJx39ferlABRRRQAUUUUAFFFFABRRRQAUU
+UUAVdQbbbIfOaL9/CNy55/eLxx69Pxq1VXUATbpt8vPnxf6zGP8AWL69/T3xjmrVABRRRQAUUUUA
+FFFFABRRRQAUUUUAFFFFABRRVLU9Ws9Ijhe7M37+Xyolht5JndtrNgKik/dVj07UAGlqFgmAheHN
+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
+
+------=_NextPart_01C4B4AD.093FBB10
+Content-Location: file:///C:/AF2349F3/PresentationofNestedProtocols_files/filelist.xml
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/xml; charset="utf-8"
+
+<xml xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+ <o:MainFile HRef=3D"../PresentationofNestedProtocols.htm"/>
+ <o:File HRef=3D"image001.png"/>
+ <o:File HRef=3D"image002.jpg"/>
+ <o:File HRef=3D"image003.png"/>
+ <o:File HRef=3D"image004.jpg"/>
+ <o:File HRef=3D"image005.png"/>
+ <o:File HRef=3D"image006.jpg"/>
+ <o:File HRef=3D"filelist.xml"/>
+</xml>
+------=_NextPart_01C4B4AD.093FBB10--

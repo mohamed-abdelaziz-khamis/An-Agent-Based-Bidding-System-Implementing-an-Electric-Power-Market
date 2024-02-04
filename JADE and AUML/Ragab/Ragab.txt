@@ -1,0 +1,1 @@
+A sender sends his AID to the receiver then the receiver send thank you message to the sender.

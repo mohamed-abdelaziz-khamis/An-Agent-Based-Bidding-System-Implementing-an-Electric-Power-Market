@@ -1,0 +1,641 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0050)http://www.ececs.uc.edu/~abaker/JiVE/Chapter2.html -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Alan Galan" name=Author>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY bgColor=#cecece>
+<TABLE>
+  <TBODY>
+  <TR height=20>
+    <TD colSpan=2>&nbsp;</TD></TR>
+  <TR>
+    <TD width=20>&nbsp;</TD>
+    <TD>
+      <CENTER>
+      <H3>Chapter 2 - Literature Review</H3></CENTER>
+      <P>This chapter first presents a discussion of intelligent agents and 
+      multi-agent systems. It then provides a survey of tools for the design and 
+      implementation of multi-agent systems. The chapter concludes with a 
+      discussion of the relevant issues related to collaboration.</P>
+      <P>
+      <H4>2.1 Agents and Multi-agent Systems</H4>
+      <P></P>
+      <P>The definition of an agent is a popular debate in the agent community. 
+      There are however various terms that seem to consistently come up when 
+      defining an agent. These can include intelligence, autonomy, reactivity, 
+      and perception. Huhns and Singh give a definition for an agent that 
+      reflects this ongoing debate:</P>
+      <BLOCKQUOTE>"Agents are active, persistent (software) components that 
+        perceive, reason, act and communicate.<BR>Some researchers add further 
+        properties, such as being autonomous, goal directed, reactive, or 
+        declaratively programmed. Others limit agents to the role of 
+        representing a user or database." [Huhns and Singh 1998]</BLOCKQUOTE>
+      <P>Given these disparities, it remains that an agent should provide a 
+      service to the user, working toward some goal while representing the 
+      user's interests.</P>
+      <P>Linking these possibly intelligent and/or autonomous agents together 
+      forms a conglomeration of agents termed a multi-agent system. This type of 
+      system is characterized by multiple independent entities working towards a 
+      common goal, or solving a problem or set of problems. They interact within 
+      themselves and possibly with the environment and/or outside entities. </P>
+      <P>
+      <H5>2.1.1 Specification of Conversations and Conversation rules</H5>
+      <P></P>
+      <P>The cornerstone of a multi-agent system is the communications. 
+      Conversations allow the agents to interact and dictate the behavior of the 
+      system. The specification of the conversation rules is an important aspect 
+      of the design and realization of multi-agent systems. A graphical 
+      representation usually provides the easiest description of agent 
+      conversations. The tendency is to resort to a formal methods approach to 
+      specifying the conversations. The most common means of representation are 
+      Petri-nets or state machines.</P>
+      <P>COOL [Barbuceanu and Fox 1995] presents an example of the specification 
+      of communications, where they use a finite state machine to represent each 
+      agent's communication parameters. Chauhan further enhances this model 
+      [Chauhan 1997] to include a Petri net representations taken from the 
+      individual conversations, aggregating them into one specification.</P>
+      <P>Moldt and Wienberg present a representation of multi-agent systems 
+      based on Colored Petri nets [Moldt and Wienberg 1997]. The tokens in the 
+      CPN represent the dynamic components of the complex system. They further 
+      make the distinction between the agent society and the agent, both of 
+      which use Petri nets as representations. Cost et al. have also used 
+      Colored Petri nets [Cost et al. 1999]. They claim that the use of these 
+      CPNs allow for improved support of concurrency and complex 
+      interactions.</P>
+      <P>In contrast, Parunak presents an enhanced form of the Dooley Graph 
+      [Parunak 1996]. The Enhanced Dooley Graphs are said to be useful in 
+      capturing agent interactions and expressing them in an easy to understand 
+      manner. The Z specification language has also been proposed as providing a 
+      framework for describing multi-agent interaction [d'Inverno, Kinny and 
+      Luck 1998].</P>
+      <P>
+      <H5>2.1.2 Agent Communication Languages</H5>
+      <P></P>
+      <P>The agent communication languages (ACL) used in multi-agent systems are 
+      another important aspect of the design of a multi-agent system. An ACL is 
+      a precisely defined protocol for inter?agent communication in multi-agent 
+      systems, including syntactic and semantic definitions. The two ACLs that 
+      seem to be in the forefront of acceptance as standards are KQML and 
+      FIPA-ACL.</P>
+      <P>KQML is a message format as well as a message handling protocol. KQML 
+      consists of three layers; the content layer, the message layer, and the 
+      communication layer. The content layer consists of the content of the 
+      message. The communication layer handles the lower level communication 
+      parameters. The message layer consists of a performative, which conveys 
+      information about the content of the message, as well as optional 
+      information to describe the content language [Labrou and Finin 1998].</P>
+      <P>FIPA-ACL is another ACL with a format similar to that of KQML. ACL 
+      messages use a set of parameters, the first representing the communicative 
+      act of the message. The additional parameters specify items: to aid in 
+      message delivery, to assist in the interpretation of the content, and to 
+      allow the receiver to respond co-operatively [FIPA 1997]. </P>
+      <P>
+      <H4>2.2 JAFMAS</H4>
+      <P></P>
+      <P>As the title of the software indicates, JiVE builds heavily on JAFMAS 
+      (Java-Based Framework for Multi-Agent Systems) [Chauhan 1997]. JAFMAS 
+      provides a methodology and a framework for designing multi-agent system. 
+      JiVE uses the five-step methodology provided by JAFMAS:</P>
+      <UL>
+        <LI>Identify the Agents 
+        <LI>Identify the Conversations 
+        <LI>Identify the Conversation Rules 
+        <LI>Analyze the Conversation Model 
+        <LI>Implementation of Multi-agent system </LI></UL>
+      <P>The JAFMAS software architecture provides a set of classes for the 
+      implementation of the multi-agent system, as proscribed by the 
+      methodology. These classes provide support for the sending and processing 
+      of broadcast and directed communication, conversation execution, and 
+      system coordination. JiVE integrates with JAFMAS by allowing the designer 
+      to step through the methodology using a set of graphical user interfaces, 
+      with the result being a set of generated class files that are compiled 
+      into a multi-agent system.</P>
+      <P>JAFMAS has a unique construct, carried forward into JiVE that warrants 
+      additional description. Each agent in a JAFMAS-based multi-agent system 
+      can have a list of 'Required Resources.' These 'Required Resources' 
+      establish the needs of the agents in the system, and allow for the 
+      discovery of agents that provide that resource. When the multi-agent 
+      system is started the agents use multi-cast messages to find the other 
+      agents in the system that provide their 'Required Resources'.</P>
+      <P>
+      <H4>2.3 Multi-agent System Design Tools</H4>
+      <P></P>
+      <P>There are various design tools available for the design of multi-agent 
+      systems. The development of these design tools range from commercially 
+      available products to research prototypes. We focus first on tools that 
+      provide graphical interfaces for the development of the multi-agent 
+      systems, and then we mention several tools that do not provide a graphical 
+      design environment, but are of particular relevance to this work.</P>
+      <P>
+      <H5>2.3.1 AgentBuilder</H5>
+      <P></P>
+      <P>AgentBuilder is a commercial product produced by Reticular Systems, 
+      Inc. it provides an integrated toolkit for the construction of intelligent 
+      agents. AgentBuilder provides a fully featured set of graphical interfaces 
+      for the design and development of a multi-agent system. It provides 
+      various graphical tools including project management, ontology management, 
+      agent management, protocol management, and run time engines. AgentBuilder 
+      is Java-based and its communication language is KQML.</P>
+      <P>The AgentBuilder agent model consists of agents that have beliefs, 
+      capabilities, commitments, intentions, and behavioral rules. Given an 
+      agent model's initial state and external influences the agent operates and 
+      communicates with the external world, which in turn modifies it's states 
+      [Reticular 1999a]. An interesting agent based system designed using 
+      AgentBuilder is a prototype system for buying and selling power generation 
+      capacity [Reticular 1999b]. </P>
+      <P>
+      <H5>2.3.2 ADE</H5>
+      <P></P>
+      <P>Another commercial multi-agent design tool is ADE (Agent Development 
+      Environment) by Gensym. ADE is an Integrated Development Environment for 
+      Distributed Multi-Agent Applications, which is built on G2, an 
+      Object-Oriented graphical environment. ADE provides a graphical language 
+      called AdeGrafcet (an extension of the French Grafcet standard, which is 
+      based on Petri net representations) for the specification of the agent's 
+      behavior. ADE provides a communication middleware, utilizing subject-based 
+      addressing. ADE also has a simulation environment for simulating the 
+      design before implementation, as well as a debugging environment [Mehra 
+      and Nissen 1998].</P>
+      <P>
+      <H5>2.3.3 ZEUS</H5>
+      <P></P>
+      <P>ZEUS is a toolkit for building distributed multi-agent systems. ZEUS 
+      specifies a design approach utilizing a three-layer model of an agent, the 
+      definition layer, the organization layer, and the co?ordination layer. It 
+      provides a set of graphical interfaces to allow a designer to create the 
+      multi-agent system. An agent is comprised of libraries that include 
+      communication (using KQML), social interaction, multi-agent coordination, 
+      and planning and scheduling. This tool generates source code for the 
+      agent-based system in Java [Nwana et al, 1999].</P>
+      <P>
+      <H5>2.3.4 DECAF</H5>
+      <P></P>
+      <P>DECAF (Distributed, Environment-Centered Agent Framework) is a software 
+      toolkit for developing intelligent agents. It provides user interfaces for 
+      the specification of the agent behavior, including logical and temporal 
+      constructs. It allows reuse of generic agent behaviors. Its Plan-Editor 
+      removes the designer of a multi-agent system from the low level API and 
+      allows for the rapid development of agents, which are generated in Java. 
+      DECAF also provides some design time error checking, and supports the use 
+      of agent communication languages [Graham and Decker, 1999].</P>
+      <P>
+      <H5>2.3.5 MASSYVE Kit</H5>
+      <P></P>
+      <P>The MASSYVE (Multiagent Agile Manufacturing Scheduling Systems for 
+      Virtual Enterprise) kit is a software kit for the development of 
+      multi-agent systems. It allows a user to configure, modify, and create a 
+      multi-agent system; it provides user interfaces to guide a designer 
+      through the process. It also provides mechanisms to launch the agents, 
+      both locally and remotely [Jacomino, Geszychter and Rabelo 2000]. </P>
+      <P>
+      <H5>2.3.6 JADE</H5>
+      <P></P>
+      <P>JADE (Java Agent DEvelopment Framework) is a software framework for 
+      developing FIPA-compliant multi-agent systems. JADE provides a set of 
+      interfaces for the design of agents, implemented in Java. JADE uses the 
+      FIPA-ACL, utilizing a combination of socket, RMI and CORBA. This framework 
+      also provides a set of pre-defined behaviors for the use of the designer, 
+      including 'SimpleBehaviour', 'CyclicalBehaviour', and 
+      'NonDeterministicBehaviour' [Bellifemine, Poggi, and Rimmassa 1999].</P>
+      <P>
+      <H5>2.3.7 KAoS</H5>
+      <P></P>
+      <P>KAoS is an agent architecture that provides a form of agent-oriented 
+      programming. A set of structures: knowledge, desires, intentions, and 
+      capabilities represent the agents in KAoS. State transition diagrams 
+      specify the conversation policies [Bradshaw et al. 1997].</P>
+      <P>
+      <H5>2.3.8 Bond</H5>
+      <P></P>
+      <P>Bond is a Java-based, object-oriented middleware for collaborative 
+      network agents. It presents a set of objects to enable agent 
+      communication, including Message Passing, Object Replication, and 
+      Directory Services. The bond agents communicate using KQML [Bölöni 1998]. 
+      A "multi-plane state machine" represents the behavior of the bond agents 
+      [Bölöni and Marinescu 1999].</P>
+      <P>
+      <H5>2.3.9 Comparison of Existing Design Tools with JiVE</H5>
+      <P></P>
+      <P>These design tools use various approaches to facilite the design of 
+      multi-agent systems. Among these, are some aspects that are notably 
+      similar to JiVE and other areas where JiVE improves on the current 
+      collection of work.</P>
+      <P>JiVE, like many of these other design tools, has turned to Java to 
+      provide platform independence. This choice affects the deployment of the 
+      design tools themselves as well as the systems that these tools design. 
+      JiVE, is both written in Java and produces Java based multi-agent 
+      systems.</P>
+      <P>Many of the design tools listed support the standard ACLs, either KQML 
+      (AgentBuilder, Zeus, and Bond) or FIPA ACL (JADE). JiVE, which supports 
+      the use of both ACLs, combines ACL support with the ability to have user 
+      defined communication languages.</P>
+      <P>JiVE uses a similar representation for the agent communications as many 
+      of the other tools. Various tools use state machines, Petri-nets, or 
+      variations thereof to specify the agent communication. The "multi-plane 
+      state machine" used in Bond is an interesting expansion of the traditional 
+      state machine representation.</P>
+      <P>Checking the conversation models for consistency and coherency is not a 
+      feature that many design tools have, although DECAF does have some design 
+      time error checking and ADE provides some simulation and debugging 
+      capabilities. JiVE on the other hand has an algorithm for converting the 
+      agent communication representations to a Petri-net for analysis of 
+      consistency and coherency of the systems communications.</P>
+      <P>The generation of source code for the deployment of the multi-agent 
+      systems is another important aspect of JiVE, which is included in some of 
+      the current design tools, including Agent Builder ZEUS and DECAF. Others 
+      directly deploy the agent based system, including ADE, MASSYVE Kit, KAoS 
+      and Bond. The generation of source code allows the users to add behavior 
+      to the agents after using the tool for the basic design, where a direct 
+      deployment prohibits this. However, using direct agent deployment the 
+      design tool can better control the final system, albeit at the expense of 
+      flexibility.</P>
+      <P>JiVE is the only design tool available to support multi-agent system 
+      design and development in JAFMAS. All of the design tools are very tightly 
+      integrated with their own underlying multi-agent framework; JiVE however 
+      has the ability to incorporate other frameworks then JAFMAS by replacing 
+      the Code Generation module. Additionally, JiVE is the only tool that 
+      supports multi-user development and a web-based interface. </P>
+      <TABLE cellSpacing=0 cellPadding=0 width=613 border=1>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=88>&nbsp; </TD>
+          <TD vAlign=top width=92>
+            <P align=center>Collaboration Support</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>Graphical Design Environment</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>Design Validation</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>Implementation Support&nbsp;†</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>ACL Support&nbsp;‡</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>Java-Based</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>Pricing*</P></TD></TR>
+        <TR>
+          <TD vAlign=top width=88>
+            <P align=center>JiVE</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>C</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>F, K, G</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>F</P></TD></TR>
+        <TR>
+          <TD vAlign=top width=88>
+            <P align=center>AgentBuilder</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>C</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>K</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>$800-$5,000</P></TD></TR>
+        <TR>
+          <TD vAlign=top width=88>
+            <P align=center>ADE</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>D</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>N/A**</P></TD></TR>
+        <TR>
+          <TD vAlign=top width=88>
+            <P align=center>ZEUS</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>C</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>K</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>F</P></TD></TR>
+        <TR>
+          <TD vAlign=top width=88>
+            <P align=center>DECAF</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>C</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>F</P></TD></TR>
+        <TR>
+          <TD vAlign=top width=88>
+            <P align=center>MASSYVE</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>D</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>F</P></TD></TR>
+        <TR>
+          <TD vAlign=top width=88>
+            <P align=center>JADE</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>D</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>F</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>F</P></TD></TR>
+        <TR>
+          <TD vAlign=top width=88>
+            <P align=center>Kaos</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>D</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>F</P></TD></TR>
+        <TR style="HEIGHT: 11.65pt">
+          <TD vAlign=top width=88>
+            <P align=center>Bond</P></TD>
+          <TD vAlign=top width=92>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=84>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=72>
+            <P align=center>&nbsp;</P></TD>
+          <TD vAlign=top width=102>
+            <P align=center>D</P></TD>
+          <TD vAlign=top width=66>
+            <P align=center>K</P></TD>
+          <TD vAlign=top width=48>
+            <P align=center>•</P></TD>
+          <TD vAlign=top width=61>
+            <P align=center>F</P></TD></TR></TBODY></TABLE><BR><B>Table 2-1 - 
+      Comparison of JiVE with Exisiting Multi-System Design Tools</B> <BR>† C = 
+      Code generation, D = Direct deployment <BR>‡ F = FIPA-ACL, K = KQML, G = 
+      General speech-act based messaging. <BR>* F = Freeware: Free for most 
+      non-commercial uses. <BR>** ADE is a commercial development environment 
+      sold bundled with services. 
+      <P>
+      <H4>2.4 Collaboration</H4>
+      <P></P>
+      <P>Collaboration of multiple users is an interesting topic with a 
+      significant amount of research behind it. This research generally falls 
+      under the title Computer Supported Cooperative Work (CSCW). The 
+      implementation of CSCW concepts is usually termed groupware. Groupware 
+      applications improve the ability of a group to produce results by allowing 
+      them to collaborate and more importantly to be an active participant in a 
+      distributed design environment. Mills recognizes a future for groupware 
+      applications, specifically in Collaborative Engineering, due to the high 
+      return on investment and improving Internet standards [Mills 1998]. </P>
+      <P>This section discusses the requirements for CSCW tools or groupware. 
+      There is also a discussion of issues involving the architectures needed. A 
+      section on the concurrency of data in these tools follows that. We then 
+      provide several examples of specific groupware applications and conclude 
+      with specific comparisons to JiVE.</P>
+      <P>
+      <H5>2.4.1 Requirements</H5>
+      <P></P>
+      <P>Some methods by which requirements for groupware applications are 
+      established are outlined in [Ehrlich 1999] and summarized in this 
+      subsection. </P>
+      <P>
+      <H6>2.4.1.1 Work Practices</H6>
+      <P></P>
+      <P>Work practices refer to the way in which a user of an application 
+      utilizes that tool in real life situations. The development of a 
+      collaborative work environment, or any application for that matter, should 
+      of course consider this. A realization is needed that designing an 
+      application should keep the needs of the user in mind. Furthermore, 
+      [Hughes et al. 1996] suggests that the practices of a user can adapt over 
+      time in response to a technology. In many aspects, this is the opposite of 
+      what an application developer should desire. An application should 
+      leverage the natural way that a user thinks about the work involved and 
+      design towards that end, enhancing the user experience, not hindering 
+      it.</P>
+      <P>
+      <H6>2.4.1.2 Methodologies</H6>
+      <P></P>
+      <P>Some methodologies for establishing the work practices involved in a 
+      groupware application are ethnography, participatory design, and action 
+      research [Ehrlich 1999].</P>
+      <P>Ethnography refers to the act of observing the end users of an 
+      application in action to evaluate their work practices. This can involve 
+      watching their actions, interviewing and participation. The application of 
+      these findings can have very positive impacts on the application design. 
+      Participatory design allows the end users to be actively involved in the 
+      design process. Action research also involves observing the end users of 
+      an application, but in an attempt to improve the processes through the 
+      implementation of the technology.</P>
+      <P>
+      <H5>2.4.2 Architecture</H5>
+      <P></P>
+      <P>Greenberg and Roseman discuss the merits of centralized vs. replicated 
+      architectures [Greenberg and Roseman 1999]. A centralized architecture is 
+      one that has a main application located on a central server machine. 
+      Clients submit request to the server and display the results based on the 
+      server's output. In this case, the server can handle all concurrency and 
+      synchronization locally. All client requests are serialized such that 
+      there will be no inconsistencies in the data. The downfalls of this type 
+      of centralized system include the server being a computational bottleneck, 
+      and network latency.</P>
+      <P>Replicated architectures have no centralized server and respond to 
+      changes in state locally and send information to each other in order to 
+      update the other's data. With a distributed system, the cost of a 
+      replicated architecture is a more complicated system. There is also now a 
+      need for distributed concurrency control. Some benefits of this approach 
+      are a decrease of the computational bottleneck due to the server, and less 
+      chance for latency due to the diminished amount of data transferred.</P>
+      <P>The compromise, in many cases, is a hybrid architecture incorporating 
+      centralized and replicated features in an attempt to gain the best of both 
+      worlds. Patterson, Day, and Kucan discuss an example of this type of 
+      architecture [Patterson, Day and Kucan 1996]. They talk of an architecture 
+      that has a central server that acts as a repository for the shared system 
+      data and handles any changes for the clients. The clients however control 
+      the data locally and manage their own view of the data. JiVE uses this 
+      hybrid approach to its architecture, but leans towards a centralized 
+      approach (c.f. Section 3.3).</P>
+      <P>
+      <H5>2.4.3 Concurrency</H5>
+      <P></P>
+      <P>An important aspect of designing a groupware application is the 
+      concurrency of the data in the application. Prakash suggests two broad 
+      classes of concurrency control in a group editor [Prakash 1999].</P>
+      <P>Pessimistic concurrency control refers to the method of acquiring 
+      network wide locks before allowing the editing of a document or section of 
+      the document, which incidentally is the method used by JiVE. This method 
+      can slow the rendering of the local data in cases where the lock has to be 
+      acquired. Optimistic Concurrency Control allows any changes on the local 
+      copy of the data to be effective immediately and then sends that 
+      information over the network (including a time stamp) to be reconciled 
+      with all of the other users. When this information is reconciled with the 
+      operations in each client, there may be a need to roll back or undo 
+      operations. This method requires that operations be reversible, in order 
+      for the reconciliation at each client. In addition, there is the 
+      opportunity for the users to interact with inconsistent data.</P>
+      <P>
+      <H5>2.4.4 Example Groupware Systems</H5>
+      <P></P>
+      <P>
+      <H6>2.4.4.1 JPECS</H6>
+      <P></P>
+      <P>JPECS (Java Programming Environment with Collaborative Support) is a 
+      web-based, platform-independent collaborative work environment. It 
+      provides a platform for the distributed editing and simulation of a visual 
+      programming language (in this case a finite state machine simulator), 
+      including a whiteboard and chat feature. It deals with issues such as 
+      concurrency, multi-user communication, and collaboration [Inamdar 1997]. 
+      JPECS provides a basis for JiVE's collaborative features. JiVE utilizes a 
+      similar approach in terms of architecture and messaging to that of JPECS. 
+      JiVE does improve upon access control issues of a collaborative 
+      programming environment. JiVE provides a more fine-grained view of access 
+      control entities in the system and makes the access control more 
+      transparent (c.f. Section 3.2.1). JiVE does not though provide a full set 
+      of user communication tools, such as a whiteboard or a chat-board and does 
+      no user privilege control.</P>
+      <P>
+      <H6>2.4.4.2 JSIM</H6>
+      <P></P>
+      <P>JSIM (Java Simulator) was built on JPECS [Inamdar 1997] and provides a 
+      collaborative tool for the definition and simulation of control systems. 
+      JSIM provides a multi-user communication utility and a block diagram 
+      editor. There is also a conference management utility to allow multiple 
+      design sessions to run concurrently [Chen 1998]. JSIM, like JPECS, 
+      provides a basis for the JiVE architecture and user control 
+facilities.</P>
+      <P>
+      <H6>2.4.4.3 Joint EMACS</H6>
+      <P></P>
+      <P>Joint EMACS is an EMACS-style text editor that allows for the 
+      collaborative editing of documents. It supports a high degree of 
+      fine-grained mutual awareness, and has well-developed methodologies for 
+      handling concurrency control [Ressel, Nitssche-Ruhland and Gunzenhäuser 
+      1996]. In addition to the comprehensive handling of concurrency control, 
+      which JiVE also uses, Joint EMACS provides mechanisms for 'Undo' 
+      operations, which could be a useful feature in a tool such as JiVE.</P>
+      <P>
+      <H6>2.4.4.4 TeamRooms</H6>
+      <P></P>
+      <P>TeamRooms is a collaboration tool that allows for collaboration either 
+      in real time or asynchronously. This implies a persistence of data in the 
+      environment. As part of the environment they provide various collaboration 
+      tools, including, user and conference management and visibility, graphical 
+      editors, textual editors, and chat boards [Roseman and Greenberg 1996]. 
+      JiVE uses a similar client/server architecture, including user 
+      verification and a data repository, though it does not incorporate any 
+      awareness features or collaboration tools beyond agent editing. TeamRooms 
+      also, adds an Administration client, which would be an interesting 
+      expansion of the JiVE functionality (c.f. Section 5.2).</P>
+      <P>
+      <H6>2.4.4.5 Artefact</H6>
+      <P></P>
+      <P>Artefact is a web-based tool for building collaborative applications 
+      that is itself a distributed collaborative tool. It uses a client/server 
+      architecture, which uses HTTP as its communication protocol. The are a 
+      number of base 'objects' that a user can use to design their application 
+      as well as the ability to develop customized application objects 
+      [Brandenburg et al. 1998]. Artefact addresses some important collaboration 
+      issues which are applicable to JiVE, such as speed and performance of 
+      web-based collaboration, including Java, but relies on a more centralized 
+      approach and a lightweight Java applet with HTTP enhancements. In 
+      addition, Artefact allows the user to interact synchronously or 
+      asynchronously with the application.</P>
+      <P>
+      <H6>2.4.4.6 Summary of JiVE's Relationship to Existing Groupware 
+      Systems</H6>
+      <P></P>
+      <P>JiVE's collaboration features draw from existing work on groupware 
+      systems. JPECS and JSIM provide much of the basis for JiVE's collaborative 
+      architecture, messaging and user control. Concurrency control components 
+      of Joint EMACS are similar to JiVE, although more fully developed. In 
+      terms of architecture, JiVE, TeamRooms and Artefact are similar in their 
+      client/server configuration. In addition, Artefact provides a thorough 
+      approach to web-based collaboration from which future versions of JiVE 
+      could draw. All of the tools mentioned in this section have various 
+      collaboration tools that could supplement JiVE's collaboration 
+      experience.</P>
+      <P>
+      <H4>2.5 Summary</H4>
+      <P></P>
+      <P>This chapter discussed some of the current literature in the fields 
+      related to this thesis. The chapter started with some background on agents 
+      and multi-agent systems. Specifically addressed were the communications 
+      between agents, including the basis for JiVE's representation of 
+      conversation and conversation rules and the use, by JiVE of ACLs. The 
+      presentation of the existing work in the area of multi-agent design tools 
+      highlighted the unique approach JiVE takes on this issue. The distributed 
+      collaboration features of JiVE are one of the things that make it stand 
+      out. The existing work in collaborative software provides the bases for 
+      these features. This includes the requirements for a groupware application 
+      and some design methodologies. We also showed how JiVE relates to existing 
+      work in terms of architecture and concurrency control. Finally, we 
+      provided a comparison of JiVE and existing collaborative applications. The 
+      next chapter presents the design and implementation of 
+  JiVE.</P></TD></TR></TBODY></TABLE>
+<CENTER>
+<P>[ <A href="http://www.ececs.uc.edu/~abaker/JiVE/Home.html">Home</A> ][ <A 
+href="http://www.ececs.uc.edu/~abaker/JiVE/Thesis.html">Thesis</A> ][ <A 
+href="http://www.ececs.uc.edu/~abaker/JiVE/Download.html">Download</A> ][ <A 
+href="http://www.ececs.uc.edu/~abaker/JiVE/Contact.html">Contact</A> ] <BR>
+<HR width="25%">
+<BR>Multi-Agent Technology at the University of Cincinnati <BR>[ <A 
+href="http://www.ececs.uc.edu/~abaker/JAFMAS/index.html" target=_top>JAFMAS</A> 
+][ <A href="http://www.ececs.uc.edu/~abaker/JiVE/index.html" 
+target=_top>JiVE</A> ][ <A href="http://www.aaria.uc.edu/" target=_top>AARIA</A> 
+]</CENTER><BR><BR></BODY></HTML>

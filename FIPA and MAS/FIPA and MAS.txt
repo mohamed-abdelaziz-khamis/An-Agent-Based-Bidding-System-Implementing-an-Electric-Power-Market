@@ -1,0 +1,49 @@
+
+The (FIPA and MAS folder) contains the following:
+
+1)An Internet-Wide Distributed Security Protocol and Implementation  (very important)
+
+It displays the difference between using the FIPA-ACL in the system (Proposed system) 
+and the currently used system (Current system): 
+
+Current system: 
+Each agent is responsible for a set of computers. 
+The log files produced by the computers are first analyzed by a log file analyzer. 
+Any detected problems become goals for the agent to act on. 
+
+Proposed system:
+The interaction between the agents will be governed by the FIPA interaction protocols. 
+
+2)Evaluating the FIPA Standards and Its Role in Achieving Cooperation in the MAS
+   (very important)
+MAS: Multi Agent Systems=Agentcities
+*Displays the FIPA role in achieving the cooperation in the MAS
+note:
+ There exist 4 MAS applications 2 of them using the FIPA protocol that achieves the cooperation in the MAS: 
+so it is important to know how FIPA achieves the cooperation in the MAS:
+
+Bidding Agents:  
+Network management: 
+Teleteaching project: using FIPA protocol
+Hotel Service Broker: using FIPA protocol
+  
+3) FIPA protocol applications:
+a-Agentcities Travel Assistant: A multi-agents system that delivers itinerary timetables
+*it is a MAS that delivers the time tables of the travel paths of the travellers , 
+ An "Agentcities"  travel assistant.
+
+b-Multiagent Network Security System using FIPA-OS
+*it is a MAS system using FIPA-OS used for the network security 
+
+4)FIPA navigation service:
+a-FIPA Nomadic Application Support Monitor Agent Specification
+b-FIPA Nomadic Application Support Overview Specification
+
+*They are important tutorials about how  FIPA supports the navigation (nomadic) service.  
+i.e. supporting the wireless services and devices 
+
+
+5)A FIPA Compliant Query Mechanism Using DAML Query Language (DQL)
+*Representing the FIPA Queries by using the DQL language. 
+
+				

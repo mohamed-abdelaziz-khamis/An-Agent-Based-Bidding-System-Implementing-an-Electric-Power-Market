@@ -1,0 +1,14 @@
+We think that the agent abstraction can be a powerful paradigm for 
+addressing these issues. It decomposes the complexity of problems into 
+small autonomous communicating entities, the agents, well suited for 
+computationally constrained environments. 
+
+AgentCities is a promising initiative, which tries to realise the 
+commercial and research potential of FIPA agent applications. 
+It aims to build a network of publicly accessible, continually 
+available FIPA platforms, where each platform represents a real 
+world city or place (Lausanne, Paris, etc). Services deployed in 
+AgentCities centre on information and transaction services for real 
+world objects such as shops, restaurants, hotels, cinemas, theatres 
+etc. 
+

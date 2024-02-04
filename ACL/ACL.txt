@@ -1,0 +1,135 @@
+1-Project scenario.
+2-JADE.
+3-AUML.
+4-ACL.
+5-A web site
+
+
+1)Agents Communication Languages (ACL):
+   It is a very important web page about the main 2 types of  ACL's : FIPA-ACL , KQML          
+ The table of contents:
+      *Introduction to ACL.
+      *Knowledge Query and Manipulation Language (KQML)
+      *Foundation for Intelligent Physical Agents (FIPA) ACL
+      *Comparing the two ACLs
+       (and others)
+
+2)Comparing ACL's:
+   It is an important web page about comparing agent communication languages:
+   KQML  and FIPA-ACL
+
+
+3)"Knowledge Query and Manipulation Language (KQML)" web page:
+    It is an important page about the (KQML) ACL language:
+       *Layers Of KQML
+       *Performatives Of KQML
+
+4)FIPA ACL Message Structure Specification:
+    It is the main page conerning the FIPA-ACL from the FIPA site:
+    summary:A description of the structure of FIPA ACL
+
+5)FIPA ACL Tools API Package:
+    It is the programming package "nzdis.lang.fipaacl.tool " concerning the FIPA-ACL: 
+    
+   The class Summary: 
+
+   DisplayTree                                   :GUI-based display of AST
+   DisplayTree.TreeFrame   
+   DisplayTree.TreeInternalFrame   
+   PrintTree                                       :Prints the tree of the given AST on standard output. 
+   PrintWalker                                  :Simple AST walker. 
+   TreeBuilder                                  :Generic parser utility API, Node builder. 
+
+6)Interface AgentCommunityAdapter:
+   
+   It is the interface:  AgentCommunityAdapter
+   
+  public interface AgentCommunityAdapter
+ // Defines the interface for interacting with an agent community such as CoABS or FIPA-OS.
+
+  All Known Implementing Classes: 
+      CoAbsCommunityAdapter, FipaOsCommunityAdapter 
+
+  e.g.
+   In order to send a message:
+      public void sendMessage(fipaos.ont.fipa.ACL acl)
+                 throws java.io.IOExceptionSends an Agent Communication Language message. 
+  Parameters: 
+      acl - the Agent Communication Language message to be sent
+
+  (It is a very important web page conerning the FIPA-ACL programming)
+
+
+7) Comparison of JiVE with Exisiting Multi-System Design Tools: 
+   It is an wonderfull page that compare between the different MAS design tools
+   (including our JADE tool) according to different  factors 
+  (including the ACL Support: F--> FIPA-ACL  ,  K--> KQML)
+
+  "As it is obivious from the table, JADE supports the FIPA-ACL only."
+
+    Collaboration   Graphical        Design          Implementation     ACL           Java    Pricing*
+    Support             Design            Validation    Support †              Support ‡  -Based  
+                           Environment 
+ 
+JiVE    •                     •                      •                       C                     F, K, G          •          F
+
+AgentBuilder            •                      •                       C                          K               •        $800
+                                                                                                                                      -$5,000
+
+ADE                          •                      •                       D                                                    N/A**
+
+ZEUS                        •                                               C                          K               •          F 
+
+DECAF                     •                     •                        C                                            •           F
+
+MASSYVE                                     •                         D                                                        F
+
+JADE                        •                                               D                           F              •           F 
+
+Kaos                                                •                        D                                            •           F
+
+Bond                                                                         D                            K             •           F
+ 
+† C = Code generation, D = Direct deployment 
+‡ F = FIPA-ACL, K = KQML, G = General speech-act based messaging. 
+* F = Freeware: Free for most non-commercial uses. 
+** ADE is a commercial development environment sold bundled with services.
+
+
+8)jfipa - Java-support for the FIPA Agent Communication Language:
+
+What is jfipa?
+
+  jfipa is a set of java-based tools that supports parsing and routing of envelopes/messages 
+of   the FIPA Agent Communication Language (ACL) encoded as XML. 
+
+note: I had sent previously its link to download it. 
+
+9)IEEE ACL:
+ This is the web page of the IEEE concerning the ACL 
+ we can download the ACL tool from this site from the "Buy Article" link.
+ (Ahmed Ragab do that as you are a member in IEEE)
+
+10)eXAT: an Experimental Tool for Programming Multi-Agent Systems
+
+ (PDF)
+
+
+11)The current landscape of Agent Communication Languages(pdf)
+
+Introducing some of the basic concepts relating to Agent Communication Languages, 
+Covering KQML and FIPA ACL, the two existing fully-specified ACLs,  
+givea brief introduction to their semantics and the issues relating to semantic descriptions of ACLs, 
+then shift the focus beyond the semantics and point to problems and limitations shared by both ACLs. 
+(and other things)
+
+
+ Note:
+The first attempt to come to a standardised agent communication language (ACL) came forth from 
+the DARPA knowledge sharing project and produced the KQML. 
+Up till now KQML is the only ACL that is implemented and (widely) used (at least in the academic world).  
+
+jackal is a Java implementation of the KQML 
+
+http://jackal.cs.umbc.edu/
+

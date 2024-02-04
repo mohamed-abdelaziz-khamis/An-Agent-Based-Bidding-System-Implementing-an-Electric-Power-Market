@@ -1,0 +1,618 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0072)http://infoeng.ee.ic.ac.uk/~malikz/surprise2001/kt197/article2/main.html -->
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><TITLE>Agent Communication language</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-874">
+<META content=Word.Document name=ProgId>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="./ACLtemp_files/filelist.xml" rel=File-List><LINK 
+href="./ACLtemp_files/editdata.mso" rel=Edit-Time-Data><LINK 
+href="./ACLtemp_files/oledata.mso" rel=OLE-Object-Data><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+w\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Kobpong Trisukhee</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Kobpong Trisukhee</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>249</o:TotalTime>
+  <o:Created>2001-06-01T11:14:00Z</o:Created>
+  <o:LastSaved>2001-06-01T11:14:00Z</o:LastSaved>
+  <o:Pages>7</o:Pages>
+  <o:Words>1185</o:Words>
+  <o:Characters>6930</o:Characters>
+  <o:Company>The Bedroom</o:Company>
+  <o:Lines>259</o:Lines>
+  <o:Paragraphs>56</o:Paragraphs>
+  <o:CharactersWithSpaces>8064</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<STYLE>@font-face {
+	font-family: Trebuchet MS;
+}
+@page Section1 {size: 8.5in 11.0in; margin: 1.0in 1.25in 1.0in 1.25in; mso-header-margin: .5in; mso-footer-margin: .5in; mso-paper-source: 0; }
+P.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; COLOR: black; FONT-FAMILY: "Times New Roman"; mso-bidi-font-size: 10.0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-GB
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; COLOR: black; FONT-FAMILY: "Times New Roman"; mso-bidi-font-size: 10.0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-GB
+}
+DIV.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; COLOR: black; FONT-FAMILY: "Times New Roman"; mso-bidi-font-size: 10.0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-GB
+}
+H1 {
+	FONT-SIZE: 16pt; MARGIN: 12pt 0in 3pt; COLOR: black; FONT-FAMILY: Arial; mso-pagination: widow-orphan; mso-ansi-language: EN-GB; mso-style-next: Normal; mso-outline-level: 1; mso-font-kerning: 16.0pt
+}
+H2 {
+	FONT-SIZE: 12pt; MARGIN: 0in 0.5in 0pt 0in; COLOR: black; FONT-FAMILY: "Trebuchet MS"; TEXT-ALIGN: center; mso-bidi-font-size: 10.0pt; mso-pagination: widow-orphan; mso-ansi-language: EN-GB; mso-style-next: Normal; mso-outline-level: 2
+}
+H3 {
+	FONT-SIZE: 12pt; MARGIN: 0in 0.5in 0pt; COLOR: black; FONT-FAMILY: "Trebuchet MS"; mso-bidi-font-size: 10.0pt; mso-pagination: widow-orphan; mso-ansi-language: EN-GB; mso-style-next: Normal; mso-outline-level: 3
+}
+P.MsoBlockText {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0in 0.5in 0pt; COLOR: black; FONT-FAMILY: "Trebuchet MS"; TEXT-ALIGN: justify; mso-bidi-font-size: 10.0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-GB; mso-bidi-font-family: "Times New Roman"
+}
+LI.MsoBlockText {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0in 0.5in 0pt; COLOR: black; FONT-FAMILY: "Trebuchet MS"; TEXT-ALIGN: justify; mso-bidi-font-size: 10.0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-GB; mso-bidi-font-family: "Times New Roman"
+}
+DIV.MsoBlockText {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0in 0.5in 0pt; COLOR: black; FONT-FAMILY: "Trebuchet MS"; TEXT-ALIGN: justify; mso-bidi-font-size: 10.0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-GB; mso-bidi-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+</HEAD>
+<BODY lang=EN-US style="tab-interval: .5in" text=#ffffff vLink=#cccccc 
+aLink=#cccccc link=#ff6633 bgColor=#ffffff 
+background="Agent Communication language_files/Image001.jpg">
+<DIV class=Section1>
+<H1 style="MARGIN: 12pt 0.5in 3pt" align=right><FONT color=#ffffff><IMG 
+height=166 src="Agent Communication language_files/Image003.gif" width=160 
+lowsrc=Image003.gif></FONT></H1>
+<H1 style="MARGIN: 12pt 0.5in 3pt">&nbsp;</H1>
+<H1 style="MARGIN: 12pt 0.5in 3pt"><FONT color=#ffffff><SPAN lang=EN-GB 
+style="FONT-SIZE: 26pt; FONT-FAMILY: 'Trebuchet MS'; mso-bidi-font-size: 16.0pt"><FONT 
+color=#ffcc33><A name=acl></A>Agent Communication language 
+(ACL)</FONT><o:p></o:p></SPAN></FONT></H1>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">Software 
+agents need to be able to interact and to communicate with other agents, and 
+their environment, in order to cooperate and to share knowledge. To do so, 
+requires that they have a common or inter-translatable representation language 
+and to share a framework of knowledge to interpret the exchanged messages. There 
+is no universally accepted language in which to represent information and 
+queries. However, a language those agents might use for these interactions 
+should have a number of desirable features. Finin and Labrou have come up with 
+these desiderata:<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">Form: A 
+good agent communication language should be declarative, syntactically simple 
+and readable by people.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">Content: A 
+communication language should be layered in a way that fits well with other 
+systems. In particular, a distinction should be made between the communication 
+language, which expresses communication acts, and the content language, which 
+expresses information about the domain.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">Semantics: 
+The semantics of a communication language should exhibit those properties 
+expected of the semantics of any other language. It should be grounded in 
+theory, and also ambiguous.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'">Implementation: The implementation should be 
+efficient, both for speed and for bandwidth 
+utilisation.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'">Networking: An ACL should fit well with 
+modern networking technology.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'">Environment: The environment should be 
+highly distributed, heterogeneous, and very 
+dynamic.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'">Reliability: A communication language must 
+support reliable and secure communications.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">The 
+implementation language, agent system architecture and the intended application 
+will also influence the design of an ACL. As agent applications become more 
+complex, the need arises to express and maintain more knowledge about its 
+environment, history, and its goal, because an agent should react autonomously 
+on events in its environment, it needs a model of the environment and the set of 
+rules that governs its behaviour. Hence, an ACL should be a knowledge 
+representation language that permits exchange of knowledge between 
+agents.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">To 
+establish communication between agents, there is a need for a common frame of 
+reference, or the context of the message. The context of the message determines 
+how that particular message is interpreted. Hence, the need to conceptualise the 
+world using ontology.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<H1 style="MARGIN: 12pt 0.5in 3pt"><FONT color=#ffffff><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><FONT color=#ffcc33><A 
+name=ontology></A>Ontology<o:p></o:p></FONT><o:p></o:p></SPAN></FONT></H1>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">The word 
+ontology has a long history in philosophy, where it refers to the notion of 
+existence. In the context of ACL, ontology is a specification of a 
+conceptualisation. Conceptualisation is sets of concepts and the relationships 
+that hold between these sets.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">Ontology 
+is used to define the vocabulary that agents must use to maintain knowledge and 
+the behavioural rules. If ontology is shared amongst agents in an environment, 
+then the vocabulary can be used for communication between these agents. 
+Therefore, ontology is written using a knowledge representation 
+language.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<H1 style="MARGIN: 12pt 0.5in 3pt"><FONT color=#ffffff><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><FONT color=#ffcc33><A 
+name=krl></A>Knowledge Representation 
+Language</FONT><o:p></o:p></SPAN></FONT></H1>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">In order 
+for an agent to use and maintain knowledge about its environment, history, and 
+its goal, a knowledge representation language is used. The Knowledge Sharing 
+Effort, KSE, <I>“is a consortium to develop conventions facilitating sharing and 
+reuse of knowledge bases and knowledge-based 
+systems.”</I><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">The KSE is 
+interested in common knowledge base languages, common constructs among 
+languages, shared and reusable knowledge bases, and the external interfaces (a 
+high level interaction language).<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">KSE has 
+developed the Knowledge Interchange Format, KIF. KIF is used to express simple 
+facts as well as more complex relations through a number of logical operators. 
+In addition, KIF provides constructs for describing procedures. KIF is first 
+order predicate logic. It is a simple list-base linear ASCII 
+syntax.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: center" 
+align=center><FONT color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p><IMG height=500 
+src="Agent Communication language_files/Img009.gif" width=620 
+align=absMiddle></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<TABLE height=38 width="30%" align=center border=1>
+  <TBODY>
+  <TR>
+    <TD height=52>
+      <DIV align=center>
+      <P><B><I><FONT face="Trebuchet MS" color=#ffcc33>Figure1: How KIF 
+      Works</FONT></I></B></P></DIV></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify" 
+align=center><I><FONT color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></I><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">To 
+facilitate successful interoperation between agents, there is a need for 
+standardised means and methods of the exchanged messages. Hence, a communication 
+protocol is required.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<H1 style="MARGIN: 12pt 0.5in 3pt"><FONT color=#ffffff><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><FONT color=#ffcc33><A 
+name=cp></A>Communication Protocols</FONT><o:p></o:p></SPAN></FONT></H1>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">KIF is 
+only a common representation language. There is a need for a language for agents 
+to share a framework of knowledge to interpret the exchanged message. There are 
+two protocols that have dominated the debates and discussion amongst 
+researchers, practitioners, and standard bodies. They are FIPA-ACL and 
+KQML.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">FIPA, the 
+Foundation for Intelligent Physical Agents, has put forward an agent 
+communication language, FIPA-ACL, which is based on the Speech Act Theory. 
+FIPA-ACL assumes existence of an Agent Management system, not part of the 
+language, and abstracts away the low-level communication 
+details.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">The 
+Knowledge Query and Manipulation Language, KQML, was developed as part of the 
+KSE. It is by far the most widely used in existing systems, and thus, shall be 
+examined further in this article.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<H1 style="MARGIN-LEFT: 0.5in"><FONT color=#ffffff><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><FONT color=#ffcc33><A 
+name=kqml></A>Knowledge Query and Manipulation Language 
+(KQML)<o:p></o:p></FONT></SPAN></FONT></H1>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffcc33><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT><FONT color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">Both 
+FIPA-ACL and KQML provides primitives to allow agents to communicate the nature 
+of their request and to find the other agent suitable to deal with that request. 
+However, in KQML, the primitives are referred to as performatives. 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">KQML is 
+designed to achieve tasks at three conceptual 
+layers:<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: center" 
+align=center><FONT color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p><IMG height=500 
+src="Agent Communication language_files/Img015.gif" 
+width=620></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P></DIV>
+<DIV class=Section1>
+<TABLE height=38 width="30%" align=center border=1>
+  <TBODY>
+  <TR>
+    <TD height=52>
+      <DIV align=center>
+      <P><B><I><FONT face="Trebuchet MS" color=#ffcc33>Figure2: 3 Layers Of 
+      KQML</FONT></I></B></P></DIV></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify">&nbsp;</P>
+<DIV align=center><FONT color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></DIV>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB>Distinctions between layers are not explicit in programs and 
+specifications. This makes building good abstractions difficult. 
+</SPAN></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB>Performatives in KQML is like instructions. They can be divided in to 
+several categories.</SPAN></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt">&nbsp;</P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt">&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT><FONT color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND: #e0e0e0; MARGIN-LEFT: 0.5in; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0in 5.4pt 0in 5.4pt" 
+cellSpacing=0 cellPadding=0 width=642 align=center bgColor=#e0e0e0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 0.5pt solid; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: center" 
+      align=center><FONT color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Queries<o:p></o:p></SPAN></B></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: justify" 
+      align=center><FONT color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">These performatives are used to send 
+      questions for evaluation somewhere.<o:p></o:p></SPAN></B></FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 0.5pt solid; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: center" 
+      align=center><FONT color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Responses<o:p></o:p></SPAN></B></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: justify"><FONT 
+      color=#666666><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">Used 
+      by agents in order to reply to queries and 
+      requests.<o:p></o:p></SPAN></B></FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 0.5pt solid; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: center" 
+      align=center><FONT color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Informational<o:p></o:p></SPAN></B></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: justify"><FONT 
+      color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Informational performatives are used 
+      to transfer information.<o:p></o:p></SPAN></B></FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 0.5pt solid; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: center" 
+      align=center><FONT color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Generative<o:p></o:p></SPAN></B></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: justify"><FONT 
+      color=#666666><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">This 
+      class of performatives is used for controlling and initiating the exchange 
+      of messages.<o:p></o:p></SPAN></B></FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 0.5pt solid; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: center" 
+      align=center><FONT color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Capability 
+      definition<o:p></o:p></SPAN></B></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: justify"><FONT 
+      color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Allows agents to learn about the 
+      capability of other agents and to announce its own to the agent 
+      community<o:p></o:p></SPAN></B></FONT></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 0.5pt solid; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: center" 
+      align=center><FONT color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Networking<o:p></o:p></SPAN></B></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top>
+      <P class=MsoNormal style="MARGIN-RIGHT: 0.5in; TEXT-ALIGN: justify"><FONT 
+      color=#666666><B><SPAN lang=EN-GB 
+      style="FONT-FAMILY: 'Trebuchet MS'">Networking performatives make it 
+      possible to pass directives to underlying community 
+      layer.<o:p></o:p></SPAN></B></FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+</SPAN></B></FONT></P>
+<TABLE height=48 width="42%" align=center border=1>
+  <TBODY>
+  <TR>
+    <TD height=52>
+      <DIV align=center>
+      <P><B><I><FONT face="Trebuchet MS" color=#ffcc33>Table 1: Performatives Of 
+      KQML</FONT></I></B></P></DIV></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify">&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0.5in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">The 
+performatives define the permissible operations that agents may attempt to 
+access each other knowledge or goal stores. These performatives are the 
+foundation on which the higher-level inter-agents interaction concepts such as 
+negotiations and contract nets are based. In addition, KQML provides a basic 
+architecture for knowledge sharing through a special class of agents called the 
+community facilitators, which organise and coordinate the interactions of other 
+agents. <o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<H1 style="MARGIN-LEFT: 0.5in"><FONT color=#ffffff><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><FONT color=#ffcc33><A 
+name=con></A>Conclusion<o:p></o:p></FONT><o:p></o:p></SPAN></FONT></H1>
+<P class=MsoNormal style="MARGIN-LEFT: 1in"><FONT color=#ffffff><B><SPAN 
+lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">The need 
+for an Agent Communication Language is clear. It is vital in the advancement of 
+electronic commerce, as well as other applications, as the Internet will heavily 
+depend on the inter-operability between agent systems. There are many protocols 
+in existence and in development, but the need for a convergence towards a single 
+standard format is of equal importance to, if not more important than, the 
+improvement in agent technology.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN-LEFT: 1in"><FONT color=#ffffff><B><SPAN 
+lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<H1 style="MARGIN-LEFT: 0.5in"><FONT color=#ffffff><SPAN lang=EN-GB 
+style="FONT-FAMILY: 'Trebuchet MS'"><FONT color=#ffcc33><A 
+name=ref></A>Reference</FONT><o:p></o:p></SPAN></FONT></H1>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB>D. McKay, R. McEntire, T. Finin and R. Fritzson, “KQML an Agent 
+Communication Language”, Proceeding of the third international conference on 
+Information and Knowledge management, 1994, pg 456-463.</SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'">Y. Labrou 
+and T. Finin, “Towards a standard for an Agent Communication Language”, 
+Proceeding of the first international conference on Multi-Agent Systems, 
+1995.<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB style="mso-bidi-font-weight: normal">C. Guilfoyle, and E. Warner, 
+“Intelligent Agents: The new Revolution in Software”, Ovum Ltd., London, 
+1994.<o:p></o:p></SPAN></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB style="mso-bidi-font-weight: normal"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB style="mso-bidi-font-weight: normal">C. Vermeulen and B. Bauwens, 
+“Software Agents using XML for telecom service modelling: A Practical 
+Experience”, Technical report, Alcatel Telecom, May 
+1998.<o:p></o:p></SPAN></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB style="mso-bidi-font-weight: normal"><A 
+href="http://www.infoloom.com/gcaconts/WEB/paris98/bauwens.HTM"><SPAN 
+style="mso-bidi-font-weight: bold">http://www.infoloom.com/gcaconts/WEB/paris98/bauwens.HTM</SPAN></A><o:p></o:p></SPAN></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB style="mso-bidi-font-weight: normal"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></FONT></P>
+<P class=MsoBlockText style="MARGIN: 0in 1in 0pt"><FONT color=#ffffff><SPAN 
+lang=EN-GB style="mso-bidi-font-weight: normal">T. Finin, Y. Labrou and J. 
+Mayfield, “Desiderata for Agent Communication Languages”, Proceeding of the AAAI 
+Symposium on Information Gathering from Heterogeneous, Distributed Environments, 
+Stanford University, Stanford, CA. March 27-29 1995.</SPAN><SPAN lang=EN-GB 
+style="mso-bidi-font-size: 12.0pt; mso-bidi-font-weight: normal"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-GB 
+style="COLOR: white">&nbsp;</SPAN><SPAN lang=EN-GB 
+style="COLOR: white; FONT-FAMILY: 'Trebuchet MS'"><o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 1in 0pt; TEXT-ALIGN: justify"><FONT 
+color=#ffffff><B><SPAN lang=EN-GB style="FONT-FAMILY: 'Trebuchet MS'"><![if !supportEmptyParas]><![endif]>&nbsp; 
+<o:p></o:p></SPAN></B></FONT></P></DIV></BODY></HTML>

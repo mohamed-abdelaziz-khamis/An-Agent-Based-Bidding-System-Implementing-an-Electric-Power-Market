@@ -1,0 +1,48 @@
+A:link {
+	COLOR: navy
+}
+A:visited {
+	COLOR: #666666
+}
+A:hover {
+	COLOR: blue
+}
+CODE {
+	COLOR: #cc2200
+}
+.code {
+	COLOR: #cc2200
+}
+BODY {
+	BACKGROUND: white; COLOR: #000033
+}
+H1 {
+	FONT: large helvetica; COLOR: #6666ff
+}
+H2 {
+	FONT: large helvetica; COLOR: #6666ff
+}
+H3 {
+	FONT: medium helvetica; COLOR: #6666ff
+}
+H4 {
+	FONT: medium helvetica; COLOR: #6666ff
+}
+P {
+	TEXT-ALIGN: justify
+}
+A {
+	TEXT-DECORATION: none
+}
+STRONG.YELLOW {
+	BACKGROUND-COLOR: #ffff00
+}
+STRONG.VERYSOFT {
+	BACKGROUND-COLOR: #ffff00
+}
+STRONG.SOFTMARKER {
+	FONT-WEIGHT: bold; BACKGROUND-COLOR: #ffff00
+}
+UNKNOWN {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #ffff00
+}

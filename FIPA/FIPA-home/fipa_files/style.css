@@ -1,0 +1,54 @@
+BODY {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(./assets/images/autogen/Background.gif); COLOR: rgb(0,0,0); FONT-STYLE: normal; FONT-FAMILY: Helvetica,sans-serif
+}
+A:active {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: rgb(0,0,255); FONT-STYLE: normal; FONT-FAMILY: Arial,Helvetica,Geneva,Sans-serif,sans-serif
+}
+A:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: rgb(0,0,255); FONT-STYLE: normal; FONT-FAMILY: Arial,Helvetica,Geneva,Sans-serif,sans-serif
+}
+UL {
+	FONT-WEIGHT: normal; LIST-STYLE-POSITION: outside; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-FAMILY: Helvetica,sans-serif; LIST-STYLE-TYPE: square; TEXT-ALIGN: justify
+}
+A:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: rgb(0,0,255); FONT-STYLE: normal; FONT-FAMILY: Arial,Helvetica,Geneva,Sans-serif,sans-serif
+}
+.TextObject {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: rgb(0,0,0); FONT-STYLE: normal; FONT-FAMILY: Helvetica,sans-serif
+}
+H1 {
+	FONT-FAMILY: Helvetica,sans-serif
+}
+H2 {
+	FONT-FAMILY: Helvetica,sans-serif
+}
+P {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: rgb(0,0,0); FONT-STYLE: normal; FONT-FAMILY: Helvetica,sans-serif; TEXT-ALIGN: justify
+}
+H3 {
+	FONT-FAMILY: Helvetica,sans-serif
+}
+LI {
+	FONT-WEIGHT: normal; LIST-STYLE-POSITION: outside; FONT-SIZE: 10pt; FONT-STYLE: normal; FONT-FAMILY: Helvetica,sans-serif; LIST-STYLE-TYPE: disc; TEXT-ALIGN: justify
+}
+OL {
+	FONT-WEIGHT: normal; LIST-STYLE-POSITION: outside; FONT-SIZE: 10px; FONT-STYLE: normal; FONT-FAMILY: Helvetica,sans-serif; TEXT-ALIGN: justify
+}
+A {
+	FONT-SIZE: 10pt; FONT-FAMILY: Arial,Helvetica,Geneva,Sans-serif,sans-serif
+}
+H4 {
+	FONT-FAMILY: Helvetica,sans-serif
+}
+.TextNavBar {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: rgb(0,0,0); FONT-STYLE: normal; FONT-FAMILY: Arial,Helvetica,Geneva,Sans-serif,sans-serif; TEXT-DECORATION: none
+}
+H5 {
+	FONT-FAMILY: Helvetica,sans-serif
+}
+H6 {
+	FONT-FAMILY: Helvetica,sans-serif
+}
+A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: rgb(0,0,255); FONT-STYLE: normal; FONT-FAMILY: Arial,Helvetica,Geneva,Sans-serif,sans-serif; TEXT-DECORATION: none
+}
